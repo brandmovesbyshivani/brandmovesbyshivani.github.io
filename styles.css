@@ -799,9 +799,9 @@ h3 {
 }
 
 .strategy-slide-copy p {
-  max-width: 520px;
+  max-width: none;
   color: rgba(255, 255, 255, 0.76);
-  font-size: clamp(1rem, 1.5vw, 1.24rem);
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
   overflow-wrap: anywhere;
 }
 
