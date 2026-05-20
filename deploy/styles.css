@@ -708,6 +708,7 @@ h3 {
 .editor-shell h1 {
   max-width: 930px;
   font-size: clamp(2.35rem, 5.2vw, 5.2rem);
+  overflow-wrap: anywhere;
 }
 
 .post-summary {
@@ -743,8 +744,8 @@ h3 {
 .strategy-slide {
   display: grid;
   min-width: 100%;
-  grid-template-columns: minmax(420px, 1.16fr) minmax(280px, 0.84fr);
-  align-items: center;
+  grid-template-columns: 1fr;
+  align-items: start;
   background: var(--ink);
   scroll-snap-align: start;
 }
@@ -752,6 +753,7 @@ h3 {
 .image-zoom-trigger {
   display: grid;
   width: 100%;
+  height: auto;
   min-height: 0;
   aspect-ratio: 16 / 9;
   border: 0;
@@ -772,11 +774,13 @@ h3 {
 
 .strategy-slide-copy {
   display: flex;
+  width: 100%;
+  min-width: 0;
   min-height: 0;
   align-self: stretch;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(22px, 5vw, 52px);
+  padding: clamp(20px, 3.2vw, 42px);
   color: var(--white);
 }
 
@@ -788,15 +792,17 @@ h3 {
 }
 
 .strategy-slide-copy h2 {
-  margin: 18px 0 14px;
+  margin: 14px 0 12px;
   color: var(--white);
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(1.8rem, 3.1vw, 3.5rem);
+  overflow-wrap: anywhere;
 }
 
 .strategy-slide-copy p {
-  max-width: 520px;
+  max-width: none;
   color: rgba(255, 255, 255, 0.76);
-  font-size: clamp(1rem, 1.5vw, 1.24rem);
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
+  overflow-wrap: anywhere;
 }
 
 .strategy-controls {
@@ -1167,21 +1173,8 @@ h3 {
     padding: 22px;
   }
 
-  .strategy-slide {
-    grid-template-columns: 1fr;
-  }
-
   .strategy-slide img {
-    max-height: 440px;
     object-fit: cover;
-  }
-
-  .image-zoom-trigger {
-    min-height: auto;
-  }
-
-  .strategy-slide-copy {
-    min-height: auto;
   }
 
   .case-section {

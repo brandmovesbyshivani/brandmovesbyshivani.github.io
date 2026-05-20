@@ -258,7 +258,7 @@
       {
         "label": "02 Insight",
         "title": "Packaging shapes perceived value",
-        "text": "When skincare packaging looks and behaves like a basic utility product, users subconsciously treat it like one. The issue is not only aesthetics; it changes trust, care, storage, travel, and repeat-use behavior.",
+        "text": "When skincare packaging feels basic, users treat it like a utility product. That changes trust, care, storage, travel, and repeat-use behavior.",
         "image": "assets/episodes/cetaphil-packaging/travel-lock-wide.png"
       },
       {
@@ -431,6 +431,28 @@
     "readTime": "Full strategy",
     "summary": "A detailed strategy episode on turning Zudio's offline popularity into a stronger digital brand and community engine.",
     "hero": "Instagram reel strategy",
+    "thumbnail": "assets/episodes/zudio/trend-drops-card-16x9.png",
+    "panelImage": "assets/episodes/zudio/trend-drops-card-16x9.png",
+    "strategySlides": [
+      {
+        "label": "01 Problem",
+        "title": "Offline buzz needs a digital loop",
+        "text": "Zudio has strong store discovery, but the digital experience can do more to bring shoppers back with intent.",
+        "image": "assets/episodes/zudio/trend-drops-card-16x9.png"
+      },
+      {
+        "label": "02 Insight",
+        "title": "Trend speed drives visits",
+        "text": "Young value-fashion shoppers want fresh drops, low-risk experimentation, and proof that a visit is worth it.",
+        "image": "assets/episodes/zudio/trend-drops-card-16x9.png"
+      },
+      {
+        "label": "03 Action",
+        "title": "Turn drops into weekly rituals",
+        "text": "City-wise trend drops, styling challenges, and creator loops can make store visits feel timely and social.",
+        "image": "assets/episodes/zudio/trend-drops-card-16x9.png"
+      }
+    ],
     "content": [
       {
         "type": "paragraph",
@@ -483,6 +505,28 @@
     "readTime": "Full strategy",
     "summary": "A complete market-entry style episode for a skincare brand trying to stand out in a trust-heavy category.",
     "hero": "Instagram reel strategy",
+    "thumbnail": "assets/episodes/d2c-skincare/launch-trust-card-16x9.png",
+    "panelImage": "assets/episodes/d2c-skincare/launch-trust-card-16x9.png",
+    "strategySlides": [
+      {
+        "label": "01 Problem",
+        "title": "A crowded trust market",
+        "text": "A new skincare brand cannot stand out only by repeating familiar clean, effective, or dermatologist-backed claims.",
+        "image": "assets/episodes/d2c-skincare/launch-trust-card-16x9.png"
+      },
+      {
+        "label": "02 Insight",
+        "title": "Customers want decision clarity",
+        "text": "People want routines that feel understandable, credible proof, and content that helps them choose without confusion.",
+        "image": "assets/episodes/d2c-skincare/launch-trust-card-16x9.png"
+      },
+      {
+        "label": "03 Action",
+        "title": "Own one sharp use case",
+        "text": "Lead with one specific concern, then build education, proof, and routine fit around that wedge.",
+        "image": "assets/episodes/d2c-skincare/launch-trust-card-16x9.png"
+      }
+    ],
     "content": [
       {
         "type": "paragraph",
