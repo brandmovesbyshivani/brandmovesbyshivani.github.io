@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Shivani Arora profile placeholder</title>
+  <desc id="desc">Warm cream and burnt orange avatar placeholder with initials SA.</desc>
+  <rect width="240" height="240" fill="#F5F0E8"/>
+  <circle cx="120" cy="96" r="44" fill="#E85D04"/>
+  <path d="M43 218c11-47 41-73 77-73s66 26 77 73" fill="#1A1A1A"/>
+  <text x="120" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF">SA</text>
+</svg>

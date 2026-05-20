@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Episode | Shivani Arora</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="blog-editor.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="Shivani Arora home">
+        <span class="brand-mark">SA</span>
+        <span>Shivani Arora</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#episodes">Episodes</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="editor-shell">
+      <section class="section-heading">
+        <p class="eyebrow">Episode Helper</p>
+        <h1>Add a reel episode without touching the website code.</h1>
+        <p>
+          Fill this form after posting a reel, copy the generated entry, and paste it into
+          <strong>data/blogs.json</strong>. Keep the newest episode at the top.
+        </p>
+      </section>
+
+      <form class="blog-form" data-blog-form>
+        <label>
+          Episode title
+          <input name="title" required placeholder="Example: If I Ran The Brand: Nike India" />
+        </label>
+        <label>
+          Category
+          <input name="category" required placeholder="Brand Strategy" />
+        </label>
+        <label>
+          Date
+          <input name="date" required type="date" />
+        </label>
+        <label>
+          Read time
+          <input name="readTime" required placeholder="4 min read" />
+        </label>
+        <label>
+          Short overview for the episode grid
+          <textarea name="summary" required rows="3" placeholder="Write 1-2 lines that explain the brand problem and strategy angle."></textarea>
+        </label>
+        <label>
+          Complete episode strategy
+          <textarea name="body" required rows="12" placeholder="Write the full strategy here: brand problem, insight, proposed strategy, execution ideas, and expected impact. Use a blank line between paragraphs. Start a line with - to create bullet points."></textarea>
+        </label>
+        <button class="button primary" type="submit">Generate Episode Entry</button>
+      </form>
+
+      <section class="generated-entry" hidden data-generated-wrap>
+        <div class="section-heading">
+          <p class="eyebrow">Generated Entry</p>
+          <h2>Paste this inside data/blogs.json</h2>
+        </div>
+        <textarea readonly data-generated-json rows="18"></textarea>
+      </section>
+    </main>
+  </body>
+</html>

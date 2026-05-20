@@ -1,0 +1,530 @@
+[
+  {
+    "title": "#CetaphilCalledMeOut: Behavior-Led Brand Strategy",
+    "slug": "cetaphil-called-me-out-behavior-led-strategy",
+    "date": "2026-05-17",
+    "category": "#IFIRANTHEBRAND Episode",
+    "readTime": "Full strategy",
+    "summary": "A PM-level strategy case study for Cetaphil: moving from skincare awareness to habit formation through a 7-day behavior-led experience.",
+    "hero": "Campaign + strategy case study",
+    "thumbnail": "assets/episodes/cetaphil/day-7-called-out-thumbnail.png",
+    "panelImage": "assets/episodes/cetaphil/trial-kit.png",
+    "strategySlides": [
+      {
+        "label": "01 Problem",
+        "title": "Inconsistent product outcomes",
+        "text": "Reviews reveal a split: some users love the product, while others see no results or irritation.",
+        "image": "assets/episodes/cetaphil/detail/problem-real-feedback-16x9.png"
+      },
+      {
+        "label": "02 Insight",
+        "title": "The gap is behavior",
+        "text": "Users often switch routines, overuse products, or judge results before consistency has time to work.",
+        "image": "assets/episodes/cetaphil/behavior-comparison-wide.png"
+      },
+      {
+        "label": "03 Action",
+        "title": "Train Your Skin for 7 days",
+        "text": "A guided 7-day experience turns daily behavior into feedback, learning, and a shareable campaign moment.",
+        "image": "assets/episodes/cetaphil/trial-kit-wide.png"
+      }
+    ],
+    "content": [
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil/day-7-called-out-banner.png",
+        "alt": "Wide Day 7 Cetaphil Called Me Out campaign banner",
+        "caption": "Campaign entry point: a Day 7 reveal where the bottle reflects the user’s routine behavior back to them."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is the complete strategy behind my first #IFIRANTHEBRAND episode. The reel introduces the idea quickly; this case study expands it at a product-management level: what problem I observed, what user behavior explains it, what product experience could solve it, and how the campaign can turn that experience into a shareable brand moment."
+      },
+      {
+        "type": "heading",
+        "text": "1. Problem understanding"
+      },
+      {
+        "type": "paragraph",
+        "text": "While analyzing Cetaphil reviews across platforms like Amazon and Reddit, I noticed a clear split in user experience. Some users describe the product as gentle, reliable, and effective, while others report no visible improvement, irritation, or breakouts. The interesting part is that the same product is creating very different outcomes for different users."
+      },
+      {
+        "type": "heading",
+        "text": "2. Core insight"
+      },
+      {
+        "type": "paragraph",
+        "text": "The issue is not only product awareness or product quality. The deeper gap is user behavior. Many skincare users are inconsistent, switch between products too frequently, overuse products when they want faster results, or do not understand how long a routine needs before it can be judged fairly."
+      },
+      {
+        "type": "heading",
+        "text": "3. Current gap in the brand experience"
+      },
+      {
+        "type": "paragraph",
+        "text": "Cetaphil already offers a skin analysis tool, which is useful for discovery. But it behaves like a one-time snapshot. It helps a user understand their skin at a point in time, but it does not guide daily behavior, habit formation, routine consistency, or learning over time. That creates a clear product opportunity: move from analysis to action."
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil/behavior-comparison-wide.png",
+        "alt": "Wide behavior comparison visual for skincare routine use",
+        "caption": "The strategy reframes uneven results as a behavior and routine consistency problem, not only a product perception problem."
+      },
+      {
+        "type": "heading",
+        "text": "4. Product opportunity"
+      },
+      {
+        "type": "paragraph",
+        "text": "The strategic opportunity is to help users use Cetaphil correctly and consistently, so the product has a better chance to work as intended. Instead of only saying the product works, Cetaphil can build an experience that helps it work for the user."
+      },
+      {
+        "type": "heading",
+        "text": "5. Product concept: Train Your Skin"
+      },
+      {
+        "type": "paragraph",
+        "text": "Train Your Skin is a 7-day guided experience that helps users understand their skincare behavior. It is not positioned as another promotional campaign. It is a lightweight product experience that turns routine consistency into something visible, interactive, and emotionally memorable."
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil/trial-kit-wide.png",
+        "alt": "Wide 7 day trial kit habit challenge visual",
+        "caption": "The 7-day kit makes the habit loop tangible: each day has a clear action, purpose, and product role."
+      },
+      {
+        "type": "list",
+        "items": [
+          "User goal: understand whether their skincare behavior is helping or hurting their results.",
+          "Brand goal: improve product experience, trust, and long-term retention.",
+          "Experience goal: turn routine consistency into a simple daily loop.",
+          "Campaign goal: create a personal, shareable moment after the user completes the experience."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "6. User experience flow"
+      },
+      {
+        "type": "paragraph",
+        "text": "The experience begins with a 10-second daily check-in. Users log simple actions: whether they used the product, whether they followed the routine, whether they added or switched products, and whether they noticed irritation, calmness, dryness, or improvement. The check-in must feel light enough to complete daily, because the product value depends on repeat use."
+      },
+      {
+        "type": "paragraph",
+        "text": "After each check-in, the system gives real-time feedback. For example, if the user overuses the product or keeps changing the routine, the experience can explain how that behavior may be causing irritation or confusion. If the user stays consistent, the experience can reinforce that calm skin and visible improvement often come from repetition, not constant switching."
+      },
+      {
+        "type": "heading",
+        "text": "7. Learning loop"
+      },
+      {
+        "type": "paragraph",
+        "text": "The product experience creates a learning loop: action, feedback, reflection, and adjustment. Instead of guessing whether Cetaphil works, users start understanding what they were doing, what changed, and how their behavior connects to outcomes. This shifts the user from passive product trial to active routine ownership."
+      },
+      {
+        "type": "heading",
+        "text": "8. Campaign layer: #CetaphilCalledMeOut"
+      },
+      {
+        "type": "paragraph",
+        "text": "After seven days, the user receives a personalized reflective moment: their Cetaphil bottle speaks to them. The output is written like a gentle call-out based on their behavior. It can say what improved, what pattern held them back, and what they should keep doing next."
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil/truth-reveal-wide.png",
+        "alt": "Wide Cetaphil 7 day trial truth reveal behavior callout visual",
+        "caption": "The reveal moment turns routine behavior into clear, personal feedback the user can understand and share."
+      },
+      {
+        "type": "paragraph",
+        "text": "This turns the experience into a campaign moment without making it feel like an ad. The user is not simply sharing a product claim. They are sharing a personal realization: how their routine behavior affected their skin journey."
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil/social-proof-wide.png",
+        "alt": "Wide social proof visual for Cetaphil Called Me Out campaign",
+        "caption": "The social layer gives the campaign scale: one personal story becomes a recognizable participation format."
+      },
+      {
+        "type": "heading",
+        "text": "9. Why the campaign is shareable"
+      },
+      {
+        "type": "list",
+        "items": [
+          "It feels personal because the output reflects the user's own behavior.",
+          "It feels relatable because many skincare users struggle with inconsistency and product switching.",
+          "It feels emotional because the brand becomes a supportive mirror, not a pushy seller.",
+          "It encourages organic sharing because users can post their own call-out moment."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "10. Value for consumers"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Reduced confusion about whether the product is working.",
+          "Better understanding of routine consistency and product usage.",
+          "More confidence in skincare decisions.",
+          "Improved chance of seeing results through correct, consistent use."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "11. Value for Cetaphil"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Improves product experience by guiding behavior after purchase.",
+          "Reduces negative perception caused by incorrect or inconsistent usage.",
+          "Builds trust by acting as a problem-solving brand.",
+          "Creates a retention loop through daily engagement and habit formation.",
+          "Generates social reach through personalized shareable outcomes."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "12. PM success metrics"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Activation rate: percentage of users who start the 7-day experience after skin analysis or product purchase.",
+          "Completion rate: percentage of users who complete all seven check-ins.",
+          "Habit consistency: average number of days users follow the recommended routine.",
+          "Self-reported outcome improvement: change in user confidence, irritation, or perceived skin calmness.",
+          "Retention signal: repeat visits, product repurchase intent, or routine continuation after day seven.",
+          "Campaign reach: number of personalized call-out cards shared on Instagram or other platforms."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "13. Risks and product considerations"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Avoid making medical claims or promising guaranteed skin improvement.",
+          "Keep the tone supportive so the call-out feels playful, not judgmental.",
+          "Make the daily check-in extremely simple to prevent drop-off.",
+          "Use disclaimers where needed and encourage users to consult dermatologists for serious concerns.",
+          "Protect user privacy and make sharing optional."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "14. Strategic impact"
+      },
+      {
+        "type": "paragraph",
+        "text": "This strategy shifts Cetaphil from product-selling to problem-solving. Most skincare campaigns focus on awareness, claims, or product promotion. This approach focuses on behavior, which is closer to the real reason many users do not get the outcome they expected."
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil/trend-reveal-wide.png",
+        "alt": "Wide trend reveal visual for Cetaphil Called Me Out campaign",
+        "caption": "The end-state vision: an insight-led product experience that becomes a social trend."
+      },
+      {
+        "type": "heading",
+        "text": "15. Final thought"
+      },
+      {
+        "type": "paragraph",
+        "text": "This is not just a campaign. It is a behavior-led strategy, executed as a campaign. Instead of saying the product works, Cetaphil helps it work for the user."
+      }
+    ]
+  },
+  {
+    "title": "Not Handwash: Packaging-Led Behavior Strategy",
+    "slug": "cetaphil-packaging-behavior-shift",
+    "date": "2026-05-19",
+    "category": "#IFIRANTHEBRAND Episode",
+    "readTime": "Full strategy",
+    "summary": "A PM-level strategy case study for Cetaphil: redesigning packaging perception, refill behavior, travel usability, and sustainability around a premium skincare system.",
+    "hero": "Packaging + behavior strategy",
+    "thumbnail": "assets/episodes/cetaphil-packaging/system-lineup.png",
+    "panelImage": "assets/episodes/cetaphil-packaging/system-lineup.png",
+    "strategySlides": [
+      {
+        "label": "01 Problem",
+        "title": "Real packaging friction",
+        "text": "Users trust Cetaphil’s formula, but real feedback shows the packaging can feel weak, messy, or not premium enough for the price.",
+        "image": "assets/episodes/cetaphil-packaging/detail/problem-packaging-feedback-16x9.png"
+      },
+      {
+        "label": "02 Insight",
+        "title": "Packaging shapes perceived value",
+        "text": "When skincare packaging looks and behaves like a basic utility product, users subconsciously treat it like one. The issue is not only aesthetics; it changes trust, care, storage, travel, and repeat-use behavior.",
+        "image": "assets/episodes/cetaphil-packaging/travel-lock-wide.png"
+      },
+      {
+        "label": "03 Action",
+        "title": "Build a refillable premium system",
+        "text": "Redesign Cetaphil as a reusable, leak-proof, travel-safe bottle with refill pouches, QR reorder, and a subscription flow.",
+        "image": "assets/episodes/cetaphil-packaging/refill-journey-wide.png"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "This episode reframes Cetaphil packaging as a product-management problem, not only a design problem. The core question is simple: if the formula is trusted and skincare-led, why does the packaging still make some users treat it like a utility product?"
+      },
+      {
+        "type": "heading",
+        "text": "1. Problem understanding"
+      },
+      {
+        "type": "paragraph",
+        "text": "Cetaphil has strong trust and functional credibility, but the current bottle can visually blend into everyday bathroom utility products. For a cleanser, that creates a perception gap. The product is skincare, but the packaging can make it feel like handwash, bodywash, or a basic commodity."
+      },
+      {
+        "type": "heading",
+        "text": "2. Why this matters for user behavior"
+      },
+      {
+        "type": "paragraph",
+        "text": "Packaging is not just an outer layer. It sets expectations before the product is used. When packaging feels clinical but not premium, practical but not intentional, users may undervalue the product, use it casually, leave it in low-attention spaces, or fail to associate it with a deliberate skincare routine."
+      },
+      {
+        "type": "heading",
+        "text": "3. Core insight"
+      },
+      {
+        "type": "paragraph",
+        "text": "Design controls behavior. If a product looks like handwash, people treat it like handwash. If it feels like a premium skincare tool, people are more likely to place it, use it, travel with it, refill it, and value it like skincare."
+      },
+      {
+        "type": "heading",
+        "text": "4. Strategic reframe"
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil-packaging/system-lineup.png",
+        "alt": "Cetaphil premium packaging system lineup",
+        "caption": "A packaging system reframes Cetaphil from basic utility cleanser to intentional skincare object."
+      },
+      {
+        "type": "paragraph",
+        "text": "The redesign should not stop at making the bottle prettier. The bigger PM opportunity is to redesign the system around behavior: usage, storage, travel, refill, repeat purchase, and brand perception."
+      },
+      {
+        "type": "heading",
+        "text": "5. Proposed product direction"
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil-packaging/travel-lock-wide.png",
+        "alt": "Wide travel lock and leak-proof pump concept",
+        "caption": "The travel-lock mechanism solves a real usage pain point: skincare spills in bags."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Slimmer, more premium bottle silhouette that looks like skincare, not utility wash.",
+          "Airless pump to reduce leaks, spills, and messy sink behavior.",
+          "Lock mechanism for travel, solving a real pain point around skincare spills in bags.",
+          "Matte finish to create a tactile, premium, routine-worthy feel.",
+          "Soft pastel variants that make the bottle desirable to keep, display, and reuse."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "6. System thinking: refill loop"
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil-packaging/refill-journey-wide.png",
+        "alt": "Wide refill journey concept with QR scan and subscription flow",
+        "caption": "The refill journey connects packaging, QR scan, subscription, reorder, and sustainability."
+      },
+      {
+        "type": "paragraph",
+        "text": "The strongest shift is not only the bottle. It is the refill system. Cetaphil can move from a disposable bottle mindset to a reusable bottle plus minimal refill pouch model. Users buy the premium bottle once, then refill through lightweight pouches."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Reusable hero bottle as the owned object.",
+          "Minimal refill pouches to reduce plastic usage.",
+          "QR scan on the bottle or pouch for reorder, subscription, and routine education.",
+          "Subscribe-and-save behavior that improves retention while making replenishment easier.",
+          "Clear sustainability story without compromising convenience."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "7. Emotional layer"
+      },
+      {
+        "type": "paragraph",
+        "text": "The pastel variation idea adds an emotional layer. Instead of treating the bottle as disposable packaging, users can see it as something collectible, bathroom-counter friendly, and aligned with their skincare identity. The goal is to make people want to keep the bottle, not throw it away."
+      },
+      {
+        "type": "heading",
+        "text": "8. Campaign line"
+      },
+      {
+        "type": "paragraph",
+        "text": "The bold campaign thought is: NOT HANDWASH. It is simple, memorable, and directly attacks the perception problem. The message makes the behavioral gap visible in a way that people instantly understand."
+      },
+      {
+        "type": "heading",
+        "text": "9. PM success metrics"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Perception lift: increase in users describing the product as premium skincare rather than basic utility wash.",
+          "Refill adoption: percentage of bottle buyers who purchase refill pouches.",
+          "Repeat purchase rate: improvement in replenishment through QR/subscription flows.",
+          "Travel-use satisfaction: reduction in complaints around leakage or packaging inconvenience.",
+          "Sustainability engagement: QR scans, refill education views, and subscription opt-ins.",
+          "Social response: comments naming brands whose packaging stops users from buying."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "10. Risk and constraints"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Do not over-premiumize so much that Cetaphil loses its accessible, dermatologist-trusted identity.",
+          "The refill system must be easy to understand, otherwise sustainability becomes extra work for the user.",
+          "Travel lock and pump improvements must be tested for durability, leakage, and cost feasibility.",
+          "Pastel variants should support brand recognition, not dilute the core Cetaphil visual equity."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "11. Strategic impact"
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/cetaphil-packaging/refill-delivered-wide.png",
+        "alt": "Wide refill delivered subscription concept",
+        "caption": "The end-state system: scan, subscribe, and refill delivered with less plastic and better experience."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is not just packaging. It is a behavior shift. The redesign turns Cetaphil from a trusted cleanser in a basic bottle into a premium, refillable skincare system. The formula already has trust; the packaging should make people behave like it is worth trusting."
+      },
+      {
+        "type": "heading",
+        "text": "12. Reel engagement trigger"
+      },
+      {
+        "type": "paragraph",
+        "text": "The reel closes with a consumer-research prompt: Has packaging ever stopped you from buying something you actually needed? Drop the brand below. This turns comments into free qualitative research and invites the audience into the strategy."
+      }
+    ]
+  },
+  {
+    "title": "If I Ran The Brand: Zudio",
+    "slug": "if-i-ran-the-brand-zudio",
+    "date": "2026-05-17",
+    "category": "#IFIRANTHEBRAND Episode",
+    "readTime": "Full strategy",
+    "summary": "A detailed strategy episode on turning Zudio's offline popularity into a stronger digital brand and community engine.",
+    "hero": "Instagram reel strategy",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "This is the complete strategy page for a reel-style episode. The focus is how Zudio could use its affordability and trend speed to build a stronger digital relationship with young shoppers."
+      },
+      {
+        "type": "heading",
+        "text": "Brand problem"
+      },
+      {
+        "type": "paragraph",
+        "text": "Zudio has high offline buzz, but the digital brand experience can become more intentional. Many shoppers discover products through store visits and social chatter, but the brand could create a stronger repeat loop before and after the visit."
+      },
+      {
+        "type": "heading",
+        "text": "Customer insight"
+      },
+      {
+        "type": "paragraph",
+        "text": "Young value-fashion shoppers want novelty, low-risk experimentation, and social proof. They want to know what is new, what is worth visiting for, and how others are styling affordable finds."
+      },
+      {
+        "type": "heading",
+        "text": "Proposed strategy"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Launch weekly city-wise trend drops that make store visits feel timely.",
+          "Build a UGC loop around styling challenges and affordable outfit formulas.",
+          "Create a simple store-discovery content format: what to look for this week.",
+          "Use creator micro-collabs to make new arrivals feel more visible and aspirational."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Expected impact"
+      },
+      {
+        "type": "paragraph",
+        "text": "The strategy can increase store intent, repeat visits, organic creator content, and brand love without losing Zudio's accessible positioning."
+      }
+    ]
+  },
+  {
+    "title": "If I Ran The Brand: A D2C Skincare Launch",
+    "slug": "if-i-ran-the-brand-d2c-skincare-launch",
+    "date": "2026-05-17",
+    "category": "#IFIRANTHEBRAND Episode",
+    "readTime": "Full strategy",
+    "summary": "A complete market-entry style episode for a skincare brand trying to stand out in a trust-heavy category.",
+    "hero": "Instagram reel strategy",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "This episode format is designed for brands where the reel introduces the strategic angle and the website carries the complete thinking."
+      },
+      {
+        "type": "heading",
+        "text": "Brand problem"
+      },
+      {
+        "type": "paragraph",
+        "text": "Skincare is crowded, trust-heavy, and full of similar claims. A new D2C brand cannot win only by saying clean, effective, or dermatologist-backed. It needs a sharper wedge."
+      },
+      {
+        "type": "heading",
+        "text": "Customer insight"
+      },
+      {
+        "type": "paragraph",
+        "text": "Customers are tired of overpromising. They want routines that feel understandable, proof that feels credible, and content that helps them choose without confusion."
+      },
+      {
+        "type": "heading",
+        "text": "Proposed strategy"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Own one specific use case instead of trying to be a complete skincare brand on day one.",
+          "Turn education into a product funnel: skin concern, ingredient logic, routine fit, proof.",
+          "Use before-after content carefully with transparent context and realistic expectations.",
+          "Build launch content around decision clarity, not just product aesthetics."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Expected impact"
+      },
+      {
+        "type": "paragraph",
+        "text": "The goal is stronger trust, clearer differentiation, better content conversion, and a launch story that gives customers a reason to remember the brand."
+      }
+    ]
+  }
+]
