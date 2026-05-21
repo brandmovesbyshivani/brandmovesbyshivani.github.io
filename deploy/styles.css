@@ -240,7 +240,45 @@ h3 {
   object-fit: cover;
 }
 
-.profile-link span {
+.social-logo {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--white);
+  background: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.social-logo svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.linkedin-logo {
+  background: #0a66c2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.instagram-logo {
+  background:
+    radial-gradient(circle at 32% 95%, #fed373 0 18%, transparent 19%),
+    radial-gradient(circle at 30% 107%, #f15245 0 34%, transparent 35%),
+    radial-gradient(circle at 88% 8%, #4f5bd5 0 31%, transparent 32%),
+    linear-gradient(135deg, #833ab4, #fd1d1d 52%, #fcb045);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-link > span:not(.social-logo) {
   position: absolute;
   left: 35px;
   bottom: 4px;
@@ -271,6 +309,61 @@ h3 {
   font-size: 0.74rem;
   font-weight: 750;
   opacity: 0.78;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.hero-stat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 110px;
+  padding: 20px 22px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 8px 28px rgba(26, 26, 26, 0.08);
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.hero-stat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), rgba(232, 93, 4, 0.4));
+  border-radius: 12px 12px 0 0;
+}
+
+.hero-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(26, 26, 26, 0.13);
+}
+
+.hero-stat strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+.hero-stat span {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .hero-visual {
