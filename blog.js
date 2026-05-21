@@ -82,23 +82,28 @@ const renderBlock = (block, index) => {
       if (typeof item === "string") {
         return `<div class="cs-metric-kpi"><span class="cs-metric-dot"></span><span>${escapeHtml(item)}</span></div>`;
       }
-      return `<div class="cs-metric-stat-row">
-        <div class="cs-metric-stat-top">
+      return `<details class="cs-metric-stat-row">
+        <summary class="cs-metric-stat-top">
           <span class="cs-metric-stat-name">${escapeHtml(item.name)}</span>
-          <strong class="cs-metric-stat-value">${escapeHtml(item.value)}</strong>
-        </div>
+          <strong class="cs-metric-stat-value"><span>Est.</span>${escapeHtml(item.value)}</strong>
+        </summary>
         <div class="cs-metric-bar">
           <span class="cs-metric-bar-fill" style="--bar-w:${item.bar || 0}%"></span>
         </div>
-      </div>`;
+        <p class="cs-metric-note">${escapeHtml(item.note || "Projected KPI for concept validation, not a reported live campaign result.")}</p>
+      </details>`;
     };
 
     return `<div class="cs-metrics-wrap">
+      <div class="cs-metrics-disclaimer">
+        <span>Estimated KPI model</span>
+        <p>These are forecast targets for a proposed product/campaign concept, not actual Cetaphil performance data.</p>
+      </div>
       ${block["north-star"] ? `<div class="cs-north-star">
         <div class="cs-north-star-left">
           <div class="cs-north-star-badge">
             <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <span>North Star Metric</span>
+            <span>Estimated North Star</span>
           </div>
           <h3>${escapeHtml(block["north-star"])}</h3>
           ${block["north-star-why"] ? `<p class="cs-north-star-why">${escapeHtml(block["north-star-why"])}</p>` : ""}
@@ -113,7 +118,7 @@ const renderBlock = (block, index) => {
           </svg>
           <div class="cs-ns-gauge-label">
             <strong>${escapeHtml(block["north-star-target"] || gauge + "%")}</strong>
-            <span>target</span>
+            <span>est. target</span>
           </div>
         </div>
       </div>` : ""}
