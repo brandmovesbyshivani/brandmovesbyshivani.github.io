@@ -136,6 +136,34 @@ const renderBlock = (block, index) => {
     </div>`;
   }
 
+  if (block.type === "live-embed") {
+    const url   = block.url   || "";
+    const title = block.title || "Live prototype";
+    const h     = block.height || "680";
+    const label = block.label || "Interactive Demo";
+    const note  = block.note  || "";
+    return `<div class="cs-live-embed">
+      <div class="cs-live-embed-header">
+        <span class="cs-live-embed-dot"></span>
+        <span class="cs-live-embed-dot"></span>
+        <span class="cs-live-embed-dot"></span>
+        <span class="cs-live-embed-label">${escapeHtml(label)}</span>
+      </div>
+      <iframe
+        src="${url}"
+        title="${escapeHtml(title)}"
+        width="100%"
+        height="${escapeHtml(String(h))}"
+        frameborder="0"
+        allow="clipboard-write"
+        allowfullscreen
+        loading="lazy"
+        class="cs-live-embed-frame"
+      ></iframe>
+      ${note ? `<p class="cs-live-embed-note">${escapeHtml(note)}</p>` : ""}
+    </div>`;
+  }
+
   if (block.type === "mvp-screens") {
     const renderMockScreen = (s) => {
       const c = s.content || {};
