@@ -78,26 +78,41 @@ const renderBlock = (block, index) => {
     const circ = +(2 * Math.PI * r).toFixed(2);
     const offset = +((1 - gauge / 100) * circ).toFixed(2);
 
+    const renderSparkline = (bar = 50) => {
+      const value = Math.max(8, Math.min(Number(bar) || 50, 96));
+      const points = [18, 30, 24, 42, value - 8, value]
+        .map((point, index) => `${index * 20},${58 - Math.max(8, Math.min(point, 92)) * 0.48}`)
+        .join(" ");
+      return `<svg class="cs-metric-sparkline" viewBox="0 0 100 60" aria-hidden="true">
+        <path class="cs-metric-range" d="M0 42 C20 30 38 38 54 28 S82 20 100 12 L100 38 C78 44 58 44 36 52 S10 50 0 56 Z"/>
+        <polyline points="${points}" />
+        <circle cx="100" cy="${58 - value * 0.48}" r="3.2" />
+      </svg>`;
+    };
+
     const renderItem = (item) => {
       if (typeof item === "string") {
         return `<div class="cs-metric-kpi"><span class="cs-metric-dot"></span><span>${escapeHtml(item)}</span></div>`;
       }
+      const confidence = item.bar >= 65 ? "High-case" : item.bar >= 45 ? "Mid-case" : "Early signal";
       return `<details class="cs-metric-stat-row">
-        <summary class="cs-metric-stat-top">
-          <span class="cs-metric-stat-name">${escapeHtml(item.name)}</span>
-          <strong class="cs-metric-stat-value"><span>Est.</span>${escapeHtml(item.value)}</strong>
+        <summary>
+          <span class="cs-metric-stat-kicker">${escapeHtml(confidence)} forecast</span>
+          <span class="cs-metric-stat-top">
+            <span class="cs-metric-stat-name">${escapeHtml(item.name)}</span>
+            <strong class="cs-metric-stat-value">${escapeHtml(item.value)}</strong>
+          </span>
+          ${renderSparkline(item.bar)}
+          <span class="cs-metric-range-label">Estimated scenario range, not measured campaign data</span>
         </summary>
-        <div class="cs-metric-bar">
-          <span class="cs-metric-bar-fill" style="--bar-w:${item.bar || 0}%"></span>
-        </div>
         <p class="cs-metric-note">${escapeHtml(item.note || "Projected KPI for concept validation, not a reported live campaign result.")}</p>
       </details>`;
     };
 
     return `<div class="cs-metrics-wrap">
       <div class="cs-metrics-disclaimer">
-        <span>Estimated KPI model</span>
-        <p>These are forecast targets for a proposed product/campaign concept, not actual Cetaphil performance data.</p>
+        <span>Forecast model, not live results</span>
+        <p>These KPI ranges are hypothetical planning estimates for the proposed experience. They are meant to show measurement thinking, not actual Cetaphil campaign performance.</p>
       </div>
       ${block["north-star"] ? `<div class="cs-north-star">
         <div class="cs-north-star-left">
@@ -136,31 +151,23 @@ const renderBlock = (block, index) => {
     </div>`;
   }
 
-  if (block.type === "live-embed") {
-    const url   = block.url   || "";
-    const title = block.title || "Live prototype";
-    const h     = block.height || "680";
-    const label = block.label || "Interactive Demo";
-    const note  = block.note  || "";
-    return `<div class="cs-live-embed">
-      <div class="cs-live-embed-header">
-        <span class="cs-live-embed-dot"></span>
-        <span class="cs-live-embed-dot"></span>
-        <span class="cs-live-embed-dot"></span>
-        <span class="cs-live-embed-label">${escapeHtml(label)}</span>
+  if (block.type === "prototype-link") {
+    const id    = block.id || "";
+    const label = block.label || "Live Prototype";
+    const desc  = block.description || "";
+    const cta   = block.cta || "Open Live Prototype";
+    const count = block.screens || "";
+    return `<div class="cs-proto-cta">
+      <div class="cs-proto-cta-left">
+        <span class="cs-proto-eyebrow">${escapeHtml(label)}</span>
+        ${desc ? `<p class="cs-proto-desc">${escapeHtml(desc)}</p>` : ""}
+        ${count ? `<span class="cs-proto-screens">${escapeHtml(String(count))} screens</span>` : ""}
       </div>
-      <iframe
-        src="${url}"
-        title="${escapeHtml(title)}"
-        width="100%"
-        height="${escapeHtml(String(h))}"
-        frameborder="0"
-        allow="clipboard-write"
-        allowfullscreen
-        loading="lazy"
-        class="cs-live-embed-frame"
-      ></iframe>
-      ${note ? `<p class="cs-live-embed-note">${escapeHtml(note)}</p>` : ""}
+      <a class="cs-proto-btn" href="prototypes.html#${escapeHtml(id)}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        ${escapeHtml(cta)}
+        <svg class="cs-proto-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
     </div>`;
   }
 

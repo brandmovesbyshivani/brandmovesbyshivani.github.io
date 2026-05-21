@@ -1543,11 +1543,13 @@ h3 {
 
 .cs-metrics-disclaimer {
   display: grid;
-  gap: 4px;
-  border: 1px dashed rgba(232, 93, 4, 0.55);
-  border-radius: 14px;
-  padding: 14px 16px;
-  background: rgba(232, 93, 4, 0.08);
+  gap: 6px;
+  border: 1px solid rgba(232, 93, 4, 0.34);
+  border-radius: 16px;
+  padding: 16px 18px;
+  background:
+    linear-gradient(135deg, rgba(232, 93, 4, 0.12), rgba(255, 255, 255, 0.88)),
+    repeating-linear-gradient(135deg, rgba(232, 93, 4, 0.08) 0 1px, transparent 1px 12px);
 }
 
 .cs-metrics-disclaimer span {
@@ -1681,10 +1683,13 @@ h3 {
 }
 
 .cs-metric-card {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--white);
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 92% 4%, rgba(232, 93, 4, 0.12), transparent 34%),
+    var(--white);
   overflow: hidden;
+  box-shadow: 0 16px 34px rgba(26, 26, 26, 0.08);
 }
 
 .cs-metric-card-header {
@@ -1712,24 +1717,58 @@ h3 {
 
 .cs-metric-kpis {
   display: grid;
+  gap: 10px;
+  padding: 14px;
 }
 
-/* Stat row — name left, big value right, bar below */
+/* Forecast cards: interactive estimate model, not reported metrics */
 .cs-metric-stat-row {
   display: grid;
-  gap: 7px;
-  padding: 14px 20px;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.05);
-  transition: background 150ms ease;
+  gap: 10px;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
   cursor: pointer;
 }
 
 .cs-metric-stat-row:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.08);
 }
 
 .cs-metric-stat-row:hover {
-  background: rgba(232, 93, 4, 0.03);
+  transform: translateY(-2px);
+  border-color: rgba(232, 93, 4, 0.34);
+  box-shadow: 0 14px 26px rgba(26, 26, 26, 0.1);
+}
+
+.cs-metric-stat-row[open] {
+  border-color: rgba(232, 93, 4, 0.45);
+  background: rgba(255, 247, 239, 0.92);
+}
+
+.cs-metric-stat-row summary {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+.cs-metric-stat-row summary::-webkit-details-marker {
+  display: none;
+}
+
+.cs-metric-stat-kicker {
+  width: max-content;
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: var(--accent);
+  background: rgba(232, 93, 4, 0.1);
+  font-size: 0.62rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .cs-metric-stat-top {
@@ -1752,22 +1791,45 @@ h3 {
 }
 
 .cs-metric-stat-value {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 5px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.3rem;
+  font-size: 1.55rem;
   font-weight: 900;
   color: var(--accent);
   line-height: 1;
   white-space: nowrap;
 }
 
-.cs-metric-stat-value span {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.55rem;
-  font-weight: 950;
-  letter-spacing: 0.08em;
+.cs-metric-sparkline {
+  display: block;
+  width: 100%;
+  height: 58px;
+}
+
+.cs-metric-sparkline .cs-metric-range {
+  fill: rgba(232, 93, 4, 0.11);
+  stroke: none;
+}
+
+.cs-metric-sparkline polyline {
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  filter: drop-shadow(0 5px 8px rgba(232, 93, 4, 0.22));
+}
+
+.cs-metric-sparkline circle {
+  fill: var(--white);
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+
+.cs-metric-range-label {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 

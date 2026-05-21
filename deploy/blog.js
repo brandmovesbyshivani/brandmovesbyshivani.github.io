@@ -78,26 +78,41 @@ const renderBlock = (block, index) => {
     const circ = +(2 * Math.PI * r).toFixed(2);
     const offset = +((1 - gauge / 100) * circ).toFixed(2);
 
+    const renderSparkline = (bar = 50) => {
+      const value = Math.max(8, Math.min(Number(bar) || 50, 96));
+      const points = [18, 30, 24, 42, value - 8, value]
+        .map((point, index) => `${index * 20},${58 - Math.max(8, Math.min(point, 92)) * 0.48}`)
+        .join(" ");
+      return `<svg class="cs-metric-sparkline" viewBox="0 0 100 60" aria-hidden="true">
+        <path class="cs-metric-range" d="M0 42 C20 30 38 38 54 28 S82 20 100 12 L100 38 C78 44 58 44 36 52 S10 50 0 56 Z"/>
+        <polyline points="${points}" />
+        <circle cx="100" cy="${58 - value * 0.48}" r="3.2" />
+      </svg>`;
+    };
+
     const renderItem = (item) => {
       if (typeof item === "string") {
         return `<div class="cs-metric-kpi"><span class="cs-metric-dot"></span><span>${escapeHtml(item)}</span></div>`;
       }
+      const confidence = item.bar >= 65 ? "High-case" : item.bar >= 45 ? "Mid-case" : "Early signal";
       return `<details class="cs-metric-stat-row">
-        <summary class="cs-metric-stat-top">
-          <span class="cs-metric-stat-name">${escapeHtml(item.name)}</span>
-          <strong class="cs-metric-stat-value"><span>Est.</span>${escapeHtml(item.value)}</strong>
+        <summary>
+          <span class="cs-metric-stat-kicker">${escapeHtml(confidence)} forecast</span>
+          <span class="cs-metric-stat-top">
+            <span class="cs-metric-stat-name">${escapeHtml(item.name)}</span>
+            <strong class="cs-metric-stat-value">${escapeHtml(item.value)}</strong>
+          </span>
+          ${renderSparkline(item.bar)}
+          <span class="cs-metric-range-label">Estimated scenario range, not measured campaign data</span>
         </summary>
-        <div class="cs-metric-bar">
-          <span class="cs-metric-bar-fill" style="--bar-w:${item.bar || 0}%"></span>
-        </div>
         <p class="cs-metric-note">${escapeHtml(item.note || "Projected KPI for concept validation, not a reported live campaign result.")}</p>
       </details>`;
     };
 
     return `<div class="cs-metrics-wrap">
       <div class="cs-metrics-disclaimer">
-        <span>Estimated KPI model</span>
-        <p>These are forecast targets for a proposed product/campaign concept, not actual Cetaphil performance data.</p>
+        <span>Forecast model, not live results</span>
+        <p>These KPI ranges are hypothetical planning estimates for the proposed experience. They are meant to show measurement thinking, not actual Cetaphil campaign performance.</p>
       </div>
       ${block["north-star"] ? `<div class="cs-north-star">
         <div class="cs-north-star-left">
