@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Prototypes | Shivani Arora</title>
+  <meta name="description" content="Interactive prototypes from Shivani Arora's #IFIRANTHEBRAND strategy series — tap through live app concepts built to accompany each brand case study." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── PAGE SHELL ─────────────────────────────────────────── */
+    .proto-page {
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    /* ── HERO ───────────────────────────────────────────────── */
+    .proto-hero {
+      padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 72px) clamp(40px, 6vw, 72px);
+      max-width: 880px;
+    }
+    .proto-hero .eyebrow { margin-bottom: 14px; }
+    .proto-hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+    .proto-hero p {
+      font-size: clamp(1rem, 1.5vw, 1.18rem);
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── GRID ───────────────────────────────────────────────── */
+    .proto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      padding: 0 clamp(20px, 5vw, 72px);
+    }
+
+    /* ── CARD ───────────────────────────────────────────────── */
+    .proto-card {
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      box-shadow: 0 4px 20px rgba(26,26,26,0.07);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .proto-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(26,26,26,0.13);
+    }
+
+    /* thumbnail area */
+    .proto-thumb {
+      position: relative;
+      background: linear-gradient(135deg, #00316E, #0076BE, #48B4E0);
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .proto-thumb img {
+      width: 45%;
+      border-radius: 14px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+      object-fit: cover;
+      object-position: top;
+      aspect-ratio: 9 / 16;
+      transition: transform 280ms ease;
+    }
+    .proto-card:hover .proto-thumb img {
+      transform: translateY(-6px) scale(1.03);
+    }
+    .proto-thumb-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 5px 11px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.28);
+      backdrop-filter: blur(8px);
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .proto-play {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(232,93,4,0.45);
+      transition: transform 200ms ease;
+    }
+    .proto-card:hover .proto-play { transform: scale(1.12); }
+    .proto-play svg {
+      width: 14px; height: 14px;
+      fill: #fff;
+      margin-left: 2px;
+    }
+
+    /* body */
+    .proto-card-body {
+      padding: 22px 22px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .proto-episode {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 7px;
+    }
+    .proto-card-title {
+      font-family: Georgia, serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+    .proto-card-desc {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
+      flex: 1;
+    }
+    .proto-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .proto-screens-count {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .proto-open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      transition: background 160ms;
+    }
+    .proto-open-btn:hover { background: var(--accent); }
+    .proto-open-btn svg {
+      width: 13px; height: 13px;
+      fill: currentColor;
+    }
+
+    /* ── COMING SOON CARD ───────────────────────────────────── */
+    .proto-card.coming-soon {
+      cursor: default;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .proto-coming-thumb {
+      aspect-ratio: 16/9;
+      background: var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    /* ── LIGHTBOX ───────────────────────────────────────────── */
+    .proto-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15, 15, 20, 0.88);
+      backdrop-filter: blur(12px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 250ms ease;
+    }
+    .proto-lightbox.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .proto-lightbox-box {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 32px 100px rgba(0,0,0,0.45);
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+      transform: translateY(18px) scale(0.97);
+      transition: transform 280ms cubic-bezier(0.22,1,0.36,1);
+    }
+    .proto-lightbox.open .proto-lightbox-box {
+      transform: translateY(0) scale(1);
+    }
+    .proto-lightbox-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      background: #1a1a2e;
+      flex-shrink: 0;
+    }
+    .proto-lb-dots {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .proto-lb-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+    }
+    .proto-lb-dot:nth-child(1) { background: #ff5f57; }
+    .proto-lb-dot:nth-child(2) { background: #febc2e; }
+    .proto-lb-dot:nth-child(3) { background: #28c840; }
+    .proto-lb-title {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      font-family: monospace;
+      letter-spacing: 0.3px;
+    }
+    .proto-lb-close {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.7);
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 150ms;
+      line-height: 1;
+    }
+    .proto-lb-close:hover { background: rgba(255,255,255,0.2); }
+    .proto-lightbox-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+      display: block;
+      min-height: 560px;
+    }
+    .proto-lb-footer {
+      padding: 10px 18px;
+      background: #f7fafe;
+      border-top: 1px solid #e5edf5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .proto-lb-footer-left {
+      font-size: 12px;
+      color: #5b6f85;
+    }
+    .proto-lb-footer-left strong {
+      color: #1a2a3a;
+      font-weight: 700;
+    }
+    .proto-lb-new-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #0076BE;
+      text-decoration: none;
+    }
+    .proto-lb-new-tab:hover { text-decoration: underline; }
+    .proto-lb-new-tab svg {
+      width: 12px; height: 12px;
+      fill: none; stroke: currentColor;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    /* Escape hint */
+    .proto-lb-esc {
+      position: absolute;
+      bottom: -36px;
+      left: 50%;
+      translate: -50%;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body class="proto-page">
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Shivani Arora home">
+      <img class="brand-mark" src="assets/profile-photo.png" alt="" />
+      <span>Shivani Arora</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#series">#IFIRANTHEBRAND</a>
+      <a href="index.html#episodes">Episodes</a>
+      <a href="index.html#services">Collaborate</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="proto-hero">
+    <p class="eyebrow">Live Prototypes</p>
+    <h1>Strategy made interactive.</h1>
+    <p>Every #IFIRANTHEBRAND episode ends with an execution plan. These are the live, tappable prototypes that bring those plans to life — not mockups, real interactive flows built for each brand concept.</p>
+  </div>
+
+  <div class="proto-grid">
+
+    <!-- ── CETAPHIL ──────────────────────────────────────────── -->
+    <div class="proto-card" data-proto-id="cetaphil-7day" data-proto-url="https://claude.site/public/artifacts/d6e2ba57-85d2-4a53-8069-257a1e945930/embed" data-proto-title="Cetaphil 7-Day Skin Challenge" onclick="openProto(this)">
+      <div class="proto-thumb">
+        <span class="proto-thumb-badge">Episode 01</span>
+        <img src="assets/episodes/cetaphil/prototype/screen-1.png" alt="Cetaphil prototype screen" />
+        <div class="proto-play">
+          <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </div>
+      <div class="proto-card-body">
+        <div class="proto-episode">#CetaphilCalledMeOut</div>
+        <h2 class="proto-card-title">7-Day Skin Behaviour Challenge</h2>
+        <p class="proto-card-desc">Full app flow: QR landing, skin onboarding quiz, daily check-in, real-time feedback, skin avatar, Day 7 reveal, shareable card, and progress dashboard. Built in Cetaphil's official brand palette.</p>
+        <div class="proto-card-footer">
+          <span class="proto-screens-count">8 screens · Interactive</span>
+          <span class="proto-open-btn">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Open Demo
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COMING SOON — NOT HANDWASH ────────────────────────── -->
+    <div class="proto-card coming-soon">
+      <div class="proto-coming-thumb">🧼</div>
+      <div class="proto-card-body">
+        <div class="proto-episode">Episode 02 · Coming Soon</div>
+        <h2 class="proto-card-title">Not Handwash Prototype</h2>
+        <p class="proto-card-desc">Interactive flow for the Episode 02 brand strategy — in progress.</p>
+        <div class="proto-card-footer">
+          <span class="proto-screens-count">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COMING SOON — ZUDIO ───────────────────────────────── -->
+    <div class="proto-card coming-soon">
+      <div class="proto-coming-thumb">👗</div>
+      <div class="proto-card-body">
+        <div class="proto-episode">Episode 03 · Coming Soon</div>
+        <h2 class="proto-card-title">Zudio Prototype</h2>
+        <p class="proto-card-desc">Interactive flow for the Episode 03 brand strategy — in progress.</p>
+        <div class="proto-card-footer">
+          <span class="proto-screens-count">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── LIGHTBOX ────────────────────────────────────────────── -->
+  <div class="proto-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title">
+    <div class="proto-lightbox-box">
+      <div class="proto-lightbox-topbar">
+        <div class="proto-lb-dots">
+          <span class="proto-lb-dot"></span>
+          <span class="proto-lb-dot"></span>
+          <span class="proto-lb-dot"></span>
+        </div>
+        <span class="proto-lb-title" id="lb-title">prototype</span>
+        <button class="proto-lb-close" onclick="closeProto()" aria-label="Close prototype">✕</button>
+      </div>
+      <iframe class="proto-lightbox-iframe" id="lb-iframe" src="" title="Interactive prototype" allow="clipboard-write" allowfullscreen></iframe>
+      <div class="proto-lb-footer">
+        <div class="proto-lb-footer-left">
+          <strong id="lb-name">Prototype</strong> · Live interactive demo
+        </div>
+        <a class="proto-lb-new-tab" id="lb-newtab" href="#" target="_blank" rel="noopener">
+          Open in new tab
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+    <span class="proto-lb-esc">Press Esc to close</span>
+  </div>
+
+  <script>
+    const lightbox  = document.getElementById('lightbox');
+    const lbIframe  = document.getElementById('lb-iframe');
+    const lbTitle   = document.getElementById('lb-title');
+    const lbName    = document.getElementById('lb-name');
+    const lbNewtab  = document.getElementById('lb-newtab');
+
+    function openProto(card) {
+      const url   = card.dataset.protoUrl;
+      const title = card.dataset.protoTitle;
+      const id    = card.dataset.protoId;
+      lbIframe.src      = url;
+      lbTitle.textContent = title || 'prototype';
+      lbName.textContent  = title || 'Prototype';
+      lbNewtab.href       = url;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      // update hash so link is shareable
+      history.replaceState(null, '', '#' + id);
+    }
+
+    function closeProto() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      lbIframe.src = '';
+      history.replaceState(null, '', location.pathname);
+    }
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeProto();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) closeProto();
+    });
+
+    // Auto-open from URL hash on page load
+    function checkHash() {
+      const hash = location.hash.slice(1); // e.g. "cetaphil-7day"
+      if (!hash) return;
+      const card = document.querySelector(`[data-proto-id="${CSS.escape(hash)}"]`);
+      if (card && !card.classList.contains('coming-soon')) {
+        // slight delay so the page renders first
+        setTimeout(() => openProto(card), 180);
+      }
+    }
+    checkHash();
+    window.addEventListener('hashchange', checkHash);
+  </script>
+
+</body>
+</html>

@@ -1959,49 +1959,77 @@ h3 {
 
 /* ── MVP Phone Mockup Showcase ── */
 
-/* ── LIVE EMBED (Claude artifact iframe) ─────────────────── */
-.cs-live-embed {
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1.5px solid var(--border);
-  box-shadow: 0 4px 24px rgba(0,0,0,.10);
-  margin-bottom: 8px;
-}
-.cs-live-embed-header {
+/* ── PROTOTYPE LINK BUTTON (opens prototypes.html) ───────── */
+.cs-proto-cta {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
-  background: #1e1e2e;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px;
+  border-radius: 18px;
+  background: var(--ink);
+  margin-bottom: 8px;
 }
-.cs-live-embed-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #555;
-}
-.cs-live-embed-dot:nth-child(1) { background: #ff5f57; }
-.cs-live-embed-dot:nth-child(2) { background: #febc2e; }
-.cs-live-embed-dot:nth-child(3) { background: #28c840; }
-.cs-live-embed-label {
-  font-size: 12px;
-  color: rgba(255,255,255,.55);
-  font-family: var(--font-mono, monospace);
-  margin-left: 8px;
-  letter-spacing: .3px;
-}
-.cs-live-embed-frame {
+.cs-proto-cta-left { flex: 1; min-width: 0; }
+.cs-proto-eyebrow {
   display: block;
-  width: 100%;
-  border: none;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
 }
-.cs-live-embed-note {
-  font-size: 12px;
-  color: var(--text-muted);
-  text-align: center;
-  padding: 10px 16px;
-  background: var(--bg-soft);
-  border-top: 1px solid var(--border);
+.cs-proto-desc {
+  font-size: 0.93rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+.cs-proto-screens {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.cs-proto-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 750;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 6px 20px rgba(232, 93, 4, 0.35);
+  text-decoration: none;
+}
+.cs-proto-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(232, 93, 4, 0.45);
+}
+.cs-proto-btn svg {
+  width: 15px; height: 15px;
+  fill: currentColor; stroke: none; flex-shrink: 0;
+}
+.cs-proto-btn svg.cs-proto-arrow {
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  opacity: 0.8;
+}
+@media (max-width: 560px) {
+  .cs-proto-cta { flex-direction: column; align-items: flex-start; }
+  .cs-proto-btn { width: 100%; justify-content: center; }
 }
 
 .cs-mvp-showcase {

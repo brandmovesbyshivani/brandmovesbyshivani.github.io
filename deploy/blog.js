@@ -151,31 +151,23 @@ const renderBlock = (block, index) => {
     </div>`;
   }
 
-  if (block.type === "live-embed") {
-    const url   = block.url   || "";
-    const title = block.title || "Live prototype";
-    const h     = block.height || "680";
-    const label = block.label || "Interactive Demo";
-    const note  = block.note  || "";
-    return `<div class="cs-live-embed">
-      <div class="cs-live-embed-header">
-        <span class="cs-live-embed-dot"></span>
-        <span class="cs-live-embed-dot"></span>
-        <span class="cs-live-embed-dot"></span>
-        <span class="cs-live-embed-label">${escapeHtml(label)}</span>
+  if (block.type === "prototype-link") {
+    const id    = block.id || "";
+    const label = block.label || "Live Prototype";
+    const desc  = block.description || "";
+    const cta   = block.cta || "Open Live Prototype";
+    const count = block.screens || "";
+    return `<div class="cs-proto-cta">
+      <div class="cs-proto-cta-left">
+        <span class="cs-proto-eyebrow">${escapeHtml(label)}</span>
+        ${desc ? `<p class="cs-proto-desc">${escapeHtml(desc)}</p>` : ""}
+        ${count ? `<span class="cs-proto-screens">${escapeHtml(String(count))} screens</span>` : ""}
       </div>
-      <iframe
-        src="${url}"
-        title="${escapeHtml(title)}"
-        width="100%"
-        height="${escapeHtml(String(h))}"
-        frameborder="0"
-        allow="clipboard-write"
-        allowfullscreen
-        loading="lazy"
-        class="cs-live-embed-frame"
-      ></iframe>
-      ${note ? `<p class="cs-live-embed-note">${escapeHtml(note)}</p>` : ""}
+      <a class="cs-proto-btn" href="prototypes.html#${escapeHtml(id)}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        ${escapeHtml(cta)}
+        <svg class="cs-proto-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
     </div>`;
   }
 

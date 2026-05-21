@@ -199,12 +199,12 @@
         "text": "Not a full app. A mobile-first web prototype — no downloads, works from a QR scan. Speed to test matters more than completeness at this stage."
       },
       {
-        "type": "live-embed",
-        "url": "https://claude.site/public/artifacts/d6e2ba57-85d2-4a53-8069-257a1e945930/embed",
-        "title": "Cetaphil 7-Day Skin Challenge — Interactive Prototype",
-        "label": "Live Prototype · cetaphil-7day-challenge.html",
-        "height": "680",
-        "note": "Fully interactive — tap through all 8 screens of the prototype."
+        "type": "prototype-link",
+        "id": "cetaphil-7day",
+        "label": "Live Interactive Prototype",
+        "description": "Tap through all 8 screens of the 7-Day Skin Challenge flow — QR landing, onboarding, daily check-in, real-time feedback, skin avatar, Day 7 reveal, shareable card, and progress dashboard.",
+        "cta": "Open Live Prototype",
+        "screens": 8
       },
       {
         "type": "mvp-screens",
