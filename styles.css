@@ -85,6 +85,26 @@ a {
   color: var(--ink);
 }
 
+.nav-proto-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 750;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(232, 93, 4, 0.28);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.nav-proto-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 20px rgba(232, 93, 4, 0.38);
+  color: #fff !important;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
