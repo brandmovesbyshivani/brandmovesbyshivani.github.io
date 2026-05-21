@@ -3,7 +3,7 @@
     "title": "#CetaphilCalledMeOut: Behavior-Led Brand Strategy",
     "slug": "cetaphil-called-me-out-behavior-led-strategy",
     "date": "2026-05-17",
-    "category": "#IFIRANTHEBRAND Episode",
+    "category": "#IFIRANTHEBRAND Episode 01",
     "readTime": "Full strategy",
     "summary": "A PM-level strategy case study for Cetaphil: moving from skincare awareness to habit formation through a 7-day behavior-led experience.",
     "hero": "Campaign + strategy case study",
@@ -13,228 +13,278 @@
       {
         "label": "01 Problem",
         "title": "Inconsistent product outcomes",
-        "text": "Reviews split between gentle results and irritation.",
+        "text": "Reviews split between gentle results and irritation — same product, very different experiences.",
         "image": "assets/episodes/cetaphil/detail/problem-real-feedback-16x9.png"
       },
       {
         "label": "02 Insight",
-        "title": "The gap is behavior",
-        "text": "Users switch or overuse before consistency works.",
+        "title": "The gap is behavior, not the product",
+        "text": "Users switch, overuse, and quit before consistency has a chance to work.",
         "image": "assets/episodes/cetaphil/behavior-comparison-wide.png"
       },
       {
         "label": "03 Action",
-        "title": "Train Your Skin for 7 days",
-        "text": "A 7-day loop turns routine behavior into a reveal.",
+        "title": "Train Your Skin — 7 Days",
+        "text": "A guided loop: log behavior → get feedback → build habit → unlock your personalized call-out.",
         "image": "assets/episodes/cetaphil/trial-kit-wide.png"
       }
     ],
     "content": [
       {
-        "type": "image",
-        "src": "assets/episodes/cetaphil/day-7-called-out-banner.png",
-        "alt": "Wide Day 7 Cetaphil Called Me Out campaign banner",
-        "caption": "Campaign entry point: a Day 7 reveal where the bottle reflects the user’s routine behavior back to them."
+        "type": "callout",
+        "text": "The product isn't failing. The usage is."
       },
       {
         "type": "paragraph",
-        "text": "This is the complete strategy behind my first #IFIRANTHEBRAND episode. The reel introduces the idea quickly; this case study expands it at a product-management level: what problem I observed, what user behavior explains it, what product experience could solve it, and how the campaign can turn that experience into a shareable brand moment."
+        "text": "This is the complete strategy behind Episode 01 of #IFIRANTHEBRAND. The reel introduces the idea in 60 seconds. This case study unpacks it at a product-management level: what I observed in real user behavior, what insight explains it, what product experience could solve it, and how the campaign turns that experience into a shareable brand moment."
       },
       {
         "type": "heading",
-        "text": "1. Problem understanding"
+        "text": "1. The Observation That Started This"
       },
       {
         "type": "paragraph",
-        "text": "While analyzing Cetaphil reviews across platforms like Amazon and Reddit, I noticed a clear split in user experience. Some users describe the product as gentle, reliable, and effective, while others report no visible improvement, irritation, or breakouts. The interesting part is that the same product is creating very different outcomes for different users."
+        "text": "While studying Cetaphil reviews across Amazon, Reddit, and skincare communities, I noticed a clear and repeating pattern. The same product was creating very different outcomes for different users — some calling it a holy grail, others reporting breakouts, irritation, or zero results. What was causing the split? Not the formula. The behavior."
+      },
+      {
+        "type": "user-voices",
+        "label": "Real words from real users",
+        "voices": [
+          "I used it for a few days but saw no result.",
+          "I don't know if I'm using too much or too little.",
+          "My skin reacts differently every week.",
+          "I keep switching products every time something doesn't work instantly.",
+          "I blamed the product. Turns out I was the problem."
+        ]
+      },
+      {
+        "type": "insight-box",
+        "label": "Core PM Insight",
+        "text": "The gap is not awareness. The gap is behavior. Most users already know Cetaphil. They just don't know how to use it consistently — and no one is helping them figure that out."
       },
       {
         "type": "heading",
-        "text": "2. Core insight"
+        "text": "2. Who Is Actually Struggling?"
       },
       {
-        "type": "paragraph",
-        "text": "The issue is not only product awareness or product quality. The deeper gap is user behavior. Many skincare users are inconsistent, switch between products too frequently, overuse products when they want faster results, or do not understand how long a routine needs before it can be judged fairly."
+        "type": "personas",
+        "users": [
+          {
+            "type": "Primary User",
+            "title": "The Confused Skincare Beginner",
+            "traits": [
+              "\"I don't know what works for my skin\"",
+              "Switches products after 3–4 days with no results",
+              "Uses too much product hoping for faster results",
+              "Never gives a routine enough time to judge it fairly",
+              "Blames the product before examining the behavior"
+            ]
+          },
+          {
+            "type": "Secondary User",
+            "title": "The Sensitive Skin User",
+            "traits": [
+              "Scared of irritation and unexpected breakouts",
+              "Wants reassurance that they're doing it right",
+              "Stops at the first sign of dryness or change",
+              "Needs someone to say: your skin is adjusting, not reacting",
+              "Looking for confidence, not just a cleanser"
+            ]
+          }
+        ]
       },
       {
         "type": "heading",
-        "text": "3. Current gap in the brand experience"
+        "text": "3. The Strategic Opportunity"
       },
       {
         "type": "paragraph",
-        "text": "Cetaphil already offers a skin analysis tool, which is useful for discovery. But it behaves like a one-time snapshot. It helps a user understand their skin at a point in time, but it does not guide daily behavior, habit formation, routine consistency, or learning over time. That creates a clear product opportunity: move from analysis to action."
+        "text": "Cetaphil already has a skin analysis tool — useful for discovery, but it behaves like a one-time snapshot. It tells users about their skin type. It doesn't guide daily behavior, habit formation, or routine consistency. That's the gap. The opportunity is to move from analysis to action."
       },
       {
         "type": "image",
         "src": "assets/episodes/cetaphil/behavior-comparison-wide.png",
-        "alt": "Wide behavior comparison visual for skincare routine use",
-        "caption": "The strategy reframes uneven results as a behavior and routine consistency problem, not only a product perception problem."
+        "alt": "Behavior comparison — current vs proposed skincare experience",
+        "caption": "Current experience: buy → use alone → get uncertain results → blame product. Proposed: buy → enter guided journey → log behavior → understand skin → build trust."
       },
       {
         "type": "heading",
-        "text": "4. Product opportunity"
+        "text": "4. Product Concept: Train Your Skin"
       },
       {
         "type": "paragraph",
-        "text": "The strategic opportunity is to help users use Cetaphil correctly and consistently, so the product has a better chance to work as intended. Instead of only saying the product works, Cetaphil can build an experience that helps it work for the user."
+        "text": "A guided, interactive 7-day skincare experience that helps users understand how their own behavior affects their skin results. It's not a promotional campaign. It's a behavior-tracking product layer that turns inconsistent usage into a simple daily feedback loop — and ends with a personalized, shareable moment."
       },
       {
-        "type": "heading",
-        "text": "5. Product concept: Train Your Skin"
-      },
-      {
-        "type": "paragraph",
-        "text": "Train Your Skin is a 7-day guided experience that helps users understand their skincare behavior. It is not positioned as another promotional campaign. It is a lightweight product experience that turns routine consistency into something visible, interactive, and emotionally memorable."
-      },
-      {
-        "type": "image",
-        "src": "assets/episodes/cetaphil/trial-kit-wide.png",
-        "alt": "Wide 7 day trial kit habit challenge visual",
-        "caption": "The 7-day kit makes the habit loop tangible: each day has a clear action, purpose, and product role."
-      },
-      {
-        "type": "list",
-        "items": [
-          "User goal: understand whether their skincare behavior is helping or hurting their results.",
-          "Brand goal: improve product experience, trust, and long-term retention.",
-          "Experience goal: turn routine consistency into a simple daily loop.",
-          "Campaign goal: create a personal, shareable moment after the user completes the experience."
+        "type": "steps",
+        "label": "The 7-Day User Flow",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Scan & Enter",
+            "text": "QR code on packaging, trial kits, influencer posts, or e-commerce inserts. Zero friction — no app download required."
+          },
+          {
+            "number": "02",
+            "title": "Skin Onboarding",
+            "text": "3 quick questions: skin type, main concern, current routine. Builds a behavioral baseline before Day 1 begins."
+          },
+          {
+            "number": "03",
+            "title": "Daily 10-Second Check-In",
+            "text": "Did you use it? How much? Which products did you combine? How does your skin feel today? Light enough to actually do every day."
+          },
+          {
+            "number": "04",
+            "title": "Real-Time Feedback",
+            "text": "The system reads behavior and explains what the routine is actually doing. Skip 2 days? It tells you why that matters. Overused it? It explains the irritation."
+          },
+          {
+            "number": "05",
+            "title": "Dynamic Skin Avatar",
+            "text": "A visual avatar that updates daily based on logged behavior. Consistent use → calm, stable skin. Product switching → confused skin state. Makes the invisible visible."
+          },
+          {
+            "number": "06",
+            "title": "Day 7 Personalized Call-Out",
+            "text": "The campaign moment. The Cetaphil bottle reflects the user's 7-day behavior back to them — honest, playful, shareable. This is where the experience becomes a story worth posting."
+          }
         ]
       },
       {
         "type": "heading",
-        "text": "6. User experience flow"
+        "text": "5. The Day 7 Moment"
       },
       {
         "type": "paragraph",
-        "text": "The experience begins with a 10-second daily check-in. Users log simple actions: whether they used the product, whether they followed the routine, whether they added or switched products, and whether they noticed irritation, calmness, dryness, or improvement. The check-in must feel light enough to complete daily, because the product value depends on repeat use."
+        "text": "At the end of 7 days, users unlock a personalized message generated from their actual behavior log. The tone is warm and direct — not judgmental, not fake-positive. It mirrors what the user actually did and gives them a reason to share it."
       },
       {
-        "type": "paragraph",
-        "text": "After each check-in, the system gives real-time feedback. For example, if the user overuses the product or keeps changing the routine, the experience can explain how that behavior may be causing irritation or confusion. If the user stays consistent, the experience can reinforce that calm skin and visible improvement often come from repetition, not constant switching."
-      },
-      {
-        "type": "heading",
-        "text": "7. Learning loop"
-      },
-      {
-        "type": "paragraph",
-        "text": "The product experience creates a learning loop: action, feedback, reflection, and adjustment. Instead of guessing whether Cetaphil works, users start understanding what they were doing, what changed, and how their behavior connects to outcomes. This shifts the user from passive product trial to active routine ownership."
-      },
-      {
-        "type": "heading",
-        "text": "8. Campaign layer: #CetaphilCalledMeOut"
-      },
-      {
-        "type": "paragraph",
-        "text": "After seven days, the user receives a personalized reflective moment: their Cetaphil bottle speaks to them. The output is written like a gentle call-out based on their behavior. It can say what improved, what pattern held them back, and what they should keep doing next."
+        "type": "callout-examples",
+        "label": "Day 7 Call-Out Examples",
+        "headline": "Your bottle has something to say.",
+        "examples": [
+          "I didn't fail you. You skipped me 3 nights in a row.",
+          "You changed products 4 times this week. Your skin was confused, not broken.",
+          "You used too much product twice. Gentle skin needs gentle usage.",
+          "You were consistent, patient, and gentle. That's exactly why your skin felt calmer.",
+          "You showed up 6 out of 7 days. Your skin noticed."
+        ]
       },
       {
         "type": "image",
         "src": "assets/episodes/cetaphil/truth-reveal-wide.png",
-        "alt": "Wide Cetaphil 7 day trial truth reveal behavior callout visual",
-        "caption": "The reveal moment turns routine behavior into clear, personal feedback the user can understand and share."
+        "alt": "Cetaphil Day 7 truth reveal — behavior call-out card",
+        "caption": "The reveal card turns 7 days of behavior into one clear, personal, shareable moment."
+      },
+      {
+        "type": "heading",
+        "text": "6. The Product Loops"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Behavior Loop — Log usage → receive feedback → improve routine → see better stability → continue.",
+          "Habit Loop — Daily check-in → streak maintained → points earned → reward unlocked → user returns.",
+          "Social Loop — Complete 7 days → receive personalized call-out → share it → friends join the challenge.",
+          "Commerce Loop — Start with trial kit → follow guided routine → gain confidence → redeem discount → buy full size."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "7. MVP — What I Would Build First"
       },
       {
         "type": "paragraph",
-        "text": "This turns the experience into a campaign moment without making it feel like an ad. The user is not simply sharing a product claim. They are sharing a personal realization: how their routine behavior affected their skin journey."
+        "text": "Not a full app. A mobile-first web prototype that requires no downloads and works from a QR scan. Speed to test matters more than completeness at this stage."
+      },
+      {
+        "type": "list",
+        "items": [
+          "P0 — QR-based landing page, 7-day onboarding, daily usage logger, rule-based feedback engine, Day 7 personalized result, shareable call-out card.",
+          "P1 — Dynamic skin avatar, streaks and points, progress dashboard, reward unlock.",
+          "P2 — Dermatologist consultation flow, AI skin scan integration.",
+          "P3 — Community leaderboard (deprioritized — risks distracting from personal progress)."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "8. Success Metrics"
+      },
+      {
+        "type": "metrics-grid",
+        "north-star": "7-Day Challenge Completion Rate",
+        "metrics": [
+          {
+            "category": "Activation",
+            "items": ["QR scan → landing page rate", "Onboarding completion %", "Day 1 check-in rate"]
+          },
+          {
+            "category": "Engagement",
+            "items": ["Avg check-ins per user", "Streak completion rate", "Avatar interaction rate"]
+          },
+          {
+            "category": "Growth",
+            "items": ["Shareable card generation", "UGC posts with #CetaphilCalledMeOut", "Referral traffic from shares"]
+          },
+          {
+            "category": "Business",
+            "items": ["Trial kit → full size conversion", "Discount redemption rate", "Repeat purchase intent"]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "9. Go-To-Market: 4 Phases"
+      },
+      {
+        "type": "phases",
+        "phases": [
+          {
+            "number": "01",
+            "title": "Prototype Test",
+            "text": "Small user group. Validate: does the onboarding feel clear? Do check-ins feel easy? Does the Day 7 call-out feel shareable enough to post?"
+          },
+          {
+            "number": "02",
+            "title": "Trial Kit Launch",
+            "text": "7-Day Train Your Skin Kit — trial-size product + QR code + simple instructions + challenge access + reward at completion. Helps users try the product the right way."
+          },
+          {
+            "number": "03",
+            "title": "Creator-Led Challenge",
+            "text": "Creators document their 7-day journey. Day 1: 'Starting the challenge.' Day 3: 'Used too much — here's what happened.' Day 7: 'Cetaphil just called me out.' The call-out card becomes the viral moment."
+          },
+          {
+            "number": "04",
+            "title": "Social Sharing Wave",
+            "text": "Users share their own Day 7 cards. 'I blamed the product. Turns out I was the problem.' The campaign is relatable because the behavior gap is universal."
+          }
+        ]
       },
       {
         "type": "image",
         "src": "assets/episodes/cetaphil/social-proof-wide.png",
-        "alt": "Wide social proof visual for Cetaphil Called Me Out campaign",
-        "caption": "The social layer gives the campaign scale: one personal story becomes a recognizable participation format."
+        "alt": "Social proof — CetaphilCalledMeOut user-generated content",
+        "caption": "One personal story becomes a participation format. The social loop scales without paid distribution."
       },
       {
         "type": "heading",
-        "text": "9. Why the campaign is shareable"
+        "text": "10. Why This Strategy Works"
       },
       {
         "type": "list",
         "items": [
-          "It feels personal because the output reflects the user's own behavior.",
-          "It feels relatable because many skincare users struggle with inconsistency and product switching.",
-          "It feels emotional because the brand becomes a supportive mirror, not a pushy seller.",
-          "It encourages organic sharing because users can post their own call-out moment."
+          "It solves a real problem — inconsistent outcomes caused by inconsistent behavior.",
+          "It creates value before asking for loyalty — users learn something before they're sold to.",
+          "It turns the reveal moment into earned media — the call-out card is shareable because it feels personal and relatable.",
+          "It reduces negative perception — users understand their own role in the outcome instead of blaming the product.",
+          "It builds retention through habit — 7 days of check-ins creates routine ownership, not just brand awareness."
         ]
       },
       {
-        "type": "heading",
-        "text": "10. Value for consumers"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Reduced confusion about whether the product is working.",
-          "Better understanding of routine consistency and product usage.",
-          "More confidence in skincare decisions.",
-          "Improved chance of seeing results through correct, consistent use."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "11. Value for Cetaphil"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Improves product experience by guiding behavior after purchase.",
-          "Reduces negative perception caused by incorrect or inconsistent usage.",
-          "Builds trust by acting as a problem-solving brand.",
-          "Creates a retention loop through daily engagement and habit formation.",
-          "Generates social reach through personalized shareable outcomes."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "12. PM success metrics"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Activation rate: percentage of users who start the 7-day experience after skin analysis or product purchase.",
-          "Completion rate: percentage of users who complete all seven check-ins.",
-          "Habit consistency: average number of days users follow the recommended routine.",
-          "Self-reported outcome improvement: change in user confidence, irritation, or perceived skin calmness.",
-          "Retention signal: repeat visits, product repurchase intent, or routine continuation after day seven.",
-          "Campaign reach: number of personalized call-out cards shared on Instagram or other platforms."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "13. Risks and product considerations"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Avoid making medical claims or promising guaranteed skin improvement.",
-          "Keep the tone supportive so the call-out feels playful, not judgmental.",
-          "Make the daily check-in extremely simple to prevent drop-off.",
-          "Use disclaimers where needed and encourage users to consult dermatologists for serious concerns.",
-          "Protect user privacy and make sharing optional."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "14. Strategic impact"
-      },
-      {
-        "type": "paragraph",
-        "text": "This strategy shifts Cetaphil from product-selling to problem-solving. Most skincare campaigns focus on awareness, claims, or product promotion. This approach focuses on behavior, which is closer to the real reason many users do not get the outcome they expected."
-      },
-      {
-        "type": "image",
-        "src": "assets/episodes/cetaphil/trend-reveal-wide.png",
-        "alt": "Wide trend reveal visual for Cetaphil Called Me Out campaign",
-        "caption": "The end-state vision: an insight-led product experience that becomes a social trend."
-      },
-      {
-        "type": "heading",
-        "text": "15. Final thought"
-      },
-      {
-        "type": "paragraph",
-        "text": "This is not just a campaign. It is a behavior-led strategy, executed as a campaign. Instead of saying the product works, Cetaphil helps it work for the user."
+        "type": "callout",
+        "text": "Instead of saying the product works — we help it work for the user."
       }
     ]
   },

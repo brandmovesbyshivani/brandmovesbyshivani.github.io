@@ -19,6 +19,86 @@ const escapeHtml = (value = "") =>
   })[char]);
 
 const renderBlock = (block, index) => {
+  if (block.type === "callout") {
+    return `<div class="cs-callout"><p>${escapeHtml(block.text)}</p></div>`;
+  }
+
+  if (block.type === "insight-box") {
+    return `<div class="cs-insight">
+      <span class="cs-insight-label">${escapeHtml(block.label)}</span>
+      <p>${escapeHtml(block.text)}</p>
+    </div>`;
+  }
+
+  if (block.type === "user-voices") {
+    return `<div class="cs-voices">
+      ${block.label ? `<div class="cs-voices-label">${escapeHtml(block.label)}</div>` : ""}
+      <div class="cs-voices-grid">
+        ${block.voices.map((v) => `<div class="cs-voice-card"><p>${escapeHtml(v)}</p></div>`).join("")}
+      </div>
+    </div>`;
+  }
+
+  if (block.type === "personas") {
+    return `<div class="cs-personas">
+      ${block.users.map((u) => `<div class="cs-persona">
+        <span class="cs-persona-type">${escapeHtml(u.type)}</span>
+        <h3>${escapeHtml(u.title)}</h3>
+        <ul>${u.traits.map((t) => `<li>${escapeHtml(t)}</li>`).join("")}</ul>
+      </div>`).join("")}
+    </div>`;
+  }
+
+  if (block.type === "steps") {
+    return `<div class="cs-steps">
+      ${block.label ? `<div class="cs-steps-label">${escapeHtml(block.label)}</div>` : ""}
+      ${block.steps.map((s) => `<div class="cs-step">
+        <div class="cs-step-num">${escapeHtml(s.number)}</div>
+        <div>
+          <h4>${escapeHtml(s.title)}</h4>
+          <p>${escapeHtml(s.text)}</p>
+        </div>
+      </div>`).join("")}
+    </div>`;
+  }
+
+  if (block.type === "callout-examples") {
+    return `<div class="cs-callout-examples">
+      ${block.label ? `<div class="cs-callout-examples-label">${escapeHtml(block.label)}</div>` : ""}
+      ${block.headline ? `<h3>${escapeHtml(block.headline)}</h3>` : ""}
+      <div class="cs-callout-cards">
+        ${block.examples.map((ex) => `<div class="cs-callout-card"><p>"${escapeHtml(ex)}"</p></div>`).join("")}
+      </div>
+    </div>`;
+  }
+
+  if (block.type === "metrics-grid") {
+    return `<div class="cs-metrics-wrap">
+      ${block["north-star"] ? `<div class="cs-north-star">
+        <span class="cs-north-star-label">North Star Metric</span>
+        <strong>${escapeHtml(block["north-star"])}</strong>
+      </div>` : ""}
+      <div class="cs-metrics-grid">
+        ${block.metrics.map((m) => `<div class="cs-metric-card">
+          <h4>${escapeHtml(m.category)}</h4>
+          <ul>${m.items.map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>
+        </div>`).join("")}
+      </div>
+    </div>`;
+  }
+
+  if (block.type === "phases") {
+    return `<div class="cs-phases">
+      ${block.phases.map((p) => `<div class="cs-phase">
+        <div class="cs-phase-num">${escapeHtml(p.number)}</div>
+        <div>
+          <h4>${escapeHtml(p.title)}</h4>
+          <p>${escapeHtml(p.text)}</p>
+        </div>
+      </div>`).join("")}
+    </div>`;
+  }
+
   if (block.type === "image") {
     return `<figure class="case-visual">
       <img src="${escapeHtml(block.src)}" alt="${escapeHtml(block.alt ?? "")}" />
