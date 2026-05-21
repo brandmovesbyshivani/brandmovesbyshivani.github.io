@@ -214,22 +214,27 @@
       {
         "type": "metrics-grid",
         "north-star": "7-Day Challenge Completion Rate",
+        "north-star-why": "If a user completes all 7 check-ins, the behavior habit is forming. Every downstream metric — sharing, trust, conversion, retention — flows from this single signal.",
         "metrics": [
           {
             "category": "Activation",
-            "items": ["QR scan → landing page rate", "Onboarding completion %", "Day 1 check-in rate"]
+            "icon": "⚡",
+            "items": ["QR scan → landing page rate", "Onboarding completion %", "Day 1 check-in completion rate"]
           },
           {
             "category": "Engagement",
-            "items": ["Avg check-ins per user", "Streak completion rate", "Avatar interaction rate"]
+            "icon": "🔁",
+            "items": ["Avg check-ins per user (out of 7)", "Streak completion rate", "Avatar interaction rate"]
           },
           {
             "category": "Growth",
-            "items": ["Shareable card generation", "UGC posts with #CetaphilCalledMeOut", "Referral traffic from shares"]
+            "icon": "📈",
+            "items": ["Shareable call-out card generation rate", "UGC posts with #CetaphilCalledMeOut", "Referral traffic from shared cards"]
           },
           {
             "category": "Business",
-            "items": ["Trial kit → full size conversion", "Discount redemption rate", "Repeat purchase intent"]
+            "icon": "💰",
+            "items": ["Trial kit → full-size purchase conversion", "Discount code redemption rate", "Repeat purchase intent score"]
           }
         ]
       },

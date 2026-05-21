@@ -75,13 +75,25 @@ const renderBlock = (block, index) => {
   if (block.type === "metrics-grid") {
     return `<div class="cs-metrics-wrap">
       ${block["north-star"] ? `<div class="cs-north-star">
-        <span class="cs-north-star-label">North Star Metric</span>
-        <strong>${escapeHtml(block["north-star"])}</strong>
+        <div class="cs-north-star-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>North Star Metric</span>
+        </div>
+        <h3>${escapeHtml(block["north-star"])}</h3>
+        ${block["north-star-why"] ? `<p class="cs-north-star-why">${escapeHtml(block["north-star-why"])}</p>` : ""}
       </div>` : ""}
       <div class="cs-metrics-grid">
         ${block.metrics.map((m) => `<div class="cs-metric-card">
-          <h4>${escapeHtml(m.category)}</h4>
-          <ul>${m.items.map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>
+          <div class="cs-metric-card-header">
+            ${m.icon ? `<span class="cs-metric-icon">${m.icon}</span>` : ""}
+            <h4>${escapeHtml(m.category)}</h4>
+          </div>
+          <div class="cs-metric-kpis">
+            ${m.items.map((i) => `<div class="cs-metric-kpi">
+              <span class="cs-metric-dot"></span>
+              <span>${escapeHtml(i)}</span>
+            </div>`).join("")}
+          </div>
         </div>`).join("")}
       </div>
     </div>`;

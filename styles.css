@@ -1538,33 +1538,67 @@ h3 {
 
 .cs-metrics-wrap {
   display: grid;
-  gap: 14px;
-}
-
-.cs-north-star {
-  display: flex;
-  align-items: center;
   gap: 16px;
-  border: 2px solid var(--accent);
-  border-radius: 10px;
-  padding: 20px 24px;
-  background: rgba(232, 93, 4, 0.06);
 }
 
-.cs-north-star-label {
-  white-space: nowrap;
+/* North Star — hero dashboard card */
+.cs-north-star {
+  display: grid;
+  gap: 14px;
+  border-radius: 14px;
+  padding: clamp(28px, 4vw, 44px) clamp(28px, 4vw, 44px);
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-north-star::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 93, 4, 0.22), transparent 70%);
+  pointer-events: none;
+}
+
+.cs-north-star-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
 }
 
-.cs-north-star strong {
-  font-size: 1.05rem;
-  font-weight: 800;
+.cs-north-star-badge svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--accent);
+  stroke: none;
 }
 
+.cs-north-star h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  color: var(--white);
+  line-height: 1.15;
+}
+
+.cs-north-star-why {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 620px;
+}
+
+/* 4-category KPI grid */
 .cs-metrics-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1572,14 +1606,28 @@ h3 {
 }
 
 .cs-metric-card {
-  padding: 20px 22px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--white);
+  overflow: hidden;
 }
 
-.cs-metric-card h4 {
-  margin: 0 0 10px;
+.cs-metric-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(26, 26, 26, 0.025);
+}
+
+.cs-metric-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.cs-metric-card-header h4 {
+  margin: 0;
   color: var(--accent);
   font-size: 0.76rem;
   font-weight: 900;
@@ -1587,28 +1635,42 @@ h3 {
   letter-spacing: 0.1em;
 }
 
-.cs-metric-card ul {
+.cs-metric-kpis {
   display: grid;
-  gap: 7px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
-.cs-metric-card li {
-  position: relative;
-  padding-left: 14px;
-  color: var(--muted);
+.cs-metric-kpi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 20px;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.05);
   font-size: 0.86rem;
-  line-height: 1.45;
+  color: var(--muted);
+  line-height: 1.4;
+  transition: background 150ms ease;
 }
 
-.cs-metric-card li::before {
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-weight: 900;
-  content: "·";
+.cs-metric-kpi:last-child {
+  border-bottom: none;
+}
+
+.cs-metric-kpi:hover {
+  background: rgba(232, 93, 4, 0.04);
+}
+
+.cs-metric-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.35;
+  flex-shrink: 0;
+  transition: opacity 150ms ease;
+}
+
+.cs-metric-kpi:hover .cs-metric-dot {
+  opacity: 1;
 }
 
 .cs-phases {
