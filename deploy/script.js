@@ -64,15 +64,23 @@ const animateCount = (el) => {
   const target = parseFloat(el.dataset.count);
   const suffix = el.dataset.suffix || "";
   const isDecimal = target % 1 !== 0;
-  const duration = 1400;
+  const duration = 1600;
   const start = performance.now();
 
   const step = (now) => {
     const progress = Math.min((now - start) / duration, 1);
-    // Ease out cubic
-    const eased = 1 - Math.pow(1 - progress, 3);
+    // Softer ease-out so the final number lands crisply
+    const eased = 1 - Math.pow(1 - progress, 2.5);
     const current = target * eased;
-    el.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+
+    // On the last frame snap to exact value so it never stalls
+    if (progress >= 1) {
+      el.textContent = (isDecimal ? target.toFixed(1) : target) + suffix;
+    } else {
+      // Math.round instead of Math.floor prevents sticking one digit below
+      el.textContent = (isDecimal ? current.toFixed(1) : Math.min(Math.round(current), target)) + suffix;
+    }
+
     if (progress < 1) requestAnimationFrame(step);
   };
 
@@ -81,9 +89,9 @@ const animateCount = (el) => {
 
 const statObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
+    // Re-trigger every time the section scrolls into view
     if (entry.isIntersecting) {
       animateCount(entry.target);
-      statObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.6 });
