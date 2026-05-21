@@ -196,15 +196,99 @@
       },
       {
         "type": "paragraph",
-        "text": "Not a full app. A mobile-first web prototype that requires no downloads and works from a QR scan. Speed to test matters more than completeness at this stage."
+        "text": "Not a full app. A mobile-first web prototype — no downloads, works from a QR scan. Speed to test matters more than completeness at this stage."
       },
       {
-        "type": "list",
-        "items": [
-          "P0 — QR-based landing page, 7-day onboarding, daily usage logger, rule-based feedback engine, Day 7 personalized result, shareable call-out card.",
-          "P1 — Dynamic skin avatar, streaks and points, progress dashboard, reward unlock.",
-          "P2 — Dermatologist consultation flow, AI skin scan integration.",
-          "P3 — Community leaderboard (deprioritized — risks distracting from personal progress)."
+        "type": "mvp-screens",
+        "screens": [
+          {
+            "priority": "P0",
+            "name": "QR Landing Page",
+            "desc": "Scan on packaging — zero friction entry",
+            "variant": "landing",
+            "content": {
+              "tag": "7-Day Challenge",
+              "headline": "The product isn't failing. The usage is.",
+              "cta": "Start My Check-In"
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Skin Onboarding",
+            "desc": "3 questions to build a behavior baseline",
+            "variant": "onboarding",
+            "content": {
+              "tag": "Quick Setup",
+              "question": "What is your main skin concern?",
+              "options": ["Dryness", "Sensitivity", "Acne-prone", "Hydration"]
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Daily Check-In",
+            "desc": "10 seconds a day — builds the behavior dataset",
+            "variant": "checkin",
+            "content": {
+              "tag": "Day 3 of 7",
+              "question": "How did you use Cetaphil today?",
+              "options": ["Used correctly", "Skipped today", "Used too much", "Changed routine"]
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Real-Time Feedback",
+            "desc": "System explains what your routine is doing",
+            "variant": "feedback",
+            "content": {
+              "tag": "Today's Insight",
+              "message": "You skipped 2 days. Your skin may need more consistency before you judge results.",
+              "cta": "Got it, keeping it simple"
+            }
+          },
+          {
+            "priority": "P1",
+            "name": "Skin Avatar",
+            "desc": "Visual that updates daily based on behavior",
+            "variant": "avatar",
+            "content": {
+              "tag": "Day 5 — Stabilising",
+              "state": "Calm & consistent",
+              "score": "72"
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Day 7 Reveal",
+            "desc": "Personalized call-out based on actual behavior",
+            "variant": "result",
+            "content": {
+              "tag": "Day 7 Reveal",
+              "message": "You were consistent 6 out of 7 days. Your skin noticed.",
+              "cta": "Share My Call-Out"
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Shareable Card",
+            "desc": "The campaign moment — personal, relatable, viral",
+            "variant": "share",
+            "content": {
+              "quote": "I blamed the product. Turns out I was the problem.",
+              "tag": "#CetaphilCalledMeOut"
+            }
+          },
+          {
+            "priority": "P1",
+            "name": "Progress Dashboard",
+            "desc": "Streak, score, and routine stability at a glance",
+            "variant": "dashboard",
+            "content": {
+              "tag": "Your Routine",
+              "streak": "4 day streak",
+              "score": "72",
+              "status": "Stabilising"
+            }
+          }
         ]
       },
       {

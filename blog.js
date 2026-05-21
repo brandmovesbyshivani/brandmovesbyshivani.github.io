@@ -99,6 +99,125 @@ const renderBlock = (block, index) => {
     </div>`;
   }
 
+  if (block.type === "mvp-screens") {
+    const renderMockScreen = (s) => {
+      const c = s.content || {};
+      const esc = escapeHtml;
+      switch (s.variant) {
+        case "landing":
+          return `<div class="cs-mock-screen cs-mock-landing">
+            <div class="cs-mock-top-bar"><span></span><span></span><span></span></div>
+            <div class="cs-mock-landing-body">
+              <div class="cs-mock-pill">${esc(c.tag || "")}</div>
+              <div class="cs-mock-big-text">${esc(c.headline || "")}</div>
+              <div class="cs-mock-btn cs-mock-btn-accent">${esc(c.cta || "")}</div>
+            </div>
+          </div>`;
+        case "onboarding":
+          return `<div class="cs-mock-screen cs-mock-light">
+            <div class="cs-mock-top-bar light"><span></span><span></span><span></span></div>
+            <div class="cs-mock-body">
+              <div class="cs-mock-pill-light">${esc(c.tag || "")}</div>
+              <div class="cs-mock-question-text">${esc(c.question || "")}</div>
+              <div class="cs-mock-option-grid">
+                ${(c.options || []).map(o => `<div class="cs-mock-option-pill">${esc(o)}</div>`).join("")}
+              </div>
+            </div>
+          </div>`;
+        case "checkin":
+          return `<div class="cs-mock-screen cs-mock-light">
+            <div class="cs-mock-top-bar light"><span></span><span></span><span></span></div>
+            <div class="cs-mock-body">
+              <div class="cs-mock-day-badge">${esc(c.tag || "")}</div>
+              <div class="cs-mock-question-text">${esc(c.question || "")}</div>
+              <div class="cs-mock-radio-list">
+                ${(c.options || []).map((o, i) => `<div class="cs-mock-radio-row ${i === 0 ? "selected" : ""}"><span class="cs-mock-radio-dot"></span><span>${esc(o)}</span></div>`).join("")}
+              </div>
+              <div class="cs-mock-btn cs-mock-btn-accent">Submit</div>
+            </div>
+          </div>`;
+        case "feedback":
+          return `<div class="cs-mock-screen cs-mock-light">
+            <div class="cs-mock-top-bar light"><span></span><span></span><span></span></div>
+            <div class="cs-mock-body">
+              <div class="cs-mock-pill-light">${esc(c.tag || "")}</div>
+              <div class="cs-mock-feedback-card">${esc(c.message || "")}</div>
+              <div class="cs-mock-btn cs-mock-btn-ghost">${esc(c.cta || "")}</div>
+            </div>
+          </div>`;
+        case "avatar":
+          return `<div class="cs-mock-screen cs-mock-light">
+            <div class="cs-mock-top-bar light"><span></span><span></span><span></span></div>
+            <div class="cs-mock-body cs-mock-body-center">
+              <div class="cs-mock-pill-light">${esc(c.tag || "")}</div>
+              <div class="cs-mock-avatar-circle"></div>
+              <div class="cs-mock-avatar-label">${esc(c.state || "")}</div>
+              <div class="cs-mock-progress-wrap">
+                <div class="cs-mock-progress-bar"><span style="width:${esc(c.score || "0")}%"></span></div>
+                <span class="cs-mock-progress-val">${esc(c.score || "0")}% consistency</span>
+              </div>
+            </div>
+          </div>`;
+        case "result":
+          return `<div class="cs-mock-screen cs-mock-result">
+            <div class="cs-mock-top-bar"><span></span><span></span><span></span></div>
+            <div class="cs-mock-landing-body">
+              <div class="cs-mock-pill">${esc(c.tag || "")}</div>
+              <div class="cs-mock-result-bottle">C</div>
+              <div class="cs-mock-big-text">${esc(c.message || "")}</div>
+              <div class="cs-mock-btn cs-mock-btn-accent">${esc(c.cta || "")}</div>
+            </div>
+          </div>`;
+        case "share":
+          return `<div class="cs-mock-screen cs-mock-light">
+            <div class="cs-mock-top-bar light"><span></span><span></span><span></span></div>
+            <div class="cs-mock-body cs-mock-body-center">
+              <div class="cs-mock-share-card">
+                <div class="cs-mock-share-logo">C</div>
+                <div class="cs-mock-share-quote">"${esc(c.quote || "")}"</div>
+                <div class="cs-mock-share-hashtag">${esc(c.tag || "")}</div>
+              </div>
+              <div class="cs-mock-btn cs-mock-btn-accent">Share →</div>
+            </div>
+          </div>`;
+        case "dashboard":
+          return `<div class="cs-mock-screen cs-mock-light">
+            <div class="cs-mock-top-bar light"><span></span><span></span><span></span></div>
+            <div class="cs-mock-body">
+              <div class="cs-mock-pill-light">${esc(c.tag || "")}</div>
+              <div class="cs-mock-dash-stat"><span>${esc(c.streak || "")}</span><span>🔥</span></div>
+              <div class="cs-mock-dash-label">Consistency Score</div>
+              <div class="cs-mock-progress-wrap">
+                <div class="cs-mock-progress-bar"><span style="width:${esc(c.score || "0")}%"></span></div>
+                <span class="cs-mock-progress-val">${esc(c.score || "0")}%</span>
+              </div>
+              <div class="cs-mock-status-chip">${esc(c.status || "")}</div>
+            </div>
+          </div>`;
+        default:
+          return `<div class="cs-mock-screen cs-mock-light"></div>`;
+      }
+    };
+
+    return `<div class="cs-mvp-showcase">
+      <div class="cs-mvp-scroll">
+        ${block.screens.map((s) => `
+          <div class="cs-mvp-item">
+            <span class="cs-mvp-priority cs-mvp-p${(s.priority || "P0").slice(1)}">${escapeHtml(s.priority || "P0")}</span>
+            <div class="cs-phone-mock">
+              <div class="cs-phone-notch"></div>
+              ${renderMockScreen(s)}
+            </div>
+            <div class="cs-mvp-meta">
+              <strong>${escapeHtml(s.name)}</strong>
+              <span>${escapeHtml(s.desc)}</span>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </div>`;
+  }
+
   if (block.type === "phases") {
     return `<div class="cs-phases">
       ${block.phases.map((p) => `<div class="cs-phase">
