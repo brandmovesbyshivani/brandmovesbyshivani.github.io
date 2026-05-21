@@ -2002,6 +2002,20 @@ h3 {
   overflow: hidden;
 }
 
+/* Real prototype screenshot inside phone frame */
+.cs-mock-screen.cs-mock-photo {
+  padding: 0;
+  display: flex;
+}
+.cs-mock-screen.cs-mock-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: 0;
+}
+
 .cs-mock-landing,
 .cs-mock-result {
   background: var(--ink);

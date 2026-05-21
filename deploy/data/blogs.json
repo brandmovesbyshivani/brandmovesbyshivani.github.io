@@ -205,6 +205,7 @@
             "priority": "P0",
             "name": "QR Landing Page",
             "desc": "Scan on packaging — zero friction entry",
+            "img": "assets/episodes/cetaphil/prototype/screen-1.png",
             "variant": "landing",
             "content": {
               "tag": "7-Day Challenge",
@@ -215,7 +216,8 @@
           {
             "priority": "P0",
             "name": "Skin Onboarding",
-            "desc": "3 questions to build a behavior baseline",
+            "desc": "3 questions to build a behaviour baseline",
+            "img": "assets/episodes/cetaphil/prototype/screen-2.png",
             "variant": "onboarding",
             "content": {
               "tag": "Quick Setup",
@@ -226,7 +228,8 @@
           {
             "priority": "P0",
             "name": "Daily Check-In",
-            "desc": "10 seconds a day — builds the behavior dataset",
+            "desc": "10 seconds a day — builds the behaviour dataset",
+            "img": "assets/episodes/cetaphil/prototype/screen-3.png",
             "variant": "checkin",
             "content": {
               "tag": "Day 3 of 7",
@@ -237,7 +240,8 @@
           {
             "priority": "P0",
             "name": "Real-Time Feedback",
-            "desc": "System explains what your routine is doing",
+            "desc": "Instant insight — explains what your routine is doing",
+            "img": "assets/episodes/cetaphil/prototype/screen-4.png",
             "variant": "feedback",
             "content": {
               "tag": "Today's Insight",
@@ -248,7 +252,8 @@
           {
             "priority": "P1",
             "name": "Skin Avatar",
-            "desc": "Visual that updates daily based on behavior",
+            "desc": "Visual that updates daily based on behaviour",
+            "img": "assets/episodes/cetaphil/prototype/screen-5.png",
             "variant": "avatar",
             "content": {
               "tag": "Day 5 — Stabilising",
@@ -259,7 +264,8 @@
           {
             "priority": "P0",
             "name": "Day 7 Reveal",
-            "desc": "Personalized call-out based on actual behavior",
+            "desc": "Personalised call-out based on actual behaviour data",
+            "img": "assets/episodes/cetaphil/prototype/screen-6.png",
             "variant": "result",
             "content": {
               "tag": "Day 7 Reveal",
@@ -270,7 +276,8 @@
           {
             "priority": "P0",
             "name": "Shareable Card",
-            "desc": "The campaign moment — personal, relatable, viral",
+            "desc": "#CetaphilCalledMeOut — personal, relatable, viral",
+            "img": "assets/episodes/cetaphil/prototype/screen-7.png",
             "variant": "share",
             "content": {
               "quote": "I blamed the product. Turns out I was the problem.",
@@ -280,7 +287,8 @@
           {
             "priority": "P1",
             "name": "Progress Dashboard",
-            "desc": "Streak, score, and routine stability at a glance",
+            "desc": "Streak, hydration score, and skin journey timeline",
+            "img": "assets/episodes/cetaphil/prototype/screen-8.png",
             "variant": "dashboard",
             "content": {
               "tag": "Your Routine",

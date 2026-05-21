@@ -140,6 +140,12 @@ const renderBlock = (block, index) => {
     const renderMockScreen = (s) => {
       const c = s.content || {};
       const esc = escapeHtml;
+      // Real prototype screenshot takes priority over CSS mockup
+      if (s.img) {
+        return `<div class="cs-mock-screen cs-mock-photo">
+          <img src="${esc(s.img)}" alt="${esc(s.name)}" loading="lazy" />
+        </div>`;
+      }
       switch (s.variant) {
         case "landing":
           return `<div class="cs-mock-screen cs-mock-landing">
