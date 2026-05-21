@@ -73,14 +73,49 @@ const renderBlock = (block, index) => {
   }
 
   if (block.type === "metrics-grid") {
+    const gauge = block["north-star-gauge"] || 60;
+    const r = 52;
+    const circ = +(2 * Math.PI * r).toFixed(2);
+    const offset = +((1 - gauge / 100) * circ).toFixed(2);
+
+    const renderItem = (item) => {
+      if (typeof item === "string") {
+        return `<div class="cs-metric-kpi"><span class="cs-metric-dot"></span><span>${escapeHtml(item)}</span></div>`;
+      }
+      return `<div class="cs-metric-stat-row">
+        <div class="cs-metric-stat-top">
+          <span class="cs-metric-stat-name">${escapeHtml(item.name)}</span>
+          <strong class="cs-metric-stat-value">${escapeHtml(item.value)}</strong>
+        </div>
+        <div class="cs-metric-bar">
+          <span class="cs-metric-bar-fill" style="--bar-w:${item.bar || 0}%"></span>
+        </div>
+      </div>`;
+    };
+
     return `<div class="cs-metrics-wrap">
       ${block["north-star"] ? `<div class="cs-north-star">
-        <div class="cs-north-star-badge">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <span>North Star Metric</span>
+        <div class="cs-north-star-left">
+          <div class="cs-north-star-badge">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>North Star Metric</span>
+          </div>
+          <h3>${escapeHtml(block["north-star"])}</h3>
+          ${block["north-star-why"] ? `<p class="cs-north-star-why">${escapeHtml(block["north-star-why"])}</p>` : ""}
         </div>
-        <h3>${escapeHtml(block["north-star"])}</h3>
-        ${block["north-star-why"] ? `<p class="cs-north-star-why">${escapeHtml(block["north-star-why"])}</p>` : ""}
+        <div class="cs-ns-gauge" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="${r}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="9"/>
+            <circle cx="60" cy="60" r="${r}" fill="none" stroke="#e85d04" stroke-width="9"
+              stroke-dasharray="${circ}" stroke-dashoffset="${offset}"
+              stroke-linecap="round" transform="rotate(-90 60 60)"
+              class="cs-gauge-arc"/>
+          </svg>
+          <div class="cs-ns-gauge-label">
+            <strong>${escapeHtml(block["north-star-target"] || gauge + "%")}</strong>
+            <span>target</span>
+          </div>
+        </div>
       </div>` : ""}
       <div class="cs-metrics-grid">
         ${block.metrics.map((m) => `<div class="cs-metric-card">
@@ -89,10 +124,7 @@ const renderBlock = (block, index) => {
             <h4>${escapeHtml(m.category)}</h4>
           </div>
           <div class="cs-metric-kpis">
-            ${m.items.map((i) => `<div class="cs-metric-kpi">
-              <span class="cs-metric-dot"></span>
-              <span>${escapeHtml(i)}</span>
-            </div>`).join("")}
+            ${m.items.map(renderItem).join("")}
           </div>
         </div>`).join("")}
       </div>

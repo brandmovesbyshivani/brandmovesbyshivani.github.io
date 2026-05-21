@@ -1541,12 +1541,14 @@ h3 {
   gap: 16px;
 }
 
-/* North Star — hero dashboard card */
+/* ── North Star hero card with circular gauge ── */
 .cs-north-star {
-  display: grid;
-  gap: 14px;
-  border-radius: 14px;
-  padding: clamp(28px, 4vw, 44px) clamp(28px, 4vw, 44px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border-radius: 16px;
+  padding: clamp(28px, 4vw, 48px);
   background: var(--ink);
   position: relative;
   overflow: hidden;
@@ -1555,13 +1557,17 @@ h3 {
 .cs-north-star::before {
   content: "";
   position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 93, 4, 0.22), transparent 70%);
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(232, 93, 4, 0.18), transparent 60%);
   pointer-events: none;
+}
+
+.cs-north-star-left {
+  display: grid;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  position: relative;
 }
 
 .cs-north-star-badge {
@@ -1576,29 +1582,74 @@ h3 {
 }
 
 .cs-north-star-badge svg {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   fill: var(--accent);
   stroke: none;
+  flex-shrink: 0;
 }
 
 .cs-north-star h3 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
   color: var(--white);
   line-height: 1.15;
 }
 
 .cs-north-star-why {
   margin: 0;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  max-width: 620px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.86rem;
+  line-height: 1.65;
+  max-width: 500px;
 }
 
-/* 4-category KPI grid */
+/* Circular SVG gauge */
+.cs-ns-gauge {
+  position: relative;
+  flex-shrink: 0;
+  width: 130px;
+  height: 130px;
+}
+
+.cs-ns-gauge svg {
+  width: 130px;
+  height: 130px;
+  display: block;
+}
+
+.cs-gauge-arc {
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cs-ns-gauge-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.cs-ns-gauge-label strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+}
+
+.cs-ns-gauge-label span {
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── 4-category KPI dashboard grid ── */
 .cs-metrics-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1607,7 +1658,7 @@ h3 {
 
 .cs-metric-card {
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   background: var(--white);
   overflow: hidden;
 }
@@ -1618,18 +1669,18 @@ h3 {
   gap: 10px;
   padding: 14px 20px;
   border-bottom: 1px solid var(--line);
-  background: rgba(26, 26, 26, 0.025);
+  background: rgba(26, 26, 26, 0.03);
 }
 
 .cs-metric-icon {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1;
 }
 
 .cs-metric-card-header h4 {
   margin: 0;
   color: var(--accent);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1639,6 +1690,69 @@ h3 {
   display: grid;
 }
 
+/* Stat row — name left, big value right, bar below */
+.cs-metric-stat-row {
+  display: grid;
+  gap: 7px;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+  transition: background 150ms ease;
+}
+
+.cs-metric-stat-row:last-child {
+  border-bottom: none;
+}
+
+.cs-metric-stat-row:hover {
+  background: rgba(232, 93, 4, 0.03);
+}
+
+.cs-metric-stat-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cs-metric-stat-name {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  flex: 1;
+}
+
+.cs-metric-stat-value {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Animated progress bar */
+.cs-metric-bar {
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(26, 26, 26, 0.08);
+  overflow: hidden;
+}
+
+.cs-metric-bar-fill {
+  display: block;
+  height: 100%;
+  width: var(--bar-w, 0%);
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(232, 93, 4, 0.45));
+  animation: bar-grow 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes bar-grow {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+/* fallback for old text-only items */
 .cs-metric-kpi {
   display: flex;
   align-items: center;
@@ -1648,29 +1762,17 @@ h3 {
   font-size: 0.86rem;
   color: var(--muted);
   line-height: 1.4;
-  transition: background 150ms ease;
 }
 
-.cs-metric-kpi:last-child {
-  border-bottom: none;
-}
-
-.cs-metric-kpi:hover {
-  background: rgba(232, 93, 4, 0.04);
-}
+.cs-metric-kpi:last-child { border-bottom: none; }
 
 .cs-metric-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--accent);
-  opacity: 0.35;
+  opacity: 0.4;
   flex-shrink: 0;
-  transition: opacity 150ms ease;
-}
-
-.cs-metric-kpi:hover .cs-metric-dot {
-  opacity: 1;
 }
 
 .cs-phases {

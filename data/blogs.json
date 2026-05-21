@@ -298,27 +298,45 @@
       {
         "type": "metrics-grid",
         "north-star": "7-Day Challenge Completion Rate",
+        "north-star-target": "60%",
+        "north-star-gauge": 60,
         "north-star-why": "If a user completes all 7 check-ins, the behavior habit is forming. Every downstream metric — sharing, trust, conversion, retention — flows from this single signal.",
         "metrics": [
           {
             "category": "Activation",
             "icon": "⚡",
-            "items": ["QR scan → landing page rate", "Onboarding completion %", "Day 1 check-in completion rate"]
+            "items": [
+              { "name": "QR Scan → Landing Page", "value": "62%", "bar": 62 },
+              { "name": "Onboarding Completion", "value": "78%", "bar": 78 },
+              { "name": "Day 1 Check-in Rate", "value": "71%", "bar": 71 }
+            ]
           },
           {
             "category": "Engagement",
             "icon": "🔁",
-            "items": ["Avg check-ins per user (out of 7)", "Streak completion rate", "Avatar interaction rate"]
+            "items": [
+              { "name": "Avg Check-ins per User", "value": "5.4/7", "bar": 77 },
+              { "name": "Streak Completion Rate", "value": "44%", "bar": 44 },
+              { "name": "Avatar Interaction Rate", "value": "58%", "bar": 58 }
+            ]
           },
           {
             "category": "Growth",
             "icon": "📈",
-            "items": ["Shareable call-out card generation rate", "UGC posts with #CetaphilCalledMeOut", "Referral traffic from shared cards"]
+            "items": [
+              { "name": "Shareable Card Generated", "value": "38%", "bar": 38 },
+              { "name": "UGC Posts Target", "value": "500+", "bar": 65 },
+              { "name": "Referral Traffic Share", "value": "22%", "bar": 22 }
+            ]
           },
           {
             "category": "Business",
             "icon": "💰",
-            "items": ["Trial kit → full-size purchase conversion", "Discount code redemption rate", "Repeat purchase intent score"]
+            "items": [
+              { "name": "Trial Kit → Purchase", "value": "28%", "bar": 28 },
+              { "name": "Discount Redemption", "value": "41%", "bar": 41 },
+              { "name": "Repeat Purchase Intent", "value": "67%", "bar": 67 }
+            ]
           }
         ]
       },
