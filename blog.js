@@ -75,16 +75,13 @@ const renderBlock = (block, index) => {
       "#0d9488"  // 08 Loyalty    — teal
     ];
 
-    const steps = block.steps || [];
-    // Split into two rows of 4
-    const row1 = steps.slice(0, 4);
-    const row2 = steps.slice(4, 8);
-
     const renderCard = (s, idx) => {
       const color = palette[idx] || "#0076BE";
       // Truncate description to ~80 chars for card readability
-      const shortText = (s.text || "").split("—")[0].trim().slice(0, 88) + (s.text.length > 88 ? "…" : "");
+      const text = s.text || "";
+      const shortText = text.split("—")[0].trim().slice(0, 118) + (text.length > 118 ? "…" : "");
       return `<div class="cs-vflow-card">
+        ${s.image ? `<div class="cs-vflow-media"><img src="${escapeHtml(s.image)}" alt="${escapeHtml(s.title)} visual" /></div>` : ""}
         <div class="cs-vflow-head" style="background:${color}">
           <span class="cs-vflow-num">${escapeHtml(s.number)}</span>
           <span class="cs-vflow-icon" aria-hidden="true">${s.icon || ""}</span>
@@ -97,33 +94,10 @@ const renderBlock = (block, index) => {
       </div>`;
     };
 
-    const renderArrow = (dir = "right") =>
-      `<div class="cs-vflow-arrow cs-vflow-arrow-${dir}" aria-hidden="true">
-        ${dir === "right" ? `<svg viewBox="0 0 32 12"><path d="M0 6h28M22 1l6 5-6 5"/></svg>` :
-                            `<svg viewBox="0 0 12 32"><path d="M6 0v28M1 22l5 6 5-6"/></svg>`}
-      </div>`;
-
     return `<div class="cs-vflow">
       ${block.label ? `<div class="cs-vflow-label">${escapeHtml(block.label)}</div>` : ""}
-      ${block.visual ? `<figure class="cs-vflow-visual">
-        <img src="${escapeHtml(block.visual)}" alt="${escapeHtml(block.visualAlt || block.label || "Digital journey visual")}" />
-      </figure>` : ""}
       <div class="cs-vflow-board">
-        <div class="cs-vflow-row">
-          ${row1.map((s, i) => `
-            ${renderCard(s, i)}
-            ${i < row1.length - 1 ? renderArrow("right") : ""}
-          `).join("")}
-        </div>
-        ${row2.length ? `
-          <div class="cs-vflow-turn">${renderArrow("down")}</div>
-          <div class="cs-vflow-row cs-vflow-row-rev">
-            ${[...row2].reverse().map((s, i) => `
-              ${i > 0 ? renderArrow("right") : ""}
-              ${renderCard(s, steps.indexOf(s))}
-            `).join("")}
-          </div>
-        ` : ""}
+        ${(block.steps || []).map(renderCard).join("")}
       </div>
     </div>`;
   }
