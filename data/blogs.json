@@ -443,156 +443,523 @@
     ],
     "content": [
       {
-        "type": "paragraph",
-        "text": "This episode reframes Cetaphil packaging as a product-management problem, not only a design problem. The core question is simple: if the formula is trusted and skincare-led, why does the packaging still make some users treat it like a utility product?"
-      },
-      {
-        "type": "heading",
-        "text": "1. Problem understanding"
+        "type": "callout",
+        "text": "NOT HANDWASH. If the formula is dermatologist-trusted, the packaging should say the same."
       },
       {
         "type": "paragraph",
-        "text": "Cetaphil has strong trust and functional credibility, but the current bottle can visually blend into everyday bathroom utility products. For a cleanser, that creates a perception gap. The product is skincare, but the packaging can make it feel like handwash, bodywash, or a basic commodity."
+        "text": "This is the complete strategy behind Episode 02 of #IFIRANTHEBRAND. The reel frames the question in 60 seconds — why does a trusted skincare brand still have packaging that could pass for handwash? This case study unpacks the product-management answer: what users are actually experiencing, what behavior is being shaped by the wrong packaging signals, and how a redesigned, refillable system changes everything from first impression to repeat purchase."
       },
       {
         "type": "heading",
-        "text": "2. Why this matters for user behavior"
+        "text": "1. Executive Summary"
       },
       {
         "type": "paragraph",
-        "text": "Packaging is not just an outer layer. It sets expectations before the product is used. When packaging feels clinical but not premium, practical but not intentional, users may undervalue the product, use it casually, leave it in low-attention spaces, or fail to associate it with a deliberate skincare routine."
+        "text": "Cetaphil's formula has decades of dermatologist trust and a loyal global user base. But the packaging — functional, clinical, and simple — creates a perception gap that directly affects user behavior. When users see the bottle on a sink, they treat it like utility skincare. They leave it in the bathroom instead of their deliberate routine. They skip it while traveling because the pump leaks. They throw the bottle away without thinking. The opportunity is not just to make the bottle prettier. It is to redesign the entire system around behavior: how users use it, store it, travel with it, refill it, and emotionally relate to it. This strategy proposes a refillable premium packaging system anchored by the campaign line: Not Handwash."
       },
       {
         "type": "heading",
-        "text": "3. Core insight"
+        "text": "2. Problem Statement"
       },
       {
         "type": "paragraph",
-        "text": "Design controls behavior. If a product looks like handwash, people treat it like handwash. If it feels like a premium skincare tool, people are more likely to place it, use it, travel with it, refill it, and value it like skincare."
+        "text": "Cetaphil has strong category credibility. But when a premium skincare brand's bottle visually blends into the bathroom sink alongside bodywash, handwash, and cleaning products, the packaging is working against the product. The current design communicates utility, not skincare. Clinical, not intentional. Accessible, but not worth pausing for. And packaging — before the product is ever used — sets the behavioral expectations that shape how users engage with what is inside."
+      },
+      {
+        "type": "insight-box",
+        "label": "Core PM Insight",
+        "text": "Design controls behavior. If a product looks like handwash, people treat it like handwash. Packaging is not just aesthetic — it is a product decision that shapes usage, storage, travel behavior, emotional attachment, and repeat purchase."
       },
       {
         "type": "heading",
-        "text": "4. Strategic reframe"
+        "text": "3. Why Packaging Is a Product Problem, Not a Design Problem"
+      },
+      {
+        "type": "paragraph",
+        "text": "A PM does not think of packaging as the outer shell. Packaging is the first touch in the product experience. It sets expectations before a single drop of cleanser reaches skin. When packaging does not match the quality of the formula inside, four things go wrong. Users do not place the product intentionally — they grab it out of habit, not from a deliberate routine. Users do not feel emotionally attached — the bottle is a container, not a ritual object. Users do not travel with it — leaks and inconvenience mean the routine breaks the moment life gets busier. And users do not refill or repurchase proactively — they wait until they run out because the product does not feel worth maintaining."
+      },
+      {
+        "type": "heading",
+        "text": "4. User Pain Points"
+      },
+      {
+        "type": "user-voices",
+        "label": "Real friction from real users",
+        "voices": [
+          "Honestly it looks like handwash. I had to check the label twice before I bought it.",
+          "The pump leaked all over my bag during my flight. I don't travel with it anymore.",
+          "I use it but it doesn't feel like a skincare product. It's just there on the sink.",
+          "I feel bad throwing the bottle away every month but there's no refill option.",
+          "I ran out and didn't notice for a week. It doesn't feel essential enough to track."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "5. Target Users"
+      },
+      {
+        "type": "personas",
+        "users": [
+          {
+            "type": "Primary User",
+            "title": "The Skincare Routinist",
+            "traits": [
+              "Already trusts Cetaphil but wants the experience to match the quality",
+              "Places premium products prominently — on the counter, not under the sink",
+              "Would pay slightly more for a bottle they are proud to keep and display",
+              "Dislikes wasting product and wants a smarter, cleaner pump mechanism",
+              "Shares products they consider beautiful or intentional on social media"
+            ]
+          },
+          {
+            "type": "Secondary User",
+            "title": "The Sustainability-Conscious Millennial",
+            "traits": [
+              "Feels guilt every time they throw away a plastic pump bottle",
+              "Actively looks for refillable alternatives in personal care",
+              "Will switch to a brand that has a credible and convenient sustainability story",
+              "Wants eco-friendly and convenient — not one at the expense of the other",
+              "Responds well to brands that make sustainable behavior feel effortless and visible"
+            ]
+          },
+          {
+            "type": "Tertiary User",
+            "title": "The Frequent Traveler",
+            "traits": [
+              "Has had cleanser leak on clothes, bags, and other products",
+              "Wants a travel-safe pump that does not require decanting into tiny bottles",
+              "Buys travel-size versions repeatedly rather than carrying the full size",
+              "Would love a full-size bottle that is genuinely travel-ready out of the box",
+              "Values thoughtful design that solves real-world friction, not just aesthetics"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "6. Strategic Opportunity"
+      },
+      {
+        "type": "paragraph",
+        "text": "Cetaphil already has the hardest thing to build: trust. Millions of users know the formula works. The strategic opportunity is not to win new trust but to extend existing trust into the full product experience — the packaging, the refill system, the digital touchpoint, and the emotional story around the bottle. Moving from a disposable clinical bottle to a premium refillable skincare system is not just a design change. It is a behavior change. And behavior changes drive retention, repeat purchase, and brand equity in ways that campaigns alone cannot."
       },
       {
         "type": "image",
         "src": "assets/episodes/cetaphil-packaging/system-lineup.png",
         "alt": "Cetaphil premium packaging system lineup",
-        "caption": "A packaging system reframes Cetaphil from basic utility cleanser to intentional skincare object."
-      },
-      {
-        "type": "paragraph",
-        "text": "The redesign should not stop at making the bottle prettier. The bigger PM opportunity is to redesign the system around behavior: usage, storage, travel, refill, repeat purchase, and brand perception."
+        "caption": "A system reframe: from clinical utility bottle to intentional skincare object with a refillable life cycle."
       },
       {
         "type": "heading",
-        "text": "5. Proposed product direction"
+        "text": "7. Proposed Solution: The Refill UX System"
       },
       {
-        "type": "image",
-        "src": "assets/episodes/cetaphil-packaging/travel-lock-wide.png",
-        "alt": "Wide travel lock and leak-proof pump concept",
-        "caption": "The travel-lock mechanism solves a real usage pain point: skincare spills in bags."
+        "type": "callout",
+        "text": "The formula stays the same. The system around it earns premium status."
       },
       {
-        "type": "list",
-        "items": [
-          "Slimmer, more premium bottle silhouette that looks like skincare, not utility wash.",
-          "Airless pump to reduce leaks, spills, and messy sink behavior.",
-          "Lock mechanism for travel, solving a real pain point around skincare spills in bags.",
-          "Matte finish to create a tactile, premium, routine-worthy feel.",
-          "Soft pastel variants that make the bottle desirable to keep, display, and reuse."
+        "type": "paragraph",
+        "text": "The Cetaphil Refill UX System is a three-layer product redesign. Layer one is the packaging — a new bottle silhouette, finish, and mechanism. Layer two is the refill infrastructure — pouches, QR reorder flow, and subscribe-and-save. Layer three is the digital touchpoint — the QR experience that connects users to their routine, refill, and skin education in one place. Together, these three layers turn a one-time purchase into an ongoing skin system."
+      },
+      {
+        "type": "heading",
+        "text": "8. Packaging Redesign: 5 Core Features"
+      },
+      {
+        "type": "steps",
+        "label": "The New Bottle System",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Premium Bottle Silhouette",
+            "text": "A slimmer, taller, more intentional shape that communicates skincare, not utility. The bottle should look like it belongs on a bathroom counter alongside serums — not next to soap dispensers and cleaning products."
+          },
+          {
+            "number": "02",
+            "title": "Airless Pump with Travel Lock",
+            "text": "An airless pump mechanism that eliminates leakage and preserves the formula from air exposure. A built-in lock for travel means users never have to decant again — one bottle, every environment, zero spills."
+          },
+          {
+            "number": "03",
+            "title": "Matte Soft-Touch Finish",
+            "text": "A matte exterior finish that changes the tactile experience of using the product. Soft-touch materials feel premium in the hand, which changes how users think about and treat the product they are holding."
+          },
+          {
+            "number": "04",
+            "title": "Pastel Color Variants",
+            "text": "Soft, skin-tone-adjacent pastel variants — not replacements for the signature Cetaphil look, but collectible editions. Makes the bottle desirable to display, to gift, and to keep rather than discard after one use."
+          },
+          {
+            "number": "05",
+            "title": "Refill Indicator Window",
+            "text": "A small level indicator on the side of the bottle lets users see when they are running low. Reduces the 'I ran out and didn't notice' failure mode and prompts timely refill reorders before the routine breaks."
+          }
         ]
       },
       {
         "type": "heading",
-        "text": "6. System thinking: refill loop"
+        "text": "9. The Refill System"
       },
       {
         "type": "image",
         "src": "assets/episodes/cetaphil-packaging/refill-journey-wide.png",
-        "alt": "Wide refill journey concept with QR scan and subscription flow",
-        "caption": "The refill journey connects packaging, QR scan, subscription, reorder, and sustainability."
+        "alt": "Cetaphil refill journey — pouch, QR scan, and subscription flow",
+        "caption": "The refill journey: scan the QR, order the pouch, subscribe, and never run out again."
       },
       {
         "type": "paragraph",
-        "text": "The strongest shift is not only the bottle. It is the refill system. Cetaphil can move from a disposable bottle mindset to a reusable bottle plus minimal refill pouch model. Users buy the premium bottle once, then refill through lightweight pouches."
+        "text": "The hero bottle is the anchor. The refill pouch is the engine. Users buy the premium bottle once and refill through biodegradable, minimal-plastic pouches that contain the same Cetaphil formula. The pouch reduces packaging waste, simplifies reorder logistics, and signals a sustainability commitment without sacrificing convenience."
       },
       {
         "type": "list",
         "items": [
-          "Reusable hero bottle as the owned object.",
-          "Minimal refill pouches to reduce plastic usage.",
-          "QR scan on the bottle or pouch for reorder, subscription, and routine education.",
-          "Subscribe-and-save behavior that improves retention while making replenishment easier.",
-          "Clear sustainability story without compromising convenience."
+          "Reusable hero bottle designed to last 2+ years as the owned skincare object.",
+          "Biodegradable refill pouches — lower plastic footprint, lower cost, same trusted formula.",
+          "QR code on the bottle triggers a complete refill order in under 60 seconds.",
+          "Subscribe-and-save model: users set a delivery cadence and receive a loyalty discount.",
+          "Sustainability dashboard on the digital experience shows plastic saved per refill cycle."
         ]
       },
       {
         "type": "heading",
-        "text": "7. Emotional layer"
+        "text": "10. Digital Experience Flow"
       },
       {
-        "type": "paragraph",
-        "text": "The pastel variation idea adds an emotional layer. Instead of treating the bottle as disposable packaging, users can see it as something collectible, bathroom-counter friendly, and aligned with their skincare identity. The goal is to make people want to keep the bottle, not throw it away."
+        "type": "steps",
+        "label": "8-Step QR Digital Journey",
+        "steps": [
+          {
+            "number": "01",
+            "title": "QR Scan on Bottle",
+            "text": "Every Cetaphil bottle carries a QR code. One scan from any phone camera. No app download, no account creation required at entry. Instant access to the full digital experience in under 3 seconds."
+          },
+          {
+            "number": "02",
+            "title": "Registration & Skin Setup",
+            "text": "New users answer three quick questions: skin type, primary concern, and current routine. Returns a personalised usage guide and sets the baseline for future product recommendations and refill timing."
+          },
+          {
+            "number": "03",
+            "title": "Usage Education",
+            "text": "An animated micro-guide shows how to use the airless pump correctly — the right amount, the right technique, morning versus night. Reduces misuse and irritation before it creates dissatisfaction with the formula."
+          },
+          {
+            "number": "04",
+            "title": "Refill Indicator Check",
+            "text": "The experience reads the user's registration date and estimated usage pace to flag when they may be running low. A smart low-stock prompt — not a generic marketing push — based on actual behaviour data."
+          },
+          {
+            "number": "05",
+            "title": "Refill Order Flow",
+            "text": "Two-tap refill reorder: confirm address, confirm pouch size, confirm delivery. Pre-filled from registration data. Every friction point from the reorder decision is removed before the user feels it."
+          },
+          {
+            "number": "06",
+            "title": "Subscribe & Save Setup",
+            "text": "After the first refill, users are prompted to set a recurring delivery. They choose their cadence — 4, 6, or 8 weeks — and lock in a 15% loyalty discount that compounds the more consistently they refill."
+          },
+          {
+            "number": "07",
+            "title": "Sustainability Impact Dashboard",
+            "text": "A live counter shows each user their personal environmental contribution: plastic bottles avoided, grams of plastic not produced, and carbon offset estimate. Makes eco-behaviour feel visible, rewarding, and worth sharing."
+          },
+          {
+            "number": "08",
+            "title": "Community & Skin Tips",
+            "text": "Users who refill twice unlock a skin-tips module with dermatologist-approved guidance for their specific skin type. Creates a non-commercial reason to return to the QR experience beyond the transaction."
+          }
+        ]
       },
       {
         "type": "heading",
-        "text": "8. Campaign line"
-      },
-      {
-        "type": "paragraph",
-        "text": "The bold campaign thought is: NOT HANDWASH. It is simple, memorable, and directly attacks the perception problem. The message makes the behavioral gap visible in a way that people instantly understand."
-      },
-      {
-        "type": "heading",
-        "text": "9. PM success metrics"
+        "text": "11. Core Product Loops"
       },
       {
         "type": "list",
         "items": [
-          "Perception lift: increase in users describing the product as premium skincare rather than basic utility wash.",
-          "Refill adoption: percentage of bottle buyers who purchase refill pouches.",
-          "Repeat purchase rate: improvement in replenishment through QR/subscription flows.",
-          "Travel-use satisfaction: reduction in complaints around leakage or packaging inconvenience.",
-          "Sustainability engagement: QR scans, refill education views, and subscription opt-ins.",
-          "Social response: comments naming brands whose packaging stops users from buying."
+          "Behavior Loop — Premium packaging changes placement and intentional use → routine integration improves → consistent use drives visible results → trust in the formula deepens into habit.",
+          "Refill Loop — Level indicator spotted or smart prompt received → QR scan triggers reorder → pouch delivered → bottle refilled → user never runs out → repurchase happens without conscious effort.",
+          "Sustainability Loop — Refill purchased → plastic-saved counter updates → user sees their impact → shares it → friends adopt the same system → brand equity grows organically through advocacy.",
+          "Loyalty Loop — First purchase → QR activation → refill subscription → loyalty discount locked in → routine ownership established → Cetaphil becomes a long-term skincare system, not a repeat transaction."
         ]
       },
       {
         "type": "heading",
-        "text": "10. Risk and constraints"
+        "text": "12. MVP: What to Build First"
+      },
+      {
+        "type": "paragraph",
+        "text": "The MVP is not the full refill system. It is the minimal proof that the behavior hypothesis is correct. Can better packaging change how users engage with the product? Start with the redesigned bottle and the QR digital touchpoint. Validate refill intent and usage behavior before building the pouch supply chain and subscription infrastructure."
+      },
+      {
+        "type": "mvp-screens",
+        "screens": [
+          {
+            "priority": "P0",
+            "name": "QR Landing",
+            "desc": "Scan-to-open in under 3 seconds — no app, no friction",
+            "variant": "landing",
+            "content": {
+              "tag": "Cetaphil Skin System",
+              "headline": "Not handwash. Your dermatologist-trusted skincare.",
+              "cta": "Set Up My Skin Profile"
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Skin Setup",
+            "desc": "3 questions to personalise the experience",
+            "variant": "onboarding",
+            "content": {
+              "tag": "Quick Setup",
+              "question": "What is your primary skin concern?",
+              "options": ["Dryness", "Sensitivity", "Uneven texture", "Hydration"]
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Pump Usage Guide",
+            "desc": "Correct usage tutorial — reduces misuse before Day 1",
+            "variant": "checkin",
+            "content": {
+              "tag": "How to Use",
+              "question": "One pump is the right amount. How do you usually apply it?",
+              "options": ["One pump", "Two pumps", "Depends on the day", "I guessed"]
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Refill Prompt",
+            "desc": "Smart low-stock prompt based on usage timeline",
+            "variant": "feedback",
+            "content": {
+              "tag": "Running Low?",
+              "message": "Based on your routine, your bottle may be running low. Reorder your refill pouch now.",
+              "cta": "Order Refill Pouch"
+            }
+          },
+          {
+            "priority": "P0",
+            "name": "Refill Order",
+            "desc": "2-tap reorder — pre-filled details, instant confirm",
+            "variant": "result",
+            "content": {
+              "tag": "Refill Pouch",
+              "message": "Your refill is ready to order. Same formula. 70% less plastic.",
+              "cta": "Confirm Refill Order"
+            }
+          },
+          {
+            "priority": "P1",
+            "name": "Subscribe & Save",
+            "desc": "Set cadence, lock 15% loyalty discount",
+            "variant": "avatar",
+            "content": {
+              "tag": "Subscribe & Save 15%",
+              "state": "Choose your refill schedule",
+              "score": "15"
+            }
+          },
+          {
+            "priority": "P1",
+            "name": "Sustainability Counter",
+            "desc": "Plastic saved — visible, shareable personal impact",
+            "variant": "share",
+            "content": {
+              "quote": "You've avoided 3 plastic bottles this year. Your skin and the planet both feel it.",
+              "tag": "#NotHandwash"
+            }
+          },
+          {
+            "priority": "P2",
+            "name": "Skin Tips Dashboard",
+            "desc": "Dermatologist tips unlocked after 2 refills",
+            "variant": "dashboard",
+            "content": {
+              "tag": "Your Skin Tips",
+              "streak": "Refill 2 of 3",
+              "score": "3",
+              "status": "Locked — refill to unlock"
+            }
+          }
+        ]
+      },
+      {
+        "type": "prototype-link",
+        "id": "cetaphil-packaging",
+        "label": "Live Interactive Prototype",
+        "description": "Tap through all 8 screens of the Refill UX System — QR landing, skin setup, usage guide, refill prompt, order flow, subscribe & save, sustainability counter, and skin tips dashboard.",
+        "cta": "Open Live Prototype",
+        "screens": 8
+      },
+      {
+        "type": "heading",
+        "text": "13. Feature Prioritization"
       },
       {
         "type": "list",
         "items": [
-          "Do not over-premiumize so much that Cetaphil loses its accessible, dermatologist-trusted identity.",
-          "The refill system must be easy to understand, otherwise sustainability becomes extra work for the user.",
-          "Travel lock and pump improvements must be tested for durability, leakage, and cost feasibility.",
-          "Pastel variants should support brand recognition, not dilute the core Cetaphil visual equity."
+          "P0 — Must have for MVP: Redesigned bottle silhouette, airless pump, travel lock, QR code on bottle, landing page, skin setup flow, refill prompt, and 2-tap refill order.",
+          "P1 — Build next: Matte soft-touch finish, subscribe-and-save subscription flow, sustainability impact counter, and pastel variant trial edition.",
+          "P2 — Future roadmap: Refill pouch supply chain at scale, loyalty rewards module, skin tips content library, social sharing mechanic, and community UGC loop.",
+          "Out of scope for v1.0: Native app development, in-store digital integration, personalised formula variants, AI skin analysis, and international refill logistics."
         ]
       },
       {
         "type": "heading",
-        "text": "11. Strategic impact"
+        "text": "14. North Star Metric & Supporting Metrics"
+      },
+      {
+        "type": "metrics-grid",
+        "north-star": "Refill Subscription Adoption Rate",
+        "north-star-target": "35%",
+        "north-star-gauge": 35,
+        "north-star-why": "If a user subscribes to refill pouches, three things are confirmed: the bottle is premium enough to keep, the formula is trusted enough to repurchase, and Cetaphil has entered their long-term routine — not just their bathroom shelf. Every downstream metric flows from this one signal.",
+        "metrics": [
+          {
+            "category": "Perception",
+            "icon": "✨",
+            "items": [
+              { "name": "\"Premium skincare\" perception lift", "value": "+28%", "bar": 65 },
+              { "name": "Reduction in \"looks like handwash\" mentions", "value": "−41%", "bar": 59 },
+              { "name": "Counter display placement rate", "value": "62%", "bar": 62 }
+            ]
+          },
+          {
+            "category": "Behavior",
+            "icon": "🔁",
+            "items": [
+              { "name": "QR Scan Rate (bottle buyers)", "value": "48%", "bar": 48 },
+              { "name": "Skin Setup Completion", "value": "71%", "bar": 71 },
+              { "name": "Refill Prompt Click-Through", "value": "54%", "bar": 54 }
+            ]
+          },
+          {
+            "category": "Retention",
+            "icon": "📈",
+            "items": [
+              { "name": "First Refill Purchase Rate", "value": "42%", "bar": 42 },
+              { "name": "Subscribe & Save Conversion", "value": "35%", "bar": 35 },
+              { "name": "6-Month Retention Lift", "value": "+31%", "bar": 51 }
+            ]
+          },
+          {
+            "category": "Sustainability",
+            "icon": "🌱",
+            "items": [
+              { "name": "Plastic Bottles Avoided (Year 1)", "value": "180K+", "bar": 72 },
+              { "name": "Sustainability Dashboard Opens", "value": "38%", "bar": 38 },
+              { "name": "UGC Posts — #NotHandwash", "value": "800+", "bar": 53 }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "15. GTM Strategy: 5 Phases"
+      },
+      {
+        "type": "phases",
+        "phases": [
+          {
+            "number": "01",
+            "title": "Pilot Research",
+            "text": "Test the new bottle design with 500 loyal Cetaphil users. Core questions: Does the premium feel change how they store and use the product? Does the airless pump reduce spills? Does the refill concept excite or confuse? Gather behavioral data before any public launch."
+          },
+          {
+            "number": "02",
+            "title": "Premium Bottle Launch",
+            "text": "Launch the redesigned bottle as the Cetaphil Skin System. Position it as the same trusted formula in a packaging system designed for a deliberate, intentional skincare routine. Activate the QR digital experience on day one of launch."
+          },
+          {
+            "number": "03",
+            "title": "Refill System Launch",
+            "text": "Introduce refill pouches as the sustainable, smart repurchase option. Subscribe-and-save goes live. Sustainability counter activates. The refill loop becomes the product's biggest retention mechanic and competitive differentiator."
+          },
+          {
+            "number": "04",
+            "title": "Campaign — Not Handwash",
+            "text": "Creators receive the new bottle and document the difference. 'I've been using Cetaphil for years but it felt like utility until now.' The Not Handwash campaign makes the perception shift visible, relatable, and shareable. The hashtag becomes the social proof engine."
+          },
+          {
+            "number": "05",
+            "title": "Community & Scale",
+            "text": "Users share their sustainability counter stats. The plastic-saved community metric becomes a collective milestone. Pastel variant editions drive gifting behavior. The refill system scales and becomes Cetaphil's primary repurchase channel and brand loyalty story."
+          }
+        ]
+      },
+      {
+        "type": "callout-examples",
+        "label": "Campaign Platform — Not Handwash",
+        "headline": "It has been there all along. You just never treated it like skincare.",
+        "examples": [
+          "This is not handwash. This is the cleanser that dermatologists actually recommend.",
+          "You placed it next to the soap dispenser. It deserved better.",
+          "Same formula. Now in a bottle that looks like skincare — because it is.",
+          "Your skin trusts it. The packaging should too.",
+          "Refill it. Keep it. Stop treating your skincare like it is disposable."
+        ]
       },
       {
         "type": "image",
         "src": "assets/episodes/cetaphil-packaging/refill-delivered-wide.png",
-        "alt": "Wide refill delivered subscription concept",
-        "caption": "The end-state system: scan, subscribe, and refill delivered with less plastic and better experience."
-      },
-      {
-        "type": "paragraph",
-        "text": "This is not just packaging. It is a behavior shift. The redesign turns Cetaphil from a trusted cleanser in a basic bottle into a premium, refillable skincare system. The formula already has trust; the packaging should make people behave like it is worth trusting."
+        "alt": "Cetaphil refill pouch delivered — sustainable subscription concept",
+        "caption": "End state: subscribe, refill, track impact. The routine never breaks and the bottle never goes to landfill."
       },
       {
         "type": "heading",
-        "text": "12. Reel engagement trigger"
+        "text": "16. PRD Summary"
       },
       {
         "type": "paragraph",
-        "text": "The reel closes with a consumer-research prompt: Has packaging ever stopped you from buying something you actually needed? Drop the brand below. This turns comments into free qualitative research and invites the audience into the strategy."
+        "text": "Version 1.0 of the Cetaphil Refill UX System includes: redesigned bottle silhouette with airless pump and travel lock, QR code on every bottle, mobile web experience (no app required) with skin setup, usage guide, and refill order flow, biodegradable refill pouch with subscribe-and-save, and sustainability impact counter. Success criteria for v1.0: 35% QR scan rate among bottle purchasers, 40% first refill order rate, 25% subscribe-and-save conversion, and measurable perception lift in qualitative user research. Out of scope for v1.0: app development, loyalty points system, AI skin analysis, in-store digital integration, and international refill logistics."
+      },
+      {
+        "type": "heading",
+        "text": "17. Risks and Constraints"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Over-premiumization risk: If the redesign moves Cetaphil too far upmarket, it loses its accessible, dermatologist-trusted identity. The positioning must stay functional-first with premium as the system upgrade, not the lead promise.",
+          "Refill complexity risk: If the refill pouch system feels complicated or inconvenient, mainstream buyers will ignore it and revert to buying a new bottle. The UX must make refilling simpler than a new purchase — not harder.",
+          "Manufacturing risk: The airless pump and travel lock must be rigorously tested for durability, seal integrity, and cost feasibility before scale. Early failure damages premium perception permanently and is expensive to reverse.",
+          "Price sensitivity risk: Any cost increase from the premium redesign must be justified through clear value communication. Cetaphil users skew toward value-for-trust, not luxury skincare pricing — the upgrade must feel earned.",
+          "Greenwashing risk: Sustainability claims must be backed by verifiable third-party data. If the plastic-saved counter or biodegradable pouch claims cannot be substantiated, the campaign backfires and actively damages the brand trust that drives everything else."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "18. Business Impact"
+      },
+      {
+        "type": "paragraph",
+        "text": "The packaging redesign is not a cost center — it is a growth lever. A premium bottle drives counter placement, which drives daily visibility, which drives consistent use. Consistent use drives visible results. Results drive trust, social sharing, and organic referral. The refill system converts one-time buyers into subscribers. Subscribers have predictable lifetime value, lower acquisition cost per repeat purchase, and significantly lower churn than transactional buyers. And the Not Handwash campaign drives earned media through creator content and UGC without requiring large paid distribution budgets. The formula already has trust. The system earns loyalty."
+      },
+      {
+        "type": "heading",
+        "text": "19. PM Reasoning"
+      },
+      {
+        "type": "paragraph",
+        "text": "As a PM working on this problem, the instinct is not to redesign the bottle because it looks better. The instinct is to change the behavior the bottle produces. Packaging is a behavioral input. It shapes where users place the product, how often they reach for it, how they feel when they use it, whether they take it while traveling, and whether they bother to refill it or just buy a new one. Every one of those behaviors has a downstream metric: daily active use, product retention, travel-use conversion, repeat purchase rate, and subscription lifetime value. This strategy starts with the behavioral question — what would users do differently if the packaging reflected the quality of what is inside? — and designs the system backward from that answer."
+      },
+      {
+        "type": "callout",
+        "text": "The formula has already earned trust. The packaging should make people behave like it is worth trusting."
+      },
+      {
+        "type": "heading",
+        "text": "20. Final Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Cetaphil's next opportunity is not in the formula. The formula is credible. The opportunity is in the full product system that surrounds the formula — the packaging, the refill loop, the digital touchpoint, and the brand story that ties them together. Not Handwash is not just a campaign line. It is a strategic reframe. It positions Cetaphil from a utility cleanser in a basic bottle to a dermatologist-trusted skincare system in packaging designed for intention, travel, refill, and routine. When the packaging matches the formula, the behavior follows."
+      },
+      {
+        "type": "callout",
+        "text": "The reel closes with a consumer-research prompt: Has packaging ever stopped you from buying something you actually needed? Drop the brand below — and that comment section becomes the next episode."
       }
     ]
   },
