@@ -63,36 +63,64 @@ const renderBlock = (block, index) => {
   }
 
   if (block.type === "flow-steps") {
-    const tagColors = {
-      "Entry":         { bg: "#e8f4fc", color: "#0076BE" },
-      "Setup":         { bg: "#eef6f0", color: "#2d8a50" },
-      "Education":     { bg: "#fdf3e3", color: "#b45309" },
-      "Smart Trigger": { bg: "#fce8f3", color: "#a1286a" },
-      "Conversion":    { bg: "#fef0e7", color: "#c2410c" },
-      "Retention":     { bg: "#ede9fe", color: "#5b21b6" },
-      "Impact":        { bg: "#ecfdf5", color: "#065f46" },
-      "Loyalty":       { bg: "#fef9c3", color: "#854d0e" }
+    // Colour palette per step — tells the funnel story visually
+    const palette = [
+      "#00316E", // 01 Entry      — Cetaphil navy
+      "#0076BE", // 02 Setup      — Cetaphil blue
+      "#0891b2", // 03 Education  — cyan
+      "#7c3aed", // 04 Trigger    — purple
+      "#e85d04", // 05 Conversion — orange (site accent)
+      "#c2410c", // 06 Retention  — deep orange
+      "#059669", // 07 Impact     — green
+      "#0d9488"  // 08 Loyalty    — teal
+    ];
+
+    const steps = block.steps || [];
+    // Split into two rows of 4
+    const row1 = steps.slice(0, 4);
+    const row2 = steps.slice(4, 8);
+
+    const renderCard = (s, idx) => {
+      const color = palette[idx] || "#0076BE";
+      // Truncate description to ~80 chars for card readability
+      const shortText = (s.text || "").split("—")[0].trim().slice(0, 88) + (s.text.length > 88 ? "…" : "");
+      return `<div class="cs-vflow-card">
+        <div class="cs-vflow-head" style="background:${color}">
+          <span class="cs-vflow-num">${escapeHtml(s.number)}</span>
+          <span class="cs-vflow-icon" aria-hidden="true">${s.icon || ""}</span>
+          <span class="cs-vflow-stage">${escapeHtml(s.tag || "")}</span>
+        </div>
+        <div class="cs-vflow-body">
+          <h4>${escapeHtml(s.title)}</h4>
+          <p>${escapeHtml(shortText)}</p>
+        </div>
+      </div>`;
     };
-    return `<div class="cs-flow">
-      ${block.label ? `<div class="cs-flow-label">${escapeHtml(block.label)}</div>` : ""}
-      <div class="cs-flow-track">
-        ${block.steps.map((s, i) => {
-          const tc = tagColors[s.tag] || { bg: "#f0f0f0", color: "#555" };
-          return `<div class="cs-flow-step">
-            <div class="cs-flow-node">
-              <div class="cs-flow-circle">${escapeHtml(s.number)}</div>
-              ${i < block.steps.length - 1 ? `<div class="cs-flow-connector"></div>` : ""}
-            </div>
-            <div class="cs-flow-card">
-              <div class="cs-flow-card-meta">
-                ${s.icon ? `<span class="cs-flow-icon" aria-hidden="true">${s.icon}</span>` : ""}
-                ${s.tag ? `<span class="cs-flow-tag" style="background:${tc.bg};color:${tc.color}">${escapeHtml(s.tag)}</span>` : ""}
-              </div>
-              <h4>${escapeHtml(s.title)}</h4>
-              <p>${escapeHtml(s.text)}</p>
-            </div>
-          </div>`;
-        }).join("")}
+
+    const renderArrow = (dir = "right") =>
+      `<div class="cs-vflow-arrow cs-vflow-arrow-${dir}" aria-hidden="true">
+        ${dir === "right" ? `<svg viewBox="0 0 32 12"><path d="M0 6h28M22 1l6 5-6 5"/></svg>` :
+                            `<svg viewBox="0 0 12 32"><path d="M6 0v28M1 22l5 6 5-6"/></svg>`}
+      </div>`;
+
+    return `<div class="cs-vflow">
+      ${block.label ? `<div class="cs-vflow-label">${escapeHtml(block.label)}</div>` : ""}
+      <div class="cs-vflow-board">
+        <div class="cs-vflow-row">
+          ${row1.map((s, i) => `
+            ${renderCard(s, i)}
+            ${i < row1.length - 1 ? renderArrow("right") : ""}
+          `).join("")}
+        </div>
+        ${row2.length ? `
+          <div class="cs-vflow-turn">${renderArrow("down")}</div>
+          <div class="cs-vflow-row cs-vflow-row-rev">
+            ${[...row2].reverse().map((s, i) => `
+              ${i > 0 ? renderArrow("right") : ""}
+              ${renderCard(s, steps.indexOf(s))}
+            `).join("")}
+          </div>
+        ` : ""}
       </div>
     </div>`;
   }

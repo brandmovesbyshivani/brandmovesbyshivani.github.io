@@ -1506,179 +1506,211 @@ h3 {
   line-height: 1.5;
 }
 
-/* ── Flow Steps (Digital Experience Journey) ──────────────────────── */
-.cs-flow {
-  margin: 1.5rem 0 2rem;
+/* ── Visual Flow Journey Map (Digital Experience Steps) ─────────────── */
+.cs-vflow {
+  margin: 1.5rem 0 2.5rem;
 }
 
-.cs-flow-label {
+.cs-vflow-label {
   font-size: 0.7rem;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent, #e85d04);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.cs-flow-label::after {
+.cs-vflow-label::after {
   content: "";
   flex: 1;
   height: 1px;
   background: var(--line, #e8e8e8);
 }
 
-.cs-flow-track {
-  position: relative;
-  padding-left: 3.25rem;
-}
-
-/* Vertical gradient spine */
-.cs-flow-track::before {
-  content: "";
-  position: absolute;
-  left: 1.1rem;
-  top: 1.25rem;
-  bottom: 1.25rem;
-  width: 2px;
-  background: linear-gradient(
-    to bottom,
-    #0076be 0%,
-    #48b4e0 55%,
-    rgba(72, 180, 224, 0.18) 100%
-  );
-  border-radius: 2px;
-}
-
-.cs-flow-step {
-  position: relative;
+/* Board: holds both rows + the turn arrow */
+.cs-vflow-board {
   display: flex;
-  align-items: flex-start;
-  gap: 1.125rem;
-  margin-bottom: 1.125rem;
+  flex-direction: column;
+  gap: 0;
 }
 
-.cs-flow-step:last-child {
-  margin-bottom: 0;
+/* Row of cards + inline arrows */
+.cs-vflow-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
 }
 
-.cs-flow-node {
-  position: absolute;
-  left: -3.25rem;
+/* Row 2 reversed so flow reads right-to-left visually = left-to-right
+   data order (steps 5–8 displayed 8→5 for the S-curve) */
+.cs-vflow-row-rev {
+  flex-direction: row-reverse;
+}
+
+/* Individual journey card */
+.cs-vflow-card {
+  flex: 1;
+  min-width: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line, #e8e8e8);
+  background: var(--white, #fff);
+  box-shadow: 0 2px 8px rgba(26, 26, 26, 0.06);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.cs-vflow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(26, 26, 26, 0.13);
+}
+
+/* Coloured header block */
+.cs-vflow-head {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 2.25rem;
-}
-
-.cs-flow-circle {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  background: #0076be;
-  color: #fff;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 0.68rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  flex-shrink: 0;
-  border: 3px solid var(--white, #fff);
-  box-shadow: 0 0 0 2px #0076be, 0 4px 12px rgba(0, 118, 190, 0.22);
-  position: relative;
-  z-index: 1;
-  transition: background 200ms ease, transform 200ms ease;
+  gap: 0.25rem;
+  padding: 1.25rem 0.75rem 1rem;
+  text-align: center;
+  color: #fff;
 }
 
-.cs-flow-step:hover .cs-flow-circle {
-  background: #e85d04;
-  box-shadow: 0 0 0 2px #e85d04, 0 4px 14px rgba(232, 93, 4, 0.28);
-  transform: scale(1.08);
-}
-
-.cs-flow-connector {
-  width: 2px;
-  flex: 1;
-  min-height: 0.5rem;
-  background: transparent;
-}
-
-.cs-flow-card {
-  flex: 1;
-  background: var(--white, #fff);
-  border: 1px solid var(--line, #e8e8e8);
-  border-left: 3px solid #0076be;
-  border-radius: 10px;
-  padding: 1rem 1.25rem 1rem 1.125rem;
-  transition: border-left-color 200ms ease, box-shadow 200ms ease,
-    transform 200ms ease;
-}
-
-.cs-flow-card:hover {
-  border-left-color: #e85d04;
-  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.08);
-  transform: translateX(3px);
-}
-
-.cs-flow-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.cs-flow-icon {
-  font-size: 1.05rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.cs-flow-tag {
+.cs-vflow-num {
   font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  opacity: 0.75;
+  line-height: 1;
+}
+
+.cs-vflow-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  display: block;
+}
+
+.cs-vflow-stage {
+  font-size: 0.6rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.22);
   padding: 0.18rem 0.55rem;
   border-radius: 999px;
   line-height: 1.4;
 }
 
-.cs-flow-card h4 {
-  margin: 0 0 0.35rem;
-  font-size: 0.92rem;
+/* Text body */
+.cs-vflow-body {
+  padding: 0.875rem 0.875rem 1rem;
+}
+
+.cs-vflow-body h4 {
+  margin: 0 0 0.375rem;
+  font-size: 0.82rem;
   font-weight: 800;
   color: var(--ink, #111);
   line-height: 1.3;
 }
 
-.cs-flow-card p {
+.cs-vflow-body p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.77rem;
   color: var(--muted, #666);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
-@media (max-width: 600px) {
-  .cs-flow-track {
-    padding-left: 2.75rem;
+/* Horizontal arrow between cards in a row */
+.cs-vflow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+  /* vertically center on the header */
+  padding-top: 0;
+}
+
+.cs-vflow-arrow-right {
+  width: 28px;
+}
+
+.cs-vflow-arrow-right svg {
+  width: 28px;
+  height: 12px;
+  stroke: #c8d6e0;
+  stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Down arrow between row 1 → row 2 */
+.cs-vflow-turn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px 0;
+  /* align right edge = end of row 1 last card */
+  padding-right: calc(25% - 14px);
+}
+
+.cs-vflow-arrow-down svg {
+  width: 12px;
+  height: 28px;
+  stroke: #c8d6e0;
+  stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Mobile: vertical single-column stack ───────────────────────── */
+@media (max-width: 680px) {
+  .cs-vflow-row,
+  .cs-vflow-row-rev {
+    flex-direction: column;
+    align-items: center;
   }
-  .cs-flow-track::before {
-    left: 0.9rem;
+
+  .cs-vflow-card {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 10px;
   }
-  .cs-flow-node {
-    left: -2.75rem;
-    width: 1.875rem;
+
+  .cs-vflow-head {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.875rem 1rem;
+    gap: 0.625rem;
+    text-align: left;
   }
-  .cs-flow-circle {
-    width: 1.875rem;
-    height: 1.875rem;
-    font-size: 0.6rem;
+
+  .cs-vflow-icon {
+    font-size: 1.35rem;
   }
-  .cs-flow-card {
-    padding: 0.875rem 1rem 0.875rem 1rem;
+
+  .cs-vflow-num {
+    order: -1;
+  }
+
+  .cs-vflow-arrow-right {
+    transform: rotate(90deg);
+    width: auto;
+    padding: 2px 0;
+  }
+
+  .cs-vflow-turn {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .cs-vflow-arrow-down {
+    transform: none;
   }
 }
 
