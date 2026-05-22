@@ -626,46 +626,62 @@
         "text": "10. Digital Experience Flow"
       },
       {
-        "type": "steps",
+        "type": "flow-steps",
         "label": "8-Step QR Digital Journey",
         "steps": [
           {
             "number": "01",
+            "icon": "📱",
+            "tag": "Entry",
             "title": "QR Scan on Bottle",
             "text": "Every Cetaphil bottle carries a QR code. One scan from any phone camera. No app download, no account creation required at entry. Instant access to the full digital experience in under 3 seconds."
           },
           {
             "number": "02",
+            "icon": "👤",
+            "tag": "Setup",
             "title": "Registration & Skin Setup",
             "text": "New users answer three quick questions: skin type, primary concern, and current routine. Returns a personalised usage guide and sets the baseline for future product recommendations and refill timing."
           },
           {
             "number": "03",
+            "icon": "📖",
+            "tag": "Education",
             "title": "Usage Education",
             "text": "An animated micro-guide shows how to use the airless pump correctly — the right amount, the right technique, morning versus night. Reduces misuse and irritation before it creates dissatisfaction with the formula."
           },
           {
             "number": "04",
+            "icon": "🔔",
+            "tag": "Smart Trigger",
             "title": "Refill Indicator Check",
             "text": "The experience reads the user's registration date and estimated usage pace to flag when they may be running low. A smart low-stock prompt — not a generic marketing push — based on actual behaviour data."
           },
           {
             "number": "05",
+            "icon": "🛒",
+            "tag": "Conversion",
             "title": "Refill Order Flow",
             "text": "Two-tap refill reorder: confirm address, confirm pouch size, confirm delivery. Pre-filled from registration data. Every friction point from the reorder decision is removed before the user feels it."
           },
           {
             "number": "06",
+            "icon": "🔄",
+            "tag": "Retention",
             "title": "Subscribe & Save Setup",
             "text": "After the first refill, users are prompted to set a recurring delivery. They choose their cadence — 4, 6, or 8 weeks — and lock in a 15% loyalty discount that compounds the more consistently they refill."
           },
           {
             "number": "07",
+            "icon": "🌱",
+            "tag": "Impact",
             "title": "Sustainability Impact Dashboard",
             "text": "A live counter shows each user their personal environmental contribution: plastic bottles avoided, grams of plastic not produced, and carbon offset estimate. Makes eco-behaviour feel visible, rewarding, and worth sharing."
           },
           {
             "number": "08",
+            "icon": "💡",
+            "tag": "Loyalty",
             "title": "Community & Skin Tips",
             "text": "Users who refill twice unlock a skin-tips module with dermatologist-approved guidance for their specific skin type. Creates a non-commercial reason to return to the QR experience beyond the transaction."
           }

@@ -62,6 +62,41 @@ const renderBlock = (block, index) => {
     </div>`;
   }
 
+  if (block.type === "flow-steps") {
+    const tagColors = {
+      "Entry":         { bg: "#e8f4fc", color: "#0076BE" },
+      "Setup":         { bg: "#eef6f0", color: "#2d8a50" },
+      "Education":     { bg: "#fdf3e3", color: "#b45309" },
+      "Smart Trigger": { bg: "#fce8f3", color: "#a1286a" },
+      "Conversion":    { bg: "#fef0e7", color: "#c2410c" },
+      "Retention":     { bg: "#ede9fe", color: "#5b21b6" },
+      "Impact":        { bg: "#ecfdf5", color: "#065f46" },
+      "Loyalty":       { bg: "#fef9c3", color: "#854d0e" }
+    };
+    return `<div class="cs-flow">
+      ${block.label ? `<div class="cs-flow-label">${escapeHtml(block.label)}</div>` : ""}
+      <div class="cs-flow-track">
+        ${block.steps.map((s, i) => {
+          const tc = tagColors[s.tag] || { bg: "#f0f0f0", color: "#555" };
+          return `<div class="cs-flow-step">
+            <div class="cs-flow-node">
+              <div class="cs-flow-circle">${escapeHtml(s.number)}</div>
+              ${i < block.steps.length - 1 ? `<div class="cs-flow-connector"></div>` : ""}
+            </div>
+            <div class="cs-flow-card">
+              <div class="cs-flow-card-meta">
+                ${s.icon ? `<span class="cs-flow-icon" aria-hidden="true">${s.icon}</span>` : ""}
+                ${s.tag ? `<span class="cs-flow-tag" style="background:${tc.bg};color:${tc.color}">${escapeHtml(s.tag)}</span>` : ""}
+              </div>
+              <h4>${escapeHtml(s.title)}</h4>
+              <p>${escapeHtml(s.text)}</p>
+            </div>
+          </div>`;
+        }).join("")}
+      </div>
+    </div>`;
+  }
+
   if (block.type === "callout-examples") {
     return `<div class="cs-callout-examples">
       ${block.label ? `<div class="cs-callout-examples-label">${escapeHtml(block.label)}</div>` : ""}

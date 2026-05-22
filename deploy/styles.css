@@ -1506,6 +1506,182 @@ h3 {
   line-height: 1.5;
 }
 
+/* ── Flow Steps (Digital Experience Journey) ──────────────────────── */
+.cs-flow {
+  margin: 1.5rem 0 2rem;
+}
+
+.cs-flow-label {
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent, #e85d04);
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cs-flow-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line, #e8e8e8);
+}
+
+.cs-flow-track {
+  position: relative;
+  padding-left: 3.25rem;
+}
+
+/* Vertical gradient spine */
+.cs-flow-track::before {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 1.25rem;
+  bottom: 1.25rem;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #0076be 0%,
+    #48b4e0 55%,
+    rgba(72, 180, 224, 0.18) 100%
+  );
+  border-radius: 2px;
+}
+
+.cs-flow-step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.cs-flow-step:last-child {
+  margin-bottom: 0;
+}
+
+.cs-flow-node {
+  position: absolute;
+  left: -3.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 2.25rem;
+}
+
+.cs-flow-circle {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: #0076be;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  border: 3px solid var(--white, #fff);
+  box-shadow: 0 0 0 2px #0076be, 0 4px 12px rgba(0, 118, 190, 0.22);
+  position: relative;
+  z-index: 1;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.cs-flow-step:hover .cs-flow-circle {
+  background: #e85d04;
+  box-shadow: 0 0 0 2px #e85d04, 0 4px 14px rgba(232, 93, 4, 0.28);
+  transform: scale(1.08);
+}
+
+.cs-flow-connector {
+  width: 2px;
+  flex: 1;
+  min-height: 0.5rem;
+  background: transparent;
+}
+
+.cs-flow-card {
+  flex: 1;
+  background: var(--white, #fff);
+  border: 1px solid var(--line, #e8e8e8);
+  border-left: 3px solid #0076be;
+  border-radius: 10px;
+  padding: 1rem 1.25rem 1rem 1.125rem;
+  transition: border-left-color 200ms ease, box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.cs-flow-card:hover {
+  border-left-color: #e85d04;
+  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.08);
+  transform: translateX(3px);
+}
+
+.cs-flow-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cs-flow-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cs-flow-tag {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  line-height: 1.4;
+}
+
+.cs-flow-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--ink, #111);
+  line-height: 1.3;
+}
+
+.cs-flow-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted, #666);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .cs-flow-track {
+    padding-left: 2.75rem;
+  }
+  .cs-flow-track::before {
+    left: 0.9rem;
+  }
+  .cs-flow-node {
+    left: -2.75rem;
+    width: 1.875rem;
+  }
+  .cs-flow-circle {
+    width: 1.875rem;
+    height: 1.875rem;
+    font-size: 0.6rem;
+  }
+  .cs-flow-card {
+    padding: 0.875rem 1rem 0.875rem 1rem;
+  }
+}
+
 .cs-callout-examples {
   display: grid;
   gap: 20px;
