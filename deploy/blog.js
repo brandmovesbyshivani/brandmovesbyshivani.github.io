@@ -105,6 +105,9 @@ const renderBlock = (block, index) => {
 
     return `<div class="cs-vflow">
       ${block.label ? `<div class="cs-vflow-label">${escapeHtml(block.label)}</div>` : ""}
+      ${block.visual ? `<figure class="cs-vflow-visual">
+        <img src="${escapeHtml(block.visual)}" alt="${escapeHtml(block.visualAlt || block.label || "Digital journey visual")}" />
+      </figure>` : ""}
       <div class="cs-vflow-board">
         <div class="cs-vflow-row">
           ${row1.map((s, i) => `

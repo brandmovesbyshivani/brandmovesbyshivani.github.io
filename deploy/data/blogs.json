@@ -628,6 +628,8 @@
       {
         "type": "flow-steps",
         "label": "8-Step QR Digital Journey",
+        "visual": "assets/episodes/cetaphil-packaging/digital-flow/qr-digital-journey-8-step.png",
+        "visualAlt": "Generated visual showing eight illustrated QR journey scenes for the Cetaphil refill experience",
         "steps": [
           {
             "number": "01",
