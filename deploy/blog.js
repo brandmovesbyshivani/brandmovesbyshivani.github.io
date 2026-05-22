@@ -84,7 +84,6 @@ const renderBlock = (block, index) => {
         ${s.image ? `<div class="cs-vflow-media"><img src="${escapeHtml(s.image)}" alt="${escapeHtml(s.title)} visual" /></div>` : ""}
         <div class="cs-vflow-head" style="background:${color}">
           <span class="cs-vflow-num">${escapeHtml(s.number)}</span>
-          <span class="cs-vflow-icon" aria-hidden="true">${s.icon || ""}</span>
           <span class="cs-vflow-stage">${escapeHtml(s.tag || "")}</span>
         </div>
         <div class="cs-vflow-body">
