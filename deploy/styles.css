@@ -1632,6 +1632,7 @@ h3 {
 @media (max-width: 680px) {
   .cs-vflow-board {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .cs-vflow-card {
