@@ -741,12 +741,13 @@ h3 {
 }
 
 .blog-card-image {
+  display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   margin-bottom: 18px;
   border-radius: 7px;
-  object-fit: contain;
-  object-position: top;
+  object-fit: cover;
+  object-position: center;
   background: var(--white);
 }
 
