@@ -788,7 +788,7 @@ h3 {
 
 .post-shell,
 .editor-shell {
-  width: min(100% - 40px, 1180px);
+  width: min(calc(100% - 40px), 1180px);
   margin: 0 auto;
   padding: clamp(36px, 6vw, 72px) 0 clamp(48px, 8vw, 96px);
 }
@@ -1276,11 +1276,27 @@ h3 {
 
   .post-shell,
   .editor-shell {
-    width: min(100% - 32px, 1180px);
+    width: min(calc(100% - 32px), 1180px);
   }
 
   .post-hero {
     padding: 22px;
+  }
+
+  .post-hero h1 {
+    width: 100%;
+    max-width: min(100%, 18rem);
+    font-size: clamp(1.65rem, 8.2vw, 2.2rem);
+    line-height: 1.02;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .post-summary {
+    width: 100%;
+    max-width: min(100%, 18rem);
+    overflow-wrap: anywhere;
   }
 
   .strategy-slide img {

@@ -988,6 +988,307 @@
     ]
   },
   {
+    "title": "Otrivin: Naak Ki Diary Strategy",
+    "slug": "otrivin-naak-ki-diary-strategy",
+    "date": "2026-05-23",
+    "category": "#IFIRANTHEBRAND Episode",
+    "readTime": "Full strategy",
+    "summary": "A PM-level campaign system for Otrivin India: turning nasal spray usage from a reactive purchase into a responsible habit loop with WhatsApp scoring, AQI context, pledge behavior, offline QR triggers, and doctor referral safeguards.",
+    "hero": "OTC health + behavior strategy",
+    "thumbnail": "assets/episodes/otrivin-naak-ki-diary/naak-ki-diary-card-16x9.png",
+    "panelImage": "assets/episodes/otrivin-naak-ki-diary/naak-ki-diary-card-16x9.png",
+    "strategySlides": [
+      {
+        "label": "01 Problem",
+        "title": "Relief is used, but not understood",
+        "text": "Blocked-nose users often treat nasal spray as a quick repeat fix without a clear habit boundary.",
+        "image": "assets/episodes/otrivin-naak-ki-diary/detail/whatsapp-bot-journey-16x9.png"
+      },
+      {
+        "label": "02 Insight",
+        "title": "The nose needs a diary, not a lecture",
+        "text": "A friendly score, AQI context, and 3-day check-in make safe usage feel personal and shareable.",
+        "image": "assets/episodes/otrivin-naak-ki-diary/detail/aqi-pledge-hub-16x9.png"
+      },
+      {
+        "label": "03 Action",
+        "title": "Make every touchpoint a QR entry",
+        "text": "Chemists, colleges, offices, societies, and packs all route into one WhatsApp habit engine.",
+        "image": "assets/episodes/otrivin-naak-ki-diary/detail/offline-triggers-16x9.png"
+      }
+    ],
+    "content": [
+      {
+        "type": "callout",
+        "text": "This episode reframes Otrivin from a blocked-nose rescue product into a responsible nasal-health authority. The strategy uses one simple behavior loop: scan, self-check, pledge, check in, and escalate to a doctor only when misuse risk appears."
+      },
+      {
+        "type": "paragraph",
+        "text": "The core idea is Naak Ki Diary, a WhatsApp-first campaign system for India where the brand helps people understand how often their nose is blocked, how safely they are using nasal spray, and what action they should take next."
+      },
+      {
+        "type": "heading",
+        "text": "1. The product-management problem"
+      },
+      {
+        "type": "paragraph",
+        "text": "Otrivin is remembered at the moment of discomfort, but that same urgency can make the brand feel transactional. The user wants quick relief, the category has misuse sensitivity, and the brand needs a way to educate without sounding scary or preachy."
+      },
+      {
+        "type": "insight-box",
+        "label": "Core tension",
+        "text": "How can Otrivin stay top of mind during congestion season while actively encouraging responsible usage and doctor consultation when behavior crosses the safe limit?"
+      },
+      {
+        "type": "heading",
+        "text": "2. The strategic insight"
+      },
+      {
+        "type": "paragraph",
+        "text": "People do not wake up thinking about nasal health. They react when the nose is blocked, when pollution spikes, when office AC dries them out, or when sleep breaks at night. That means the strategy should not start as a brand lecture. It should start as a personal check-in."
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/otrivin-naak-ki-diary/naak-ki-diary-card-16x9.png",
+        "alt": "Naak Ki Diary campaign system visual",
+        "caption": "The campaign anchor: a QR-led nasal health habit system with score, AQI context, pledge behavior, and check-ins."
+      },
+      {
+        "type": "heading",
+        "text": "3. The campaign engine"
+      },
+      {
+        "type": "steps",
+        "label": "WhatsApp bot journey",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Scan or message NAAK",
+            "text": "The user enters through a QR code or Otrivin's official WhatsApp number."
+          },
+          {
+            "number": "02",
+            "title": "Answer five quick questions",
+            "text": "The bot asks about blocked-nose days, spray usage, morning dependency, sleep disruption, and sneezing."
+          },
+          {
+            "number": "03",
+            "title": "Receive a Naak Score",
+            "text": "The user gets a shareable card with city, score, status, and AQI context."
+          },
+          {
+            "number": "04",
+            "title": "Enter the 3-day loop",
+            "text": "Every three days the bot asks for a simple update, keeping the behavior visible without extra paid media."
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/otrivin-naak-ki-diary/detail/whatsapp-bot-journey-16x9.png",
+        "alt": "Naak Ki Diary WhatsApp bot journey visual",
+        "caption": "The WhatsApp bot turns a private symptom into a simple, measurable, shareable moment."
+      },
+      {
+        "type": "heading",
+        "text": "4. Score logic and responsible escalation"
+      },
+      {
+        "type": "personas",
+        "users": [
+          {
+            "type": "80-100",
+            "title": "Naak Champion",
+            "traits": [
+              "Celebrate and maintain the routine",
+              "Keep nasal health as a light weekly habit",
+              "Share the score card if the user wants"
+            ]
+          },
+          {
+            "type": "60-79",
+            "title": "Warning Zone",
+            "traits": [
+              "Gentle nudge before behavior worsens",
+              "Explain triggers like AQI, AC, sleep, and frequency",
+              "Move user toward safer daily care"
+            ]
+          },
+          {
+            "type": "40-59",
+            "title": "Naak Ka Nasha Stage 1",
+            "traits": [
+              "Correction-led message",
+              "Encourage stopping repeated spray use",
+              "Suggest Breathe Clean-style daily care where appropriate"
+            ]
+          },
+          {
+            "type": "Below 40",
+            "title": "Naak Ka Nasha Stage 2",
+            "traits": [
+              "High-risk misuse signal",
+              "Stop-spray education",
+              "Doctor referral only if 7+ days usage is reported"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "text": "The doctor referral is not triggered by a low score alone. It is triggered when a user reports 7+ consecutive days of nasal spray use, making the campaign safer, clearer, and recruiter-friendly from a compliance perspective."
+      },
+      {
+        "type": "heading",
+        "text": "5. The website hub"
+      },
+      {
+        "type": "paragraph",
+        "text": "naakkidiary.in becomes the public home of the campaign: an India Naak AQI Map, a 3 Din Pledge Wall, and real Naak Stories from people who agreed to share their experience."
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/otrivin-naak-ki-diary/detail/aqi-pledge-hub-16x9.png",
+        "alt": "India Naak AQI Map and pledge wall visual",
+        "caption": "The website makes the brand's education visible: city-level nasal stress context, public pledge behavior, and real user stories."
+      },
+      {
+        "type": "heading",
+        "text": "6. Offline triggers"
+      },
+      {
+        "type": "paragraph",
+        "text": "The campaign becomes powerful because it does not wait for users to find the website. Every offline touchpoint carries one QR entry point that opens the bot and completes the same score-plus-pledge journey."
+      },
+      {
+        "type": "flow-steps",
+        "label": "8 connected activation routes",
+        "steps": [
+          {
+            "number": "01",
+            "tag": "Chemist",
+            "title": "QR on Otrivin box",
+            "text": "At the exact moment of purchase, the pack invites the user to start Naak Ki Diary and understand safe usage."
+          },
+          {
+            "number": "02",
+            "tag": "Campus",
+            "title": "Naak Ka Aayna",
+            "text": "A mirror installation asks students to check their nasal health and join a campus-level challenge."
+          },
+          {
+            "number": "03",
+            "tag": "College",
+            "title": "College Naak League",
+            "text": "Colleges compete on collective nasal health scores, creating organic student-led spread."
+          },
+          {
+            "number": "04",
+            "tag": "Office",
+            "title": "The 18 Degree Problem",
+            "text": "Desk drops turn the common AC-and-blocked-nose feeling into a QR-led self-check."
+          },
+          {
+            "number": "05",
+            "tag": "Society",
+            "title": "AQI WhatsApp alert",
+            "text": "Residential societies receive daily AQI and nasal stress alerts during pollution season."
+          },
+          {
+            "number": "06",
+            "tag": "Digital",
+            "title": "#NaakKiDiary card",
+            "text": "Users share their score card on Instagram stories, turning education into earned visibility."
+          },
+          {
+            "number": "07",
+            "tag": "Content",
+            "title": "Humein Pata Nahi Tha",
+            "text": "A mini documentary uses real stories from opt-in users to build trust without scripted advertising."
+          },
+          {
+            "number": "08",
+            "tag": "Trade",
+            "title": "Complete nasal kit",
+            "text": "A Fast Relief plus Breathe Clean combo pack makes the 3-day journey physical at pharmacy shelf."
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "src": "assets/episodes/otrivin-naak-ki-diary/detail/offline-triggers-16x9.png",
+        "alt": "Naak Ki Diary offline QR trigger collage",
+        "caption": "Offline touchpoints are not separate stunts. They are acquisition channels into one measurable WhatsApp habit engine."
+      },
+      {
+        "type": "heading",
+        "text": "7. Product and SKU architecture"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Xylometazoline-based SKUs carry the 3-day safe-usage education clearly.",
+          "Otrivin Breathe Clean plays the daily-care role because saline has no dependency risk.",
+          "The complete journey becomes: pollution high today, use daily nasal care; blocked nose happens, use fast relief for only 3 days; prolonged use triggers a doctor referral."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "8. Why this works for brand and business"
+      },
+      {
+        "type": "phases",
+        "phases": [
+          {
+            "number": "P1",
+            "title": "Awareness",
+            "text": "AQI map, society alerts, and office/campus triggers make nasal health visible before symptoms become urgent."
+          },
+          {
+            "number": "P2",
+            "title": "Behavior",
+            "text": "The score card and 3-day check-in create a repeatable habit loop instead of one-off brand recall."
+          },
+          {
+            "number": "P3",
+            "title": "Trust",
+            "text": "Doctor referral logic and clear disclaimers show that the brand is correcting misuse, not exploiting it."
+          },
+          {
+            "number": "P4",
+            "title": "Commerce",
+            "text": "The combo pack and pharmacy QR connect education to shelf behavior and higher basket value."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "9. Regulatory guardrails"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Position the bot as an educational self-check, not a medical diagnostic tool.",
+          "Use AQI as external environmental context, not a treatment claim.",
+          "Show safe-usage disclaimers on every touchpoint: use as directed, not for more than 3 consecutive days, and consult a doctor if symptoms persist.",
+          "Offer doctor referral only after reported 7+ day usage, where the user may already be misusing the product."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "10. Final positioning shift"
+      },
+      {
+        "type": "paragraph",
+        "text": "Before Naak Ki Diary, Otrivin is a product people remember when the nose is blocked. After Naak Ki Diary, Otrivin becomes a nasal-health companion that understands the user's environment, usage behavior, and safety boundary."
+      },
+      {
+        "type": "callout",
+        "text": "Otrivin does not just sell relief. It starts the conversation India needs about nasal health, safe usage, pollution, and everyday breathing behavior."
+      }
+    ]
+  },
+  {
     "title": "If I Ran The Brand: Zudio",
     "slug": "if-i-ran-the-brand-zudio",
     "date": "2026-05-17",
