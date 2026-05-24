@@ -393,20 +393,40 @@ h3 {
   min-height: clamp(430px, 52vh, 540px);
 }
 
-.hero-metrics-panel {
+.hero-collage-panel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.metrics-collage {
+.portrait-collage {
   position: relative;
-  display: grid;
-  width: min(100%, 560px);
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: minmax(86px, auto);
-  gap: 12px;
-  align-items: stretch;
+  width: min(100%, 590px);
+  min-height: 540px;
+  isolation: isolate;
+}
+
+.portrait-glow {
+  position: absolute;
+  inset: 10% 13% 4%;
+  z-index: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.9), rgba(245, 240, 232, 0.28) 52%, transparent 68%),
+    radial-gradient(circle at 58% 42%, rgba(232, 93, 4, 0.18), transparent 58%);
+  filter: blur(2px);
+}
+
+.hero-portrait {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 0;
+  width: min(66%, 390px);
+  max-height: 100%;
+  object-fit: contain;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 28px 34px rgba(26, 26, 26, 0.22));
 }
 
 .metric-card {
@@ -415,8 +435,8 @@ h3 {
   border: 1px solid rgba(26, 26, 26, 0.12);
   border-radius: 8px;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 18px 42px rgba(26, 26, 26, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 42px rgba(26, 26, 26, 0.12);
 }
 
 .metric-card::before {
@@ -427,7 +447,8 @@ h3 {
   content: "";
 }
 
-.metric-card span {
+.metric-card span,
+.collage-tag {
   display: block;
   color: var(--accent);
   font-size: 0.68rem;
@@ -438,75 +459,91 @@ h3 {
 
 .metric-card strong {
   display: block;
-  margin-top: 14px;
+  margin-top: 12px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 4.2vw, 4rem);
+  font-size: clamp(2.4rem, 4vw, 3.55rem);
   line-height: 0.86;
   color: var(--accent);
 }
 
-.metric-card p {
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.45;
-  overflow-wrap: anywhere;
-}
-
-.metric-card-primary {
-  grid-column: span 3;
-  grid-row: span 2;
-  min-height: 210px;
-  padding: 22px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.9)),
-    radial-gradient(circle at 92% 8%, rgba(232, 93, 4, 0.13), transparent 13rem);
-}
-
-.metric-card-primary strong {
-  font-size: clamp(5.4rem, 8vw, 7rem);
-}
-
 .metric-card-dark {
-  grid-column: span 3;
   color: var(--white);
   background: var(--ink);
 }
 
-.metric-card-dark p,
 .metric-card-dark strong {
   color: var(--white);
-}
-
-.metric-card-dark span {
-  color: var(--accent);
-}
-
-.metric-card:not(.metric-card-primary):not(.metric-card-dark):not(.metric-card-wide) {
-  grid-column: span 3;
-}
-
-.metric-card-slim {
-  grid-column: span 2 !important;
 }
 
 .metric-card-accent {
   background: rgba(232, 93, 4, 0.1);
 }
 
-.metric-card-wide {
-  grid-column: span 6;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 16px;
-  align-items: center;
-  min-height: 76px;
+.collage-card {
+  position: absolute;
+  z-index: 3;
+  min-width: 150px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  backdrop-filter: blur(12px);
 }
 
-.metric-card-wide p {
-  margin: 0;
-  font-weight: 850;
-  color: var(--ink);
+.collage-card:hover {
+  transform: translateY(-5px) rotate(0deg);
+  box-shadow: 0 24px 54px rgba(26, 26, 26, 0.17);
+}
+
+.card-episodes {
+  top: 8%;
+  left: 0;
+  transform: rotate(-3deg);
+}
+
+.card-views {
+  top: 18%;
+  right: 0;
+  transform: rotate(3deg);
+}
+
+.card-reach {
+  right: 3%;
+  bottom: 24%;
+  transform: rotate(-2deg);
+}
+
+.card-series {
+  left: 2%;
+  bottom: 20%;
+  transform: rotate(2deg);
+}
+
+.card-series strong {
+  max-width: 12ch;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.04;
+  overflow-wrap: anywhere;
+}
+
+.collage-tag {
+  position: absolute;
+  z-index: 4;
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  border-radius: 999px;
+  padding: 10px 13px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 28px rgba(26, 26, 26, 0.09);
+}
+
+.card-tag-top {
+  top: 2%;
+  left: 39%;
+  transform: rotate(2deg);
+}
+
+.card-tag-bottom {
+  right: 7%;
+  bottom: 4%;
+  transform: rotate(-2deg);
 }
 
 @media (min-width: 981px) and (max-height: 860px) {
@@ -534,26 +571,42 @@ h3 {
     min-height: 440px;
   }
 
-  .metrics-collage {
-    width: min(100%, 520px);
-    gap: 10px;
+  .portrait-collage {
+    width: min(100%, 540px);
+    min-height: 450px;
+  }
+
+  .hero-portrait {
+    width: min(62%, 330px);
   }
 
   .metric-card {
     padding: 14px;
   }
 
-  .metric-card-primary {
-    min-height: 190px;
-    padding: 18px;
+  .collage-card {
+    min-width: 138px;
   }
 
-  .metric-card-primary strong {
-    font-size: clamp(4.4rem, 6.2vw, 5.5rem);
+  .card-episodes {
+    top: 7%;
+    left: 2%;
+  }
+
+  .card-views {
+    top: 17%;
+  }
+
+  .card-reach {
+    bottom: 23%;
+  }
+
+  .card-series {
+    bottom: 19%;
   }
 
   .metric-card strong {
-    font-size: clamp(2.1rem, 3.3vw, 2.7rem);
+    font-size: clamp(2rem, 3vw, 2.55rem);
   }
 
   .metric-card p {
@@ -1258,7 +1311,34 @@ h3 {
   }
 
   .hero-visual {
-    min-height: 500px;
+    min-height: 470px;
+  }
+
+  .portrait-collage {
+    width: min(100%, 620px);
+    min-height: 470px;
+  }
+
+  .hero-portrait {
+    width: min(54%, 320px);
+  }
+
+  .card-episodes {
+    left: 6%;
+  }
+
+  .card-views {
+    right: 6%;
+  }
+
+  .card-reach {
+    right: 7%;
+    bottom: 18%;
+  }
+
+  .card-series {
+    left: 8%;
+    bottom: 17%;
   }
 
   .case-grid,
@@ -1287,13 +1367,23 @@ h3 {
     padding-inline: 16px;
   }
 
+  .hero {
+    width: 100%;
+    gap: 26px;
+    overflow: hidden;
+  }
+
   .hero,
   .hero-copy,
   .hero-visual,
-  .metrics-collage,
+  .portrait-collage,
   .metric-card {
     max-width: 100%;
     min-width: 0;
+  }
+
+  .hero-copy > * {
+    max-width: 100%;
   }
 
   h1 {
@@ -1305,8 +1395,19 @@ h3 {
   }
 
   .hero-lede {
+    width: 100%;
     max-width: 100%;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
   }
 
   .hero-stats {
@@ -1332,27 +1433,55 @@ h3 {
     min-height: auto;
   }
 
-  .metrics-collage {
+  .portrait-collage {
+    display: grid;
     width: 100%;
+    min-height: auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
+    align-items: stretch;
+    justify-items: stretch;
+  }
+
+  .portrait-glow {
+    inset: 4% 8% 38%;
+  }
+
+  .hero-portrait {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    z-index: 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(68%, 230px);
+    max-height: 300px;
+    transform: none;
+  }
+
+  .collage-card,
+  .collage-tag {
+    position: relative;
+    inset: auto;
+    transform: none;
+  }
+
+  .collage-card:hover {
+    transform: translateY(-3px);
   }
 
   .metric-card,
-  .metric-card:not(.metric-card-primary):not(.metric-card-dark):not(.metric-card-wide),
-  .metric-card-slim {
+  .metric-card:not(.metric-card-primary):not(.metric-card-dark):not(.metric-card-wide) {
     grid-column: span 1 !important;
     padding: 14px;
   }
 
   .metric-card-primary,
-  .metric-card-dark,
-  .metric-card-wide {
+  .metric-card-dark {
     grid-column: 1 / -1 !important;
   }
 
   .metric-card-primary {
-    min-height: 180px;
     padding: 18px;
   }
 
@@ -1364,13 +1493,8 @@ h3 {
     font-size: clamp(2.1rem, 12vw, 3rem);
   }
 
-  .metric-card-wide {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .metrics-skill-row span {
-    font-size: 0.7rem;
+  .collage-tag {
+    display: none;
   }
 
   .contact {
