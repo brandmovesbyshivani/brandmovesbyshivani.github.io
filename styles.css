@@ -18,12 +18,17 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   color: var(--ink);
   background:
     radial-gradient(circle at 12% 10%, rgba(232, 93, 4, 0.12), transparent 32rem),
     linear-gradient(180deg, var(--cream), var(--cream));
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 a {
@@ -108,10 +113,10 @@ a {
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
-  gap: clamp(34px, 7vw, 92px);
+  gap: clamp(28px, 5vw, 72px);
   align-items: center;
-  min-height: calc(100vh - 78px);
-  padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 76px) 42px;
+  min-height: calc(100svh - 78px);
+  padding: clamp(34px, 5.4vw, 68px) clamp(20px, 5vw, 76px) clamp(24px, 4vw, 38px);
 }
 
 .eyebrow {
@@ -132,10 +137,10 @@ p {
 
 h1 {
   max-width: 780px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.05rem, 7vw, 6.9rem);
-  line-height: 0.93;
+  font-size: clamp(3rem, 5.6vw, 5.95rem);
+  line-height: 0.92;
   letter-spacing: 0;
 }
 
@@ -163,7 +168,7 @@ h3 {
 
 .hero-lede {
   max-width: 680px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .hero-actions,
@@ -332,7 +337,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .hero-stat {
@@ -385,76 +390,44 @@ h3 {
 
 .hero-visual {
   position: relative;
-  min-height: 580px;
+  min-height: clamp(430px, 52vh, 540px);
 }
 
-.hero-visual-3d {
-  display: grid;
-  min-height: 620px;
-  place-items: center;
-  perspective: 1200px;
-  overflow: hidden;
+.hero-metrics-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.portfolio-canvas {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  border-radius: 18px;
-  cursor: grab;
-}
-
-.portfolio-canvas:active {
-  cursor: grabbing;
-}
-
-.portfolio-stage {
+.metrics-collage {
   position: relative;
-  z-index: 0;
-  width: min(118%, 660px);
-  height: 620px;
-  transform: rotateX(calc(58deg + var(--tilt-y, 0deg))) rotateZ(calc(-16deg + var(--tilt-x, 0deg))) scale(1.06);
-  transform-style: preserve-3d;
-  pointer-events: none;
-  transition: transform 180ms ease;
+  display: grid;
+  width: min(100%, 560px);
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(86px, auto);
+  gap: 12px;
+  align-items: stretch;
 }
 
-.portfolio-shadow {
-  position: absolute;
-  inset: 18% 8% 10%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(26, 26, 26, 0.18), transparent 64%);
-  filter: blur(16px);
-  transform: translateZ(-80px);
-}
-
-.portfolio-card,
-.portfolio-core,
-.skill-chip {
-  position: absolute;
-  border: 1px solid rgba(26, 26, 26, 0.12);
-  box-shadow: 0 22px 48px rgba(26, 26, 26, 0.16);
-}
-
-.portfolio-card {
-  width: 220px;
+.metric-card {
+  position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  background: var(--white);
-  transform-style: preserve-3d;
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 42px rgba(26, 26, 26, 0.1);
 }
 
-.portfolio-card img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+.metric-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), rgba(232, 93, 4, 0.22));
+  content: "";
 }
 
-.portfolio-card span,
-.core-kicker {
+.metric-card span {
   display: block;
   color: var(--accent);
   font-size: 0.68rem;
@@ -463,221 +436,129 @@ h3 {
   text-transform: uppercase;
 }
 
-.portfolio-card span {
-  padding: 10px 12px 12px;
-  color: var(--ink);
-}
-
-.card-cetaphil {
-  top: 52px;
-  left: 22px;
-  transform: translateZ(76px) rotateZ(-4deg);
-}
-
-.card-otrivin {
-  top: 150px;
-  right: 34px;
-  transform: translateZ(138px) rotateZ(5deg);
-}
-
-.card-packaging {
-  bottom: 52px;
-  left: 86px;
-  transform: translateZ(102px) rotateZ(3deg);
-}
-
-.portfolio-core {
-  top: 205px;
-  left: 112px;
-  width: 270px;
-  border-radius: 12px;
-  padding: 22px;
-  color: var(--white);
-  background:
-    linear-gradient(145deg, rgba(26, 26, 26, 0.96), rgba(43, 39, 36, 0.9)),
-    radial-gradient(circle at 80% 0%, rgba(232, 93, 4, 0.32), transparent 46%);
-  transform: translateZ(190px);
-}
-
-.portfolio-core strong {
+.metric-card strong {
   display: block;
-  margin: 10px 0 16px;
+  margin-top: 14px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.55rem;
-  line-height: 1.05;
+  font-size: clamp(2.5rem, 4.2vw, 4rem);
+  line-height: 0.86;
+  color: var(--accent);
 }
 
-.core-metrics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.metric-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
-.core-metrics span,
-.skill-chip {
-  border-radius: 999px;
-  padding: 7px 10px;
-  background: rgba(255, 255, 255, 0.14);
-  font-size: 0.72rem;
-  font-weight: 850;
-}
-
-.skill-chip {
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-}
-
-.chip-one {
-  top: 18px;
-  right: 116px;
-  transform: translateZ(220px);
-}
-
-.chip-two {
-  right: 18px;
-  bottom: 170px;
-  transform: translateZ(170px);
-}
-
-.chip-three {
-  left: 20px;
-  bottom: 158px;
-  transform: translateZ(210px);
-}
-
-.chip-four {
-  right: 138px;
-  bottom: 18px;
-  transform: translateZ(145px);
-}
-
-.strategy-board {
-  position: absolute;
-  inset: 34px 0 42px 36px;
-  overflow: hidden;
-  border: 1px solid rgba(26, 26, 26, 0.16);
-  border-radius: 8px;
+.metric-card-primary {
+  grid-column: span 3;
+  grid-row: span 2;
+  min-height: 210px;
+  padding: 22px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(245, 240, 232, 0.9)),
-    repeating-linear-gradient(90deg, transparent 0 42px, rgba(26, 26, 26, 0.04) 42px 43px);
-  box-shadow: var(--shadow);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.9)),
+    radial-gradient(circle at 92% 8%, rgba(232, 93, 4, 0.13), transparent 13rem);
 }
 
-.board-top {
-  display: flex;
-  justify-content: space-between;
-  padding: 18px 20px;
-  border-bottom: 1px solid var(--line);
-  color: var(--muted);
-  font-weight: 800;
+.metric-card-primary strong {
+  font-size: clamp(5.4rem, 8vw, 7rem);
 }
 
-.orbit {
-  position: relative;
-  height: 390px;
-  margin: 18px;
-  border: 1px dashed rgba(26, 26, 26, 0.18);
-  border-radius: 50%;
+.metric-card-dark {
+  grid-column: span 3;
+  color: var(--white);
+  background: var(--ink);
 }
 
-.orbit::before,
-.orbit::after {
-  position: absolute;
-  content: "";
-  inset: 18%;
-  border: 1px solid rgba(232, 93, 4, 0.18);
-  border-radius: inherit;
+.metric-card-dark p,
+.metric-card-dark strong {
+  color: var(--white);
 }
 
-.orbit::after {
-  inset: 34%;
-  border-color: rgba(26, 26, 26, 0.16);
-}
-
-.node {
-  position: absolute;
-  display: grid;
-  min-width: 94px;
-  min-height: 54px;
-  place-items: center;
-  border: 1px solid rgba(26, 26, 26, 0.12);
-  border-radius: 999px;
-  background: var(--white);
-  font-weight: 900;
-  box-shadow: 0 16px 35px rgba(26, 26, 26, 0.12);
-}
-
-.node-core {
-  top: 42%;
-  left: 38%;
+.metric-card-dark span {
   color: var(--accent);
 }
 
-.node-one {
-  top: 8%;
-  left: 35%;
+.metric-card:not(.metric-card-primary):not(.metric-card-dark):not(.metric-card-wide) {
+  grid-column: span 3;
 }
 
-.node-two {
-  right: 4%;
-  bottom: 28%;
-  color: var(--muted);
+.metric-card-slim {
+  grid-column: span 2 !important;
 }
 
-.node-three {
-  bottom: 8%;
-  left: 7%;
-  color: var(--accent);
+.metric-card-accent {
+  background: rgba(232, 93, 4, 0.1);
 }
 
-.brand-strip {
+.metric-card-wide {
+  grid-column: span 6;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  padding: 0 20px 20px;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  min-height: 76px;
 }
 
-.brand-strip span {
-  height: 42px;
-  border-radius: 6px;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.12), rgba(26, 26, 26, 0.04));
-}
-
-.signal-card {
-  position: absolute;
-  z-index: 2;
-  max-width: 230px;
-  padding: 18px;
-  border: 1px solid rgba(26, 26, 26, 0.13);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 16px 44px rgba(26, 26, 26, 0.16);
-  backdrop-filter: blur(16px);
-}
-
-.signal-card span {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--muted);
-  font-size: 0.78rem;
+.metric-card-wide p {
+  margin: 0;
   font-weight: 850;
-  text-transform: uppercase;
+  color: var(--ink);
 }
 
-.signal-card strong {
-  display: block;
-  line-height: 1.15;
-}
+@media (min-width: 981px) and (max-height: 860px) {
+  .hero {
+    padding-top: 28px;
+    padding-bottom: 22px;
+  }
 
-.card-a {
-  top: 0;
-  left: 0;
-}
+  h1 {
+    max-width: 720px;
+    font-size: clamp(2.75rem, 5vw, 5.25rem);
+  }
 
-.card-b {
-  right: 0;
-  bottom: 0;
+  .hero-lede {
+    max-width: 620px;
+    margin-bottom: 20px;
+    font-size: clamp(0.98rem, 1.25vw, 1.12rem);
+  }
+
+  .hero-stats {
+    margin-top: 22px;
+  }
+
+  .hero-visual {
+    min-height: 440px;
+  }
+
+  .metrics-collage {
+    width: min(100%, 520px);
+    gap: 10px;
+  }
+
+  .metric-card {
+    padding: 14px;
+  }
+
+  .metric-card-primary {
+    min-height: 190px;
+    padding: 18px;
+  }
+
+  .metric-card-primary strong {
+    font-size: clamp(4.4rem, 6.2vw, 5.5rem);
+  }
+
+  .metric-card strong {
+    font-size: clamp(2.1rem, 3.3vw, 2.7rem);
+  }
+
+  .metric-card p {
+    font-size: 0.84rem;
+  }
 }
 
 .section {
@@ -1372,14 +1253,12 @@ h3 {
 
   .hero {
     min-height: auto;
+    padding-top: 34px;
+    padding-bottom: 34px;
   }
 
   .hero-visual {
     min-height: 500px;
-  }
-
-  .hero-visual-3d {
-    min-height: 540px;
   }
 
   .case-grid,
@@ -1408,76 +1287,90 @@ h3 {
     padding-inline: 16px;
   }
 
+  .hero,
+  .hero-copy,
+  .hero-visual,
+  .metrics-collage,
+  .metric-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+
   h1 {
-    font-size: clamp(2.72rem, 17vw, 4rem);
+    width: min(100%, 21rem);
+    max-width: 100%;
+    font-size: clamp(1.95rem, 9.5vw, 2.55rem);
+    line-height: 1;
+    overflow-wrap: break-word;
+  }
+
+  .hero-lede {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .hero-stat {
+    min-width: 0;
+    padding: 14px 16px 12px;
+  }
+
+  .hero-stat strong {
+    font-size: clamp(1.9rem, 9vw, 2.35rem);
+  }
+
+  .hero-stat span {
+    font-size: 0.62rem;
   }
 
   .hero-visual {
-    min-height: 440px;
+    min-height: auto;
   }
 
-  .hero-visual-3d {
-    min-height: 460px;
+  .metrics-collage {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
-  .portfolio-stage {
-    width: min(112%, 390px);
-    height: 430px;
-    transform: rotateX(calc(58deg + var(--tilt-y, 0deg))) rotateZ(calc(-14deg + var(--tilt-x, 0deg))) scale(0.92);
+  .metric-card,
+  .metric-card:not(.metric-card-primary):not(.metric-card-dark):not(.metric-card-wide),
+  .metric-card-slim {
+    grid-column: span 1 !important;
+    padding: 14px;
   }
 
-  .portfolio-card {
-    width: 176px;
+  .metric-card-primary,
+  .metric-card-dark,
+  .metric-card-wide {
+    grid-column: 1 / -1 !important;
   }
 
-  .portfolio-core {
-    top: 160px;
-    left: 58px;
-    width: 238px;
+  .metric-card-primary {
+    min-height: 180px;
     padding: 18px;
   }
 
-  .portfolio-core strong {
-    font-size: 1.28rem;
+  .metric-card-primary strong {
+    font-size: clamp(4.8rem, 24vw, 6.2rem);
   }
 
-  .card-cetaphil {
-    top: 36px;
-    left: 0;
+  .metric-card strong {
+    font-size: clamp(2.1rem, 12vw, 3rem);
   }
 
-  .card-otrivin {
-    top: 112px;
-    right: 0;
+  .metric-card-wide {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
-  .card-packaging {
-    bottom: 34px;
-    left: 32px;
-  }
-
-  .skill-chip {
-    font-size: 0.64rem;
-  }
-
-  .chip-one {
-    top: 0;
-    right: 68px;
-  }
-
-  .chip-two {
-    right: 0;
-    bottom: 126px;
-  }
-
-  .chip-three {
-    left: 2px;
-    bottom: 128px;
-  }
-
-  .chip-four {
-    right: 78px;
-    bottom: 0;
+  .metrics-skill-row span {
+    font-size: 0.7rem;
   }
 
   .contact {
