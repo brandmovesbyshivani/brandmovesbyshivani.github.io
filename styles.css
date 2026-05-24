@@ -388,6 +388,170 @@ h3 {
   min-height: 580px;
 }
 
+.hero-visual-3d {
+  display: grid;
+  min-height: 620px;
+  place-items: center;
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.portfolio-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  cursor: grab;
+}
+
+.portfolio-canvas:active {
+  cursor: grabbing;
+}
+
+.portfolio-stage {
+  position: relative;
+  z-index: 0;
+  width: min(118%, 660px);
+  height: 620px;
+  transform: rotateX(calc(58deg + var(--tilt-y, 0deg))) rotateZ(calc(-16deg + var(--tilt-x, 0deg))) scale(1.06);
+  transform-style: preserve-3d;
+  pointer-events: none;
+  transition: transform 180ms ease;
+}
+
+.portfolio-shadow {
+  position: absolute;
+  inset: 18% 8% 10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26, 26, 26, 0.18), transparent 64%);
+  filter: blur(16px);
+  transform: translateZ(-80px);
+}
+
+.portfolio-card,
+.portfolio-core,
+.skill-chip {
+  position: absolute;
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  box-shadow: 0 22px 48px rgba(26, 26, 26, 0.16);
+}
+
+.portfolio-card {
+  width: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--white);
+  transform-style: preserve-3d;
+}
+
+.portfolio-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.portfolio-card span,
+.core-kicker {
+  display: block;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.portfolio-card span {
+  padding: 10px 12px 12px;
+  color: var(--ink);
+}
+
+.card-cetaphil {
+  top: 52px;
+  left: 22px;
+  transform: translateZ(76px) rotateZ(-4deg);
+}
+
+.card-otrivin {
+  top: 150px;
+  right: 34px;
+  transform: translateZ(138px) rotateZ(5deg);
+}
+
+.card-packaging {
+  bottom: 52px;
+  left: 86px;
+  transform: translateZ(102px) rotateZ(3deg);
+}
+
+.portfolio-core {
+  top: 205px;
+  left: 112px;
+  width: 270px;
+  border-radius: 12px;
+  padding: 22px;
+  color: var(--white);
+  background:
+    linear-gradient(145deg, rgba(26, 26, 26, 0.96), rgba(43, 39, 36, 0.9)),
+    radial-gradient(circle at 80% 0%, rgba(232, 93, 4, 0.32), transparent 46%);
+  transform: translateZ(190px);
+}
+
+.portfolio-core strong {
+  display: block;
+  margin: 10px 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.core-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.core-metrics span,
+.skill-chip {
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.skill-chip {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.chip-one {
+  top: 18px;
+  right: 116px;
+  transform: translateZ(220px);
+}
+
+.chip-two {
+  right: 18px;
+  bottom: 170px;
+  transform: translateZ(170px);
+}
+
+.chip-three {
+  left: 20px;
+  bottom: 158px;
+  transform: translateZ(210px);
+}
+
+.chip-four {
+  right: 138px;
+  bottom: 18px;
+  transform: translateZ(145px);
+}
+
 .strategy-board {
   position: absolute;
   inset: 34px 0 42px 36px;
@@ -1214,6 +1378,10 @@ h3 {
     min-height: 500px;
   }
 
+  .hero-visual-3d {
+    min-height: 540px;
+  }
+
   .case-grid,
   .service-grid,
   .blog-grid {
@@ -1248,23 +1416,68 @@ h3 {
     min-height: 440px;
   }
 
-  .strategy-board {
-    inset: 26px 0 34px 0;
+  .hero-visual-3d {
+    min-height: 460px;
   }
 
-  .signal-card {
-    max-width: 184px;
-    padding: 14px;
+  .portfolio-stage {
+    width: min(112%, 390px);
+    height: 430px;
+    transform: rotateX(calc(58deg + var(--tilt-y, 0deg))) rotateZ(calc(-14deg + var(--tilt-x, 0deg))) scale(0.92);
   }
 
-  .orbit {
-    height: 300px;
+  .portfolio-card {
+    width: 176px;
   }
 
-  .node {
-    min-width: 78px;
-    min-height: 45px;
-    font-size: 0.78rem;
+  .portfolio-core {
+    top: 160px;
+    left: 58px;
+    width: 238px;
+    padding: 18px;
+  }
+
+  .portfolio-core strong {
+    font-size: 1.28rem;
+  }
+
+  .card-cetaphil {
+    top: 36px;
+    left: 0;
+  }
+
+  .card-otrivin {
+    top: 112px;
+    right: 0;
+  }
+
+  .card-packaging {
+    bottom: 34px;
+    left: 32px;
+  }
+
+  .skill-chip {
+    font-size: 0.64rem;
+  }
+
+  .chip-one {
+    top: 0;
+    right: 68px;
+  }
+
+  .chip-two {
+    right: 0;
+    bottom: 126px;
+  }
+
+  .chip-three {
+    left: 2px;
+    bottom: 128px;
+  }
+
+  .chip-four {
+    right: 78px;
+    bottom: 0;
   }
 
   .contact {

@@ -8,8 +8,8 @@
       name="description"
       content="Portfolio of Shivani Arora — a PM candidate with sharp product thinking, growth strategy, and a creator series that proves it."
     />
-    <link rel="stylesheet" href="styles.css?v=20260524-thumbnails" />
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css?v=20260524-3d" />
+    <script defer src="script.js?v=20260524-3d"></script>
   </head>
   <body>
     <header class="site-header">
@@ -43,7 +43,7 @@
           </div>
           <div class="hero-stats">
             <div class="hero-stat">
-              <strong data-count="4" data-suffix="">4</strong>
+              <strong data-count="5" data-suffix="">5</strong>
               <span>Episodes published</span>
             </div>
             <div class="hero-stat">
@@ -57,29 +57,34 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Portfolio positioning visual">
-          <div class="signal-card card-a">
-            <span>PM Role</span>
-            <strong>Research, roadmap, GTM, metrics</strong>
-          </div>
-          <div class="strategy-board">
-            <div class="board-top">
-              <span>Strategy Map</span>
-              <span>2026</span>
+        <div class="hero-visual hero-visual-3d" aria-label="Interactive 3D portfolio preview">
+          <canvas class="portfolio-canvas" data-portfolio-3d aria-hidden="true"></canvas>
+          <div class="portfolio-stage" aria-hidden="true">
+            <div class="portfolio-shadow"></div>
+            <div class="portfolio-card card-cetaphil">
+              <img src="assets/episodes/cetaphil/day-7-called-out-thumbnail.png" alt="" />
+              <span>Cetaphil</span>
             </div>
-            <div class="orbit">
-              <span class="node node-core">Insight</span>
-              <span class="node node-one">Product</span>
-              <span class="node node-two">Growth</span>
-              <span class="node node-three">Brand</span>
+            <div class="portfolio-card card-otrivin">
+              <img src="assets/episodes/otrivin-naak-ki-diary/naak-ki-diary-card-16x9.png" alt="" />
+              <span>Otrivin</span>
             </div>
-            <div class="brand-strip">
-              <span></span><span></span><span></span><span></span>
+            <div class="portfolio-card card-packaging">
+              <img src="assets/episodes/cetaphil-packaging/system-lineup.png" alt="" />
+              <span>Packaging</span>
             </div>
-          </div>
-          <div class="signal-card card-b">
-            <span>Creator Series</span>
-            <strong>#IFIRANTHEBRAND</strong>
+            <div class="portfolio-core">
+              <span class="core-kicker">PM Portfolio</span>
+              <strong>Insight → Strategy → Execution</strong>
+              <div class="core-metrics">
+                <span>5 Episodes</span>
+                <span>Brand x Product</span>
+              </div>
+            </div>
+            <span class="skill-chip chip-one">User insight</span>
+            <span class="skill-chip chip-two">GTM</span>
+            <span class="skill-chip chip-three">Growth</span>
+            <span class="skill-chip chip-four">Metrics</span>
           </div>
         </div>
       </section>
@@ -97,7 +102,7 @@
           </p>
           <p>
             My creator series, <strong>#IFIRANTHEBRAND</strong>, is that same thinking
-            applied in public — 4 published episodes, each a real brand diagnosis,
+            applied in public — 5 published episodes, each a real brand diagnosis,
             strategic recommendation, and execution plan built from live market signals.
             It is PM judgment made visible.
           </p>
