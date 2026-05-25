@@ -8,10 +8,10 @@
       name="description"
       content="Portfolio of Shivani Arora — a PM candidate with sharp product thinking, growth strategy, and a creator series that proves it."
     />
-    <link rel="stylesheet" href="styles.css?v=20260524-series-card" />
-    <script defer src="script.js?v=20260524-series-card"></script>
+    <link rel="stylesheet" href="styles.css?v=20260525-skills-lab" />
+    <script defer src="script.js?v=20260525-skills-lab"></script>
   </head>
-  <body>
+  <body class="landing-page">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Shivani Arora home">
         <img class="brand-mark" src="assets/profile-photo.png" alt="" />
@@ -70,9 +70,16 @@
       </section>
 
       <section class="section split" id="about">
-        <div>
-          <p class="eyebrow">Positioning</p>
-          <h2>A PM candidate with the instincts of a strategist and the voice of a creator.</h2>
+        <div class="about-copy">
+          <div>
+            <p class="eyebrow">Positioning</p>
+            <h2>A PM candidate with the instincts of a strategist and the voice of a creator.</h2>
+          </div>
+          <div class="positioning-pills" aria-label="Shivani's positioning strengths">
+            <span>User signal</span>
+            <span>Brand strategy</span>
+            <span>Measurable outcomes</span>
+          </div>
         </div>
         <div class="section-copy">
           <p>
@@ -87,6 +94,10 @@
             It is PM judgment made visible.
           </p>
         </div>
+        <figure class="positioning-visual">
+          <img src="assets/positioning-brand-collage.png?v=20260524-positioning-collage" alt="Editorial collage of PM lens, user signal, brand move, creator voice, and outcome artifacts" />
+          <figcaption>PM lens + creator voice + measurable brand moves</figcaption>
+        </figure>
       </section>
 
       <section class="section" id="work">
@@ -96,6 +107,9 @@
         </div>
         <div class="case-grid">
           <article class="case-card">
+            <div class="case-visual case-visual-product" aria-hidden="true">
+              <img src="assets/pm-case-study-visual.png?v=20260524-visual-sections" alt="" />
+            </div>
             <div class="case-kicker">Product Strategy</div>
             <h3>Diagnosing the real customer problem</h3>
             <p>
@@ -109,6 +123,9 @@
             </ul>
           </article>
           <article class="case-card featured">
+            <div class="case-visual case-visual-growth" aria-hidden="true">
+              <img src="assets/growth-gtm-visual.png?v=20260524-visual-sections" alt="" />
+            </div>
             <div class="case-kicker">Growth & GTM</div>
             <h3>Turning insight into a launchable plan</h3>
             <p>
@@ -122,6 +139,9 @@
             </ul>
           </article>
           <article class="case-card">
+            <div class="case-visual case-visual-analytics" aria-hidden="true">
+              <img src="assets/analytics-visual.png?v=20260524-visual-sections" alt="" />
+            </div>
             <div class="case-kicker">Analytics</div>
             <h3>Making decisions with measurable signals</h3>
             <p>
@@ -147,13 +167,15 @@
           </p>
         </div>
         <div class="reel-layout">
-          <div class="phone-frame">
-            <div class="phone-screen">
-              <div class="reel-tag">Episode Format</div>
-              <h3>If I Ran The Brand</h3>
-              <p>Problem → Insight → Strategy → Execution → Expected impact</p>
-              <div class="reel-bars"><span></span><span></span><span></span></div>
-            </div>
+          <div class="instagram-preview-stack">
+            <a class="phone-frame instagram-profile-card" href="https://www.instagram.com/brandmovesbyshivani?igsh=MTVlMGQ5cmw2ZWdtYg==" target="_blank" rel="noreferrer" aria-label="Open Shivani's live Instagram profile">
+              <div class="phone-screen instagram-profile-screen instagram-screenshot-screen">
+                <img src="assets/instagram-profile-screenshot.png" alt="Screenshot of Shivani Arora's Instagram profile page" />
+              </div>
+            </a>
+            <a class="instagram-live-button" href="https://www.instagram.com/brandmovesbyshivani?igsh=MTVlMGQ5cmw2ZWdtYg==" target="_blank" rel="noreferrer">
+              Open live Instagram profile
+            </a>
           </div>
           <div class="episode-list">
             <article>
@@ -221,22 +243,55 @@
         </div>
       </section>
 
-      <section class="section skills">
-        <div class="section-heading">
+      <section class="section skills" id="skills">
+        <div class="skills-intro">
           <p class="eyebrow">Skills</p>
-          <h2>What I bring into a PM team.</h2>
+          <h2>Pick a PM moment. See how I would show up.</h2>
+          <p>
+            This is the working style I bring into teams: sharp diagnosis, clear bets,
+            measurable plans, and communication people can actually act on.
+          </p>
         </div>
-        <div class="skill-cloud">
-          <span>User research</span>
-          <span>Problem framing</span>
-          <span>Roadmapping</span>
-          <span>GTM strategy</span>
-          <span>Growth experiments</span>
-          <span>Product analytics</span>
-          <span>Brand positioning</span>
-          <span>Content strategy</span>
-          <span>Stakeholder communication</span>
-          <span>Market research</span>
+        <div class="skills-lab" data-skills-lab>
+          <div class="skills-scenarios" role="tablist" aria-label="Choose a PM scenario">
+            <button type="button" role="tab" aria-selected="true" data-skill-scenario="problem">Messy problem</button>
+            <button type="button" role="tab" aria-selected="false" data-skill-scenario="launch">New launch</button>
+            <button type="button" role="tab" aria-selected="false" data-skill-scenario="growth">Growth stall</button>
+            <button type="button" role="tab" aria-selected="false" data-skill-scenario="alignment">Stakeholder room</button>
+          </div>
+          <article class="skills-playbook" aria-live="polite">
+            <div>
+              <span class="playbook-label" data-skill-label>Scenario 01</span>
+              <h3 data-skill-title>When the problem is fuzzy</h3>
+              <p data-skill-summary>
+                I slow the team down just enough to find the real user signal, define the pain clearly,
+                and turn it into a decision-ready product opportunity.
+              </p>
+            </div>
+            <div class="playbook-flow" aria-label="Selected scenario workflow">
+              <span data-skill-step-one>Listen to users</span>
+              <span data-skill-step-two>Frame the problem</span>
+              <span data-skill-step-three>Define success</span>
+            </div>
+            <div class="playbook-output">
+              <strong>Output I would bring</strong>
+              <p data-skill-output>Research synthesis, problem statement, user segments, and north-star metric.</p>
+            </div>
+          </article>
+          <div class="skills-proof-grid">
+            <article>
+              <span>Research</span>
+              <strong data-skill-proof-one>User interviews + review mining</strong>
+            </article>
+            <article>
+              <span>Strategy</span>
+              <strong data-skill-proof-two>Prioritized product bet</strong>
+            </article>
+            <article>
+              <span>Metrics</span>
+              <strong data-skill-proof-three>Outcome-focused success measure</strong>
+            </article>
+          </div>
         </div>
       </section>
 

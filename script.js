@@ -99,3 +99,84 @@ const statObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll(".hero-stat strong[data-count], .metric-card-count[data-count]").forEach((el) => {
   statObserver.observe(el);
 });
+
+const skillScenarios = {
+  problem: {
+    label: "Scenario 01",
+    title: "When the problem is fuzzy",
+    summary: "I slow the team down just enough to find the real user signal, define the pain clearly, and turn it into a decision-ready product opportunity.",
+    steps: ["Listen to users", "Frame the problem", "Define success"],
+    output: "Research synthesis, problem statement, user segments, and north-star metric.",
+    proofs: ["User interviews + review mining", "Prioritized product bet", "Outcome-focused success measure"]
+  },
+  launch: {
+    label: "Scenario 02",
+    title: "When a launch needs a story",
+    summary: "I connect audience, positioning, channels, and product value so the launch does not feel like a list of features.",
+    steps: ["Segment audience", "Shape narrative", "Plan activation"],
+    output: "GTM brief, launch narrative, channel plan, and activation ideas.",
+    proofs: ["Audience segmentation", "Brand positioning", "Launch-ready roadmap"]
+  },
+  growth: {
+    label: "Scenario 03",
+    title: "When growth has stalled",
+    summary: "I look for friction in the funnel, form testable hypotheses, and design experiments that teach the team what to do next.",
+    steps: ["Map funnel", "Find friction", "Run experiments"],
+    output: "Growth hypothesis, experiment design, measurement plan, and learnings loop.",
+    proofs: ["Funnel thinking", "Growth experiments", "Product analytics"]
+  },
+  alignment: {
+    label: "Scenario 04",
+    title: "When the room needs clarity",
+    summary: "I translate messy inputs into a crisp decision, name the tradeoffs, and keep stakeholders aligned on what matters.",
+    steps: ["Clarify tradeoffs", "Make the call", "Communicate next steps"],
+    output: "Decision memo, stakeholder update, risks, and next-step plan.",
+    proofs: ["Stakeholder communication", "Roadmapping", "Clear decision framing"]
+  }
+};
+
+const skillsLab = document.querySelector("[data-skills-lab]");
+
+if (skillsLab) {
+  const buttons = skillsLab.querySelectorAll("[data-skill-scenario]");
+  const fields = {
+    label: skillsLab.querySelector("[data-skill-label]"),
+    title: skillsLab.querySelector("[data-skill-title]"),
+    summary: skillsLab.querySelector("[data-skill-summary]"),
+    steps: [
+      skillsLab.querySelector("[data-skill-step-one]"),
+      skillsLab.querySelector("[data-skill-step-two]"),
+      skillsLab.querySelector("[data-skill-step-three]")
+    ],
+    output: skillsLab.querySelector("[data-skill-output]"),
+    proofs: [
+      skillsLab.querySelector("[data-skill-proof-one]"),
+      skillsLab.querySelector("[data-skill-proof-two]"),
+      skillsLab.querySelector("[data-skill-proof-three]")
+    ]
+  };
+
+  const selectScenario = (key) => {
+    const scenario = skillScenarios[key];
+    if (!scenario) return;
+
+    buttons.forEach((button) => {
+      button.setAttribute("aria-selected", String(button.dataset.skillScenario === key));
+    });
+
+    fields.label.textContent = scenario.label;
+    fields.title.textContent = scenario.title;
+    fields.summary.textContent = scenario.summary;
+    fields.output.textContent = scenario.output;
+    fields.steps.forEach((field, index) => {
+      field.textContent = scenario.steps[index];
+    });
+    fields.proofs.forEach((field, index) => {
+      field.textContent = scenario.proofs[index];
+    });
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => selectScenario(button.dataset.skillScenario));
+  });
+}
