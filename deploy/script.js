@@ -18,7 +18,7 @@ const fallbackEpisodePosts = [
   },
   {
     title: "Otrivin — Naak Ki Diary: Responsible Nasal Health System",
-    slug: "otrivin-naak-ki-diary",
+    slug: "otrivin-naak-ki-diary-strategy",
     category: "#IFIRANTHEBRAND Episode 03",
     summary: "A PM-level strategy case study for Otrivin: turning fast nasal relief into a responsible WhatsApp-led nasal health system with behavior tracking, Naak Score cards, pledges, and doctor referrals.",
     thumbnail: "assets/episodes/otrivin/naak-ki-diary-card.png"
@@ -125,36 +125,36 @@ document.querySelectorAll(".hero-stat strong[data-count], .metric-card-count[dat
 
 const skillScenarios = {
   problem: {
-    label: "Scenario 01",
-    title: "When the problem is fuzzy",
-    summary: "I slow the team down just enough to find the real user signal, define the pain clearly, and turn it into a decision-ready product opportunity.",
-    steps: ["Listen to users", "Frame the problem", "Define success"],
-    output: "Research synthesis, problem statement, user segments, and north-star metric.",
-    proofs: ["User interviews + review mining", "Prioritized product bet", "Outcome-focused success measure"]
+    label: "Moment 01",
+    title: "The team knows something is wrong, but not what.",
+    summary: "I turn scattered feedback into one clear problem the team can actually solve.",
+    steps: ["Listen to users", "Name the pain", "Choose the metric"],
+    output: "A clear problem statement, user signal, and success metric.",
+    proofs: ["User signal", "Problem clarity", "Success metric"]
   },
   launch: {
-    label: "Scenario 02",
-    title: "When a launch needs a story",
-    summary: "I connect audience, positioning, channels, and product value so the launch does not feel like a list of features.",
-    steps: ["Segment audience", "Shape narrative", "Plan activation"],
-    output: "GTM brief, launch narrative, channel plan, and activation ideas.",
-    proofs: ["Audience segmentation", "Brand positioning", "Launch-ready roadmap"]
+    label: "Moment 02",
+    title: "The product is ready, but the story is not.",
+    summary: "I connect the audience, the promise, and the launch plan so people understand why it matters.",
+    steps: ["Pick the audience", "Shape the promise", "Plan the launch"],
+    output: "A simple launch story, channel plan, and first activation ideas.",
+    proofs: ["Audience focus", "Positioning", "Launch plan"]
   },
   growth: {
-    label: "Scenario 03",
-    title: "When growth has stalled",
-    summary: "I look for friction in the funnel, form testable hypotheses, and design experiments that teach the team what to do next.",
-    steps: ["Map funnel", "Find friction", "Run experiments"],
-    output: "Growth hypothesis, experiment design, measurement plan, and learnings loop.",
-    proofs: ["Funnel thinking", "Growth experiments", "Product analytics"]
+    label: "Moment 03",
+    title: "People try the product, but do not keep going.",
+    summary: "I look for the point where users drop off and turn it into a small experiment.",
+    steps: ["Map the journey", "Find the drop-off", "Test one fix"],
+    output: "A growth hypothesis, experiment plan, and learning loop.",
+    proofs: ["Journey map", "Experiment", "Learning loop"]
   },
   alignment: {
-    label: "Scenario 04",
-    title: "When the room needs clarity",
-    summary: "I translate messy inputs into a crisp decision, name the tradeoffs, and keep stakeholders aligned on what matters.",
-    steps: ["Clarify tradeoffs", "Make the call", "Communicate next steps"],
-    output: "Decision memo, stakeholder update, risks, and next-step plan.",
-    proofs: ["Stakeholder communication", "Roadmapping", "Clear decision framing"]
+    label: "Moment 04",
+    title: "Everyone has an opinion, and the team needs a call.",
+    summary: "I make the tradeoffs visible, simplify the decision, and keep the next step clear.",
+    steps: ["List the tradeoffs", "Make the call", "Share next steps"],
+    output: "A clear decision, risks, owner, and next action.",
+    proofs: ["Tradeoffs", "Decision", "Next action"]
   }
 };
 
