@@ -1,6 +1,30 @@
 const header = document.querySelector(".site-header");
 const blogGrid = document.querySelector("[data-blog-grid]");
 
+const fallbackEpisodePosts = [
+  {
+    title: "#CetaphilCalledMeOut: Behavior-Led Brand Strategy",
+    slug: "cetaphil-called-me-out-behavior-led-strategy",
+    category: "#IFIRANTHEBRAND Episode 01",
+    summary: "A PM-level strategy case study for Cetaphil: moving from skincare awareness to habit formation through a 7-day behavior-led experience.",
+    thumbnail: "assets/episodes/cetaphil/day-7-called-out-thumbnail.png"
+  },
+  {
+    title: "Not Handwash: Packaging-Led Behavior Strategy",
+    slug: "cetaphil-packaging-behavior-shift",
+    category: "#IFIRANTHEBRAND Episode",
+    summary: "A PM-level strategy case study for Cetaphil: redesigning packaging perception, refill behavior, travel usability, and sustainability around a premium skincare system.",
+    thumbnail: "assets/episodes/cetaphil-packaging/system-lineup.png"
+  },
+  {
+    title: "Otrivin — Naak Ki Diary: Responsible Nasal Health System",
+    slug: "otrivin-naak-ki-diary",
+    category: "#IFIRANTHEBRAND Episode 03",
+    summary: "A PM-level strategy case study for Otrivin: turning fast nasal relief into a responsible WhatsApp-led nasal health system with behavior tracking, Naak Score cards, pledges, and doctor referrals.",
+    thumbnail: "assets/episodes/otrivin/naak-ki-diary-card.png"
+  }
+];
+
 const setHeaderState = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 12);
 };
@@ -29,11 +53,7 @@ const escapeHtml = (value = "") =>
 const renderBlogCards = async () => {
   if (!blogGrid) return;
 
-  try {
-    const limit = Number(blogGrid.dataset.limit) || 3;
-    const response = await fetch("data/blogs.json");
-    const posts = (await response.json()).slice(0, limit);
-
+  const renderPosts = (posts) => {
     blogGrid.innerHTML = posts
       .map((post) => `
         <a class="blog-card" href="blog.html?slug=${encodeURIComponent(post.slug)}">
@@ -46,14 +66,17 @@ const renderBlogCards = async () => {
         </a>
       `)
       .join("");
+  };
+
+  try {
+    const limit = Number(blogGrid.dataset.limit) || 3;
+    const response = await fetch("data/blogs.json");
+    if (!response.ok) throw new Error("Episodes unavailable");
+    const posts = (await response.json()).slice(0, limit);
+    renderPosts(posts);
   } catch {
-    blogGrid.innerHTML = `
-      <article class="blog-card">
-        <span class="blog-category">Episodes</span>
-        <h3>Episodes could not be loaded</h3>
-        <p>Please check data/blogs.json and refresh the page.</p>
-      </article>
-    `;
+    const limit = Number(blogGrid.dataset.limit) || 3;
+    renderPosts(fallbackEpisodePosts.slice(0, limit));
   }
 };
 
