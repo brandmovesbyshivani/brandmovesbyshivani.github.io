@@ -101,6 +101,40 @@ const renderBlock = (block, index) => {
     </div>`;
   }
 
+  if (block.type === "score-levels") {
+    const levels = block.levels || [];
+    return `<div class="cs-score-levels">
+      ${block.label ? `<div class="cs-score-section-label">${escapeHtml(block.label)}</div>` : ""}
+      <div class="cs-score-grid">
+        ${levels.map((lv) => {
+          const from = Number(lv.barFrom ?? 0);
+          const to   = Number(lv.barTo   ?? 100);
+          const leftPct  = from;
+          const widthPct = to - from;
+          return `<div class="cs-score-card" style="--sc:${escapeHtml(lv.color || '#0076BE')}">
+            <div class="cs-score-head">
+              <span class="cs-score-emoji" aria-hidden="true">${lv.icon || "●"}</span>
+              <div class="cs-score-range">${escapeHtml(lv.range || "")}</div>
+              <div class="cs-score-bar-wrap" aria-label="Score range ${escapeHtml(lv.range || "")} out of 100">
+                <div class="cs-score-bar-track">
+                  <div class="cs-score-bar-fill" style="left:${leftPct}%;width:${widthPct}%"></div>
+                </div>
+                <div class="cs-score-bar-labels"><span>0</span><span>100</span></div>
+              </div>
+            </div>
+            <div class="cs-score-body">
+              <div class="cs-score-chips">
+                <span class="cs-score-name-chip">${escapeHtml(lv.title || "")}</span>
+                <span class="cs-score-mood-chip">${escapeHtml(lv.mood || "")}</span>
+              </div>
+              <p>${escapeHtml(lv.text || "")}</p>
+            </div>
+          </div>`;
+        }).join("")}
+      </div>
+    </div>`;
+  }
+
   if (block.type === "callout-examples") {
     return `<div class="cs-callout-examples">
       ${block.label ? `<div class="cs-callout-examples-label">${escapeHtml(block.label)}</div>` : ""}

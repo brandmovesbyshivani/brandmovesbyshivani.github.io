@@ -1311,27 +1311,47 @@
         "text": "8. Naak Score System"
       },
       {
-        "type": "steps",
-        "label": "4 Score Levels",
-        "steps": [
+        "type": "score-levels",
+        "label": "Naak Score System",
+        "levels": [
           {
-            "number": "80–100",
+            "range": "80–100",
+            "icon": "🏆",
             "title": "Naak Champion",
+            "mood": "Celebrate & maintain",
+            "color": "#059669",
+            "barFrom": 80,
+            "barTo": 100,
             "text": "Nasal health behavior is on track. Bot tone: celebrate and reinforce. Recommendation: continue current routine, consider Breathe Clean as a daily preventive nasal hygiene habit."
           },
           {
-            "number": "60–79",
+            "range": "60–79",
+            "icon": "👀",
             "title": "Warning Zone",
+            "mood": "Gentle nudge",
+            "color": "#d97706",
+            "barFrom": 60,
+            "barTo": 79,
             "text": "Usage pattern needs attention. Bot tone: gentle nudge without alarm. Recommendation: track usage days more carefully, try nasal rinse for high-AQI pollution days."
           },
           {
-            "number": "40–59",
+            "range": "40–59",
+            "icon": "😅",
             "title": "Naak Ka Nasha — Stage 1",
+            "mood": "Warm correction",
+            "color": "#e85d04",
+            "barFrom": 40,
+            "barTo": 59,
             "text": "Spray overuse patterns detected. Bot tone: warm correction with a nasal hygiene suggestion. Recommendation: stop spray, switch to daily nasal hygiene support, track for 3 days."
           },
           {
-            "number": "0–39",
+            "range": "0–39",
+            "icon": "🚨",
             "title": "Naak Ka Nasha — Stage 2",
+            "mood": "Doctor referral",
+            "color": "#dc2626",
+            "barFrom": 0,
+            "barTo": 39,
             "text": "Prolonged usage risk detected. Bot tone: serious but caring, never frightening. If 7+ consecutive spray days are reported in check-ins: doctor referral triggered automatically."
           }
         ]
